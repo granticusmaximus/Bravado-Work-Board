@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Bravado.Models
 {
-    public class Content
+    public class Entry
     {
         [Key]
         public int ContentID { get; set; }
@@ -12,5 +12,7 @@ namespace Bravado.Models
 
         [Display(Name = "Date Created")]
         public DateTime DateCreated { get; set; }
+
+        public ApplicationUser AppUser { get; set; }
     }
 }

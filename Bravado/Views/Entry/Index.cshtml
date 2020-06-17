@@ -1,11 +1,11 @@
-@model IEnumerable<Bravado.Models.Content>
+@model IEnumerable<Bravado.Models.Entry>
 
-@{ ViewData["Title"] = "Journal Entry"; }
+@{ ViewData["Title"] = "Index"; }
 
-<h1>Entry List</h1>
+<h1>List of Current Entries</h1>
 
 <p>
-    <button type="button" class="btn btn-primary"><a asp-action="Create" style="color:white">New Entry</a></button>
+    <button type="button" class="btn btn-primary"><a asp-action="Create" style="color:white">Create New</a></button>
 </p>
 <table class="table">
     <thead>
@@ -40,7 +40,6 @@
         <a asp-action="Details" asp-route-id="@item.ContentID">Details</a> |
         <a asp-action="Delete" asp-route-id="@item.ContentID">Delete</a>
     </td>
-</tr>
-}
+</tr>}
     </tbody>
 </table>

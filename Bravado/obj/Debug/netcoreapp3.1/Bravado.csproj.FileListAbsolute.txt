@@ -375,11 +375,6 @@
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml.g.cs
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewImports.cshtml.g.cs
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewStart.cshtml.g.cs
-/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Content/Create.cshtml.g.cs
-/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Content/Delete.cshtml.g.cs
-/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Content/Details.cshtml.g.cs
-/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Content/Edit.cshtml.g.cs
-/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Content/Index.cshtml.g.cs
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Home/Privacy.cshtml.g.cs
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
@@ -398,3 +393,9 @@
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Bravado.pdb
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Bravado.genruntimeconfig.cache
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Bravado.csprojAssemblyReference.cache
+/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Entry/Create.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Entry/Delete.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Entry/Details.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Entry/Edit.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Entry/Index.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Login.cshtml.g.cs

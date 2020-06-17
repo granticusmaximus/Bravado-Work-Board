@@ -3,24 +3,29 @@ using System;
 using Bravado.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Bravado.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(AppDbContext))]
+    [Migration("20200617203158_EntityCreation")]
+    partial class EntityCreation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.5");
 
-            modelBuilder.Entity("Bravado.Models.Content", b =>
+            modelBuilder.Entity("Bravado.Models.Entry", b =>
                 {
                     b.Property<int>("ContentID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("TEXT");
@@ -33,7 +38,9 @@ namespace Bravado.Migrations
 
                     b.HasKey("ContentID");
 
-                    b.ToTable("Content");
+                    b.HasIndex("AppUserId");
+
+                    b.ToTable("Entry");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -249,6 +256,13 @@ namespace Bravado.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasDiscriminator().HasValue("ApplicationUser");
+                });
+
+            modelBuilder.Entity("Bravado.Models.Entry", b =>
+                {
+                    b.HasOne("Bravado.Models.ApplicationUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

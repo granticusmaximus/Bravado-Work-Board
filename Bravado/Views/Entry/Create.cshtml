@@ -1,4 +1,4 @@
-@model Bravado.Models.Content
+@model Bravado.Models.Entry
 
 @{ ViewData["Title"] = "Create"; }
 
@@ -6,7 +6,8 @@
         selector: '#mytextarea'
     });</script>
 
-<h1>Create New Entry</h1>
+<h1>Add New Entry</h1>
+
 <hr />
 <div class="row">
     <div class="col-md-12">
@@ -29,10 +30,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label asp-for="Description" class="control-label"></label>
-                        <textarea asp-for="Description" class="form-control" id="mytextarea" name="mytextarea"></textarea>
+                        <textarea id="mytextarea" asp-for="Description" class="form-control"></textarea>
                         <span asp-validation-for="Description" class="text-danger"></span>
                     </div>
                 </div>
