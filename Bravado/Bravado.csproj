@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-Bravado-CAF53CB3-CDB9-4E6C-A770-38499307ED4E</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.5"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+<PrivateAssets>all</PrivateAssets>
+</PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.5" />
+    <PackageReference Include="ElectronNET.API" Version="9.31.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Areas\Identity\Pages\Account\Manage\SetPassword.cshtml" />
+    <Content Remove="Areas\Identity\Pages\Account\Manage\Disable2fa.cshtml" />
+    <Content Remove="Areas\Identity\Pages\Account\Manage\DownloadPersonalData.cshtml" />
+    <Content Remove="Areas\Identity\Pages\Account\Manage\_Layout.cshtml" />
+    <Content Remove="Areas\Identity\Pages\Account\Logout.cshtml" />
+    <Content Remove="Areas\Identity\Pages\Account\Login.cshtml" />
+    <Content Remove="Areas\Identity\Pages\Account\LoginWithRecoveryCode.cshtml" />
+    <Content Remove="Areas\Identity\Pages\Account\Manage\ShowRecoveryCodes.cshtml" />
+    <Content Remove="Areas\Identity\Pages\Account\Manage\_StatusMessage.cshtml" />
+    <Content Remove="Areas\Identity\Pages\Account\Manage\ChangePassword.cshtml" />
+    <Content Remove="Areas\Identity\Pages\Account\Manage\TwoFactorAuthentication.cshtml" />
+  </ItemGroup>
+</Project>
