@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Program.cs">
+    <Files>
+      <File FileName="Bravado/Models/Content.cs" Line="13" Column="38" />
+      <File FileName="Bravado/Models/ApplicationUser.cs" Line="13" Column="30" />
+      <File FileName="Bravado/Data/ApplicationDbContext.cs" Line="17" Column="54" />
+      <File FileName="Bravado/Areas/Identity/IdentityHostingStartup.cs" Line="17" Column="28" />
+      <File FileName="Bravado/appsettings.json" Line="3" Column="45" />
+      <File FileName="Bravado/Areas/Identity/Pages/_ViewImports.cshtml" Line="1" Column="1" />
+      <File FileName="Bravado/Startup.cs" Line="28" Column="39" />
+      <File FileName="Bravado/Program.cs" Line="23" Column="31" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Bravado" expanded="True">
+            <Node name="Bravado" expanded="True">
+              <Node name="Areas" expanded="True">
+                <Node name="Identity" expanded="True">
+                  <Node name="Pages" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Bravado PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

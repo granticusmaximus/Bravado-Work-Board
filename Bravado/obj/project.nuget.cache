@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oUaflXCRsbBpmGJIqx3Ot7F9laS2Q+ovznTLbe1mfrkrqzl62w58QSPE+uXutkoGfRy4WSgqZ+yZG7/l3DxG/Q==",
+  "dgSpecHash": "2ZP2cUEh13w9R+hoXdhSfvJS6KXb/ucCnQT4KH/81Nd1KNzzfx5AuWsrzaaf5u5dgB35ugCsnLTz5W4GaqhJpQ==",
   "success": true,
-  "projectFilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado/Bravado.csproj",
+  "projectFilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Bravado.csproj",
   "expectedPackageFiles": [
     "/Users/grantwatson/.nuget/packages/electronnet.api/9.31.1/electronnet.api.9.31.1.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/engineioclientdotnet/1.0.5/engineioclientdotnet.1.0.5.nupkg.sha512",

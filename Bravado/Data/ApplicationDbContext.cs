@@ -14,5 +14,6 @@ namespace Bravado.Data
         {
         }
         public DbSet<Content> Content { get; set; }
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
     }
 }

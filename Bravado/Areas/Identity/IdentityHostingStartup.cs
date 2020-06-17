@@ -1,5 +1,5 @@
 using System;
-using Bravado.Areas.Identity.Data;
+using Bravado.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -14,14 +14,7 @@ namespace Bravado.Areas.Identity
     {
         public void Configure(IWebHostBuilder builder)
         {
-            builder.ConfigureServices((context, services) => {
-                services.AddDbContext<BravadoIdentityDbContext>(options =>
-                    options.UseSqlServer(
-                        context.Configuration.GetConnectionString("BravadoIdentityDbContextConnection")));
-
-                services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                    .AddEntityFrameworkStores<BravadoIdentityDbContext>();
-            });
+            builder.UseStartup<Startup>();
         }
     }
 }
