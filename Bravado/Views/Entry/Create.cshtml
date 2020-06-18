@@ -1,10 +1,9 @@
 @model Bravado.Models.Entry
 
-@{ ViewData["Title"] = "Create"; }
+@{ ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
 
-<script>$(document).ready(function () {
-        $('#summernote').summernote();
-    });</script>
+
 
 <h1>Add New Entry</h1>
 
@@ -30,10 +29,11 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="form-group">
                         <label asp-for="Description" class="control-label"></label>
-                        <textarea asp-for="Description" name="editordata" class="form-control"></textarea>
+                        <textarea asp-for="Description" class="textarea" placeholder="Place some text here"
+                                  style="height: 550px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; border-radius:3px; padding: 10px;"></textarea>
                         <span asp-validation-for="Description" class="text-danger"></span>
                     </div>
                 </div>

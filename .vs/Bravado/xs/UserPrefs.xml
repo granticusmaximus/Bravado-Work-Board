@@ -1,34 +1,30 @@
 ﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Views/Entry/Create.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Views/Entry/Details.cshtml">
     <Files>
-      <File FileName="Bravado/Areas/Identity/Pages/Account/Login.cshtml.cs" Line="1" Column="1" />
-      <File FileName="Bravado/Areas/Identity/Pages/Account/Login.cshtml" />
-      <File FileName="Bravado/wwwroot/css/site.css" />
-      <File FileName="Bravado/Views/Shared/_Layout.cshtml" />
-      <File FileName="Bravado/Views/Entry/Index.cshtml" />
-      <File FileName="Bravado/Views/Entry/Create.cshtml" Line="7" Column="10" />
+      <File FileName="Bravado/Views/Shared/_Layout.cshtml" Line="12" Column="18" />
+      <File FileName="Bravado/Views/Entry/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Bravado/Views/Entry/Create.cshtml" Line="36" Column="51" />
+      <File FileName="Bravado/Views/Entry/Edit.cshtml" Line="37" Column="19" />
+      <File FileName="Bravado/Views/Entry/Details.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Bravado" expanded="True">
             <Node name="Bravado" expanded="True">
-              <Node name="Areas" expanded="True">
-                <Node name="Identity" expanded="True">
-                  <Node name="Pages" expanded="True">
-                    <Node name="Account" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
+              <Node name="Areas" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Entry" expanded="True">
-                  <Node name="Create.cshtml" selected="True" />
+                  <Node name="Details.cshtml" selected="True" />
                 </Node>
                 <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
