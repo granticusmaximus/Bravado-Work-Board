@@ -10,6 +10,7 @@ a.navbar-brand {
 .loginBox {
     background-color: orange !important;
     border-radius: 3px !important;
+    padding: 20px;
 }
 
 /* Provide sufficient contrast against white background */
