@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "iZ/OlqlGwPNUaqzyzRXKEA5b6rO1VMirOcUUk6AGxseVhlgwNImaCdgj/2HaxrZi7oU0HU4jso8nYIpM7DeWBA==",
+  "dgSpecHash": "7RE1W7hmMjDBoPoAIKu73Rb0FIP3Hy1Wl6yuOWbpI3hLOHBmPFFOsYZDUmsjHWJX/XhwUO7fiRfoJNzidVLB/Q==",
   "success": true,
   "projectFilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Bravado.csproj",
   "expectedPackageFiles": [
     "/Users/grantwatson/.nuget/packages/electronnet.api/9.31.1/electronnet.api.9.31.1.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/engineioclientdotnet/1.0.5/engineioclientdotnet.1.0.5.nupkg.sha512",
+    "/Users/grantwatson/.nuget/packages/microsoft.aspnetcore.authentication.google/3.1.5/microsoft.aspnetcore.authentication.google.3.1.5.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/microsoft.aspnetcore.cryptography.internal/3.1.5/microsoft.aspnetcore.cryptography.internal.3.1.5.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/3.1.5/microsoft.aspnetcore.cryptography.keyderivation.3.1.5.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/microsoft.aspnetcore.diagnostics.entityframeworkcore/3.1.5/microsoft.aspnetcore.diagnostics.entityframeworkcore.3.1.5.nupkg.sha512",
@@ -90,6 +91,7 @@
     "/Users/grantwatson/.nuget/packages/runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "/Users/grantwatson/.nuget/packages/sendgrid/9.16.0/sendgrid.9.16.0.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/socketioclientdotnet/1.0.5/socketioclientdotnet.1.0.5.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.0.2/sqlitepclraw.bundle_e_sqlite3.2.0.2.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/sqlitepclraw.core/2.0.2/sqlitepclraw.core.2.0.2.nupkg.sha512",

@@ -6,6 +6,8 @@ using Bravado.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Bravado.Services;
 
 namespace Bravado
 {
@@ -28,6 +30,12 @@ namespace Bravado
                 .AddEntityFrameworkStores<AppDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            // requires
+            // using Microsoft.AspNetCore.Identity.UI.Services;
+            // using Bravado.Services;
+            services.AddTransient<IEmailSender, EmailSender>();
+            services.Configure<AuthMessageSenderOptions>(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
