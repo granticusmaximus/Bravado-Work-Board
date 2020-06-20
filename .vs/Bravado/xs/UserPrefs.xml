@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Views/Entry/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Views/Home/Index.cshtml">
     <Files>
-      <File FileName="Bravado/Views/Shared/_Layout.cshtml" Line="63" Column="21" />
-      <File FileName="Bravado/Views/Entry/Create.cshtml" Line="26" Column="89" />
-      <File FileName="Bravado/Views/Entry/Edit.cshtml" Line="26" Column="89" />
-      <File FileName="Bravado/Views/Entry/Delete.cshtml" Line="22" Column="24" />
-      <File FileName="Bravado/Views/Entry/Details.cshtml" Line="14" Column="10" />
-      <File FileName="Bravado/Views/Entry/Index.cshtml" Line="36" Column="78" />
+      <File FileName="Bravado/Views/Shared/_Layout.cshtml" Line="11" Column="35" />
+      <File FileName="Bravado/Views/Entry/Create.cshtml" Line="35" Column="42" />
+      <File FileName="Bravado/Views/Entry/Edit.cshtml" Line="47" Column="7" />
+      <File FileName="Bravado/Views/Entry/Delete.cshtml" Line="35" Column="64" />
+      <File FileName="Bravado/Views/Entry/Details.cshtml" Line="23" Column="5" />
+      <File FileName="Bravado/Views/Entry/Index.cshtml" Line="40" Column="9" />
+      <File FileName="Bravado/Views/Home/Index.cshtml" Line="6" Column="38" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,9 +18,11 @@
               <Node name="Controllers" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Entry" expanded="True">
+                <Node name="Entry" expanded="True" />
+                <Node name="Home" expanded="True">
                   <Node name="Index.cshtml" selected="True" />
                 </Node>
+                <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>

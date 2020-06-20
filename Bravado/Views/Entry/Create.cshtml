@@ -20,7 +20,7 @@
                         <span asp-validation-for="Title" class="text-danger"></span>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="form-group">
                         <label asp-for="DateCreated" class="control-label"></label>
                         <input asp-for="DateCreated" class="form-control" id="datepicker" />
@@ -32,7 +32,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label asp-for="Description" class="control-label"></label>
-                        <textarea asp-for="Description" class="textarea" placeholder="Place some text here"
+                        <textarea cols="250" asp-for="Description" class="textarea" placeholder="Place some text here"
                                   style="height: 550px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; border-radius:3px; padding: 10px;"></textarea>
                         <span asp-validation-for="Description" class="text-danger"></span>
                     </div>

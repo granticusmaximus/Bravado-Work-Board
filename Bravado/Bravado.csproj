@@ -28,7 +28,4 @@
     <Folder Include="Migrations\" />
     <Folder Include="Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <None Remove="app.db" />
-  </ItemGroup>
 </Project>
