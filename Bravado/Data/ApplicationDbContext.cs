@@ -12,5 +12,7 @@ namespace Bravado.Data
         }
         public DbSet<Entry> Entry { get; set; }
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
+        public DbSet<Board> Boards { get; set; }
+        public DbSet<Task> Tasks { get; set; }
     }
 }

@@ -5,7 +5,7 @@
 <h1>List of Current Entries</h1>
 
 <p>
-    <button type="button" class="btn btn-primary"><a asp-action="Create" style="color:white">Create New</a></button>
+    <button type="button" class="btn btn-primary"><a asp-action="Create" style="color:white"><i class="fa fa-file-text-o" aria-hidden="true"></i> Create New Entry</a></button>
 </p>
 <table class="table">
     <thead>
@@ -38,7 +38,6 @@
     <td>
         <button type="button" class="btn btn-outline-primary"><a asp-action="Edit" asp-route-id="@item.ContentID"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></button>
     </td>
-</tr>
-}
+</tr>}
     </tbody>
 </table>
