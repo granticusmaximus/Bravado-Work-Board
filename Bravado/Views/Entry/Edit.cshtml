@@ -2,9 +2,10 @@
 
 @{ ViewData["Title"] = "Edit"; }
 
-<h1>Edit</h1>
-
-<h4>Entry</h4>
+<h4>Edit Entry</h4>
+<div>
+    <button class="btn btn-secondary"><a asp-action="Index" style="color:white">Back to List</a></button>
+</div>
 <hr />
 <div class="row">
     <div class="col-md-12">
@@ -23,7 +24,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label asp-for="DateCreated" class="control-label"></label>
-                        <input asp-for="DateCreated" class="form-control" />
+                        <input asp-for="DateCreated" class="form-control" id="datepicker" />
                         <span asp-validation-for="DateCreated" class="text-danger"></span>
                     </div>
                 </div>
@@ -42,10 +43,10 @@
         </form>
     </div>
 </div>
+<br />
+<hr />
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

@@ -1,6 +1,6 @@
 @model IEnumerable<Bravado.Models.Entry>
 
-@{ ViewData["Title"] = "Index"; }
+@{ ViewData["Title"] = "Index";}
 
 <h1>List of Current Entries</h1>
 
@@ -30,15 +30,14 @@
         @Html.DisplayFor(modelItem => item.Title)
     </td>
     <td>
-        @Html.Raw(item.Description)
+        @Html.Raw((item.Description.Length > 200 ? item.Description.Substring(0, 200) : item.Description))
     </td>
     <td>
-        @Html.DisplayFor(modelItem => item.DateCreated)
+        @item.DateCreated.ToString("dd/MM/yyyy")
     </td>
     <td>
         <a asp-action="Edit" asp-route-id="@item.ContentID">Edit</a> |
-        <a asp-action="Details" asp-route-id="@item.ContentID">Details</a> |
-        <a asp-action="Delete" asp-route-id="@item.ContentID">Delete</a>
+        <a asp-action="Details" asp-route-id="@item.ContentID">Details</a>
     </td>
 </tr>}
     </tbody>
