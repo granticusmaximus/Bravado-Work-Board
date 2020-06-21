@@ -25,11 +25,6 @@ namespace Bravado.Controllers
             _userManager = userManager;
         }
 
-        /// <summary>
-        /// Opens a task
-        /// </summary>
-        /// <param name="id">The id of the task to open</param>
-        /// <returns>A view</returns>
         [HttpGet]
         public async Task<IActionResult> Open([FromRoute] Guid id)
         {
@@ -40,21 +35,12 @@ namespace Bravado.Controllers
             return View(model: new TaskDetails { Task = task, Board = board });
         }
 
-        /// <summary>
-        /// Serves the add task page
-        /// </summary>
-        /// <returns>The view of the add task page</returns>
         [HttpGet]
         public IActionResult Add([FromRoute] Guid id)
         {
             return View(new Models.Task { BoardId = id.ToString() });
         }
 
-        /// <summary>
-        /// Handles the creation of a new task
-        /// </summary>
-        /// <param name="task"> A task construct</param>
-        /// <returns> A new task </returns>
         [HttpPost]
         public async Task<IActionResult> Add([FromForm] Models.Task task)
         {
@@ -66,11 +52,7 @@ namespace Bravado.Controllers
             return RedirectToAction("Open", "Boards", routeValues);
         }
 
-        /// <summary>
-        /// Returns the view to edit the task
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
+
         [HttpGet]
         public async Task<IActionResult> Edit([FromRoute] Guid id)
         {
@@ -78,11 +60,7 @@ namespace Bravado.Controllers
             return View(task);
         }
 
-        /// <summary>
-        /// Returns the updated task and saves the changes
-        /// </summary>
-        /// <param name="taskUpdate">The delta task</param>
-        /// <returns></returns>
+
         [HttpPost]
         public async Task<IActionResult> Edit([FromForm] Models.Task taskUpdate)
         {
@@ -104,11 +82,7 @@ namespace Bravado.Controllers
             return RedirectToAction(nameof(Open), "Tasks", routeValues);
         }
 
-        /// <summary>
-        /// The delete function for tasks
-        /// </summary>
-        /// <param name="id">The id of the task to be deleted</param>
-        /// <returns></returns>
+
         [HttpGet]
         public async Task<IActionResult> Delete([FromRoute] Guid id)
         {

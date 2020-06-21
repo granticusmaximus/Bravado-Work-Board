@@ -29,5 +29,7 @@
     <Folder Include="Services\" />
     <Folder Include="Models\BoardViewModels\" />
     <Folder Include="Models\TaskViewModels\" />
+    <Folder Include="Views\Tasks\" />
+    <Folder Include="Views\Boards\" />
   </ItemGroup>
 </Project>
