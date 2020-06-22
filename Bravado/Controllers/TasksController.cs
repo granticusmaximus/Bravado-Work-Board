@@ -17,12 +17,9 @@ namespace Bravado.Controllers
     {
         private AppDbContext _context;
 
-        private UserManager<ApplicationUser> _userManager;
-
-        public TasksController(AppDbContext context, UserManager<ApplicationUser> userManager)
+        public TasksController(AppDbContext context)
         {
             _context = context;
-            _userManager = userManager;
         }
 
         [HttpGet]

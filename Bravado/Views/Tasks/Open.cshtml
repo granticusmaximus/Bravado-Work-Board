@@ -5,11 +5,12 @@
 @{
     ViewData["Title"] = "Task: " + Model.Task.Title;
 }
+<h1>@ViewData["Title"]</h1>
 <div>
-    <a asp-action=Delete asp-route-id="@Model.Task.Id" class="waves-effect waves-light red btn"> Delete <i class="material-icons">delete</i></a>
+    <a asp-action=Delete asp-route-id="@Model.Task.Id" class="btn btn-danger"> Delete <i class="fa fa-times" aria-hidden="true"></i></a>
 </div>
 <div class="fixed-action-btn">
-    <a asp-action=Edit asp-controller="Tasks" asp-route-id="@Model.Task.Id" class="btn-floating btn-large waves-effect waves-light yellow"><i class="large material-icons">edit</i></a>
+    <a asp-action=Edit asp-controller="Tasks" asp-route-id="@Model.Task.Id" class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
 </div>
 
 <div class="container">
@@ -23,5 +24,5 @@
             <p> @Model.Task.DueDate.ToString() </p>
         </li> -->
     </ul>
-    <a asp-action=Open asp-controller=Boards asp-route-id="@Model.Board.Id" class="btn-large waves-effect center-align"> Return to Board <i class="large material-icons">arrow_back</i></a>
+    <a asp-action=Open asp-controller=Boards asp-route-id="@Model.Board.Id" class="btn-large waves-effect center-align"> Return to Board <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
 </div>

@@ -21,22 +21,17 @@ namespace Bravado.Controllers
     {
         private AppDbContext _context;
 
-        private UserManager<ApplicationUser> _userManager;
 
-        public BoardsController(AppDbContext context, UserManager<ApplicationUser> userManager)
+        public BoardsController(AppDbContext context)
         {
             _context = context;
-            _userManager = userManager;
 
         }
 
         [HttpGet]
         public IActionResult All()
         {
-            var Claims = this.User;
-            ClaimsPrincipal currentUser = this.User;
-            var uId = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
-            var Boards = _context.Boards.Where(board => board.UserId == uId).ToList();
+            var Boards = _context.Boards.ToList();
             return View(Boards);
         }
 
@@ -54,9 +49,7 @@ namespace Bravado.Controllers
         [HttpGet]
         public IActionResult Add()
         {
-            ClaimsPrincipal currentUser = this.User;
-            var uId = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
-            return View(new Board { UserId = uId });
+            return View(new Board());
         }
 
 

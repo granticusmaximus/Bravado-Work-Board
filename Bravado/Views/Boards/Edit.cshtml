@@ -1,4 +1,4 @@
-﻿@using Bravado.Mumba.Models
+﻿@using Bravado.Models
 @model Bravado.Models.Board
 @{
     ViewData["Title"] = "Edit Board";
@@ -9,7 +9,7 @@
         <input asp-for="Title" placeholder="Title" Model.Title required>
         <input hidden asp-for="Id" Model.Id>
         <button asp-route-id="Model.Id" class="btn center-align" type="submit">
-            Update <i class="material-icons right">send</i>
+            Update <i class="fa fa-cog" aria-hidden="true"></i>
         </button>
     </form>
 </div>

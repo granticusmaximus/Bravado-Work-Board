@@ -1,9 +1,11 @@
 ﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Bravado.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Views/Boards/Open.cshtml">
     <Files>
-      <File FileName="Bravado/Views/Boards/Open.cshtml" Line="9" Column="16" />
-      <File FileName="Bravado/Views/Shared/_Layout.cshtml" Line="40" Column="19" />
-      <File FileName="Bravado/Bravado.csproj" Line="36" Column="1" />
+      <File FileName="Bravado/wwwroot/css/site.css" Line="20" Column="1" />
+      <File FileName="Bravado/Views/Tasks/Edit.cshtml" Line="16" Column="13" />
+      <File FileName="Bravado/Views/Tasks/Add.cshtml" Line="23" Column="15" />
+      <File FileName="Bravado/Views/Boards/Open.cshtml" Line="28" Column="24" />
+      <File FileName="Bravado/wwwroot/css/materialize.css" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,16 +13,15 @@
           <Node name="Bravado" expanded="True">
             <Node name="Bravado" expanded="True">
               <Node name="Dependencies" expanded="True" />
-              <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True" />
-              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Boards" expanded="True" />
-                <Node name="Shared" expanded="True">
-                  <Node name="_Layout.cshtml" selected="True" />
+                <Node name="Boards" expanded="True">
+                  <Node name="Open.cshtml" selected="True" />
                 </Node>
+                <Node name="Entry" expanded="True" />
               </Node>
-              <Node name="wwwroot" expanded="True" />
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>

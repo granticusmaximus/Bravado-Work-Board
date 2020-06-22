@@ -6,32 +6,28 @@
 @model IEnumerable<Board>
 
 <div class="fixed-action-btn">
-    <a asp-action=Add asp-controller="Boards" class="btn-floating btn-large waves-effect waves-light red">
-        <i class="large material-icons">add</i>
+    <a asp-action=Add asp-controller="Boards" class="btn btn-warning">
+        Add New Board <i class="fa fa-plus" aria-hidden="true"></i>
     </a>
 </div>
-
+<hr />
 <div class="container">
     <div class="row">
-        @foreach (var board in Model)
-        {
+        <div class="col-md-4">
+            @foreach (var board in Model)
+            {
+                <div class="card text-center">
 
-            <div class="col s12 m6 l3">
-                <div class="card stickey-action blue-grey darken-1 hoverable activation">
-                    <div class="card-content white-text">
-                        <span class="card-title center-align">@board.Title</span>
+                    <div class="card-body">
+                        <span class="card-title">@board.Title</span>
                     </div>
-
-                    <div class="card-reveal">
-                        <span class="card-title white-text text-darken-4 center-align">@board.Title<i class="material-icons right">close</i></span>
-                    </div>
-                    <div class="card-action">
-                        <a asp-action="Open" asp-route-id="@board.Id">Open</a>
+                    <div class="card-footer">
+                        <a asp-action="Open" class="btn btn-primary" asp-route-id="@board.Id">Open <i class="fa fa-envelope-open-o" aria-hidden="true"></i></a>
                     </div>
                 </div>
-            </div>
 
-        }
+            }
+        </div>
     </div>
 
 </div>
