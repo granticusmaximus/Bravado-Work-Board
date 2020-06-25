@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Bravado.Controllers
 {
+    [Authorize]
     public class EntryController : Controller
     {
         private readonly AppDbContext _context;
