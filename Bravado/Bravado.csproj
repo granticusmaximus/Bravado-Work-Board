@@ -33,5 +33,6 @@
     <Folder Include="Views\Boards\" />
     <Folder Include="Models\Services\" />
     <Folder Include="Models\Agile\" />
+    <Folder Include="Views\ServiceEntity\" />
   </ItemGroup>
 </Project>

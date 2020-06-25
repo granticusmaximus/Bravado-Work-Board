@@ -20601,6 +20601,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Views/ServiceEntity/Index.cshtml",
+      "TargetPath": "Views\\ServiceEntity\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Areas/Identity/Pages/_ViewImports.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"

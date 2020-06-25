@@ -398,6 +398,7 @@
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Entry/Index.cshtml.g.cs
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Home/Privacy.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/ServiceEntity/Index.cshtml.g.cs
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_LoginPartial.cshtml.g.cs
@@ -416,4 +417,3 @@
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Bravado.dll
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Bravado.pdb
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Bravado.genruntimeconfig.cache
-/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Bravado.csprojAssemblyReference.cache

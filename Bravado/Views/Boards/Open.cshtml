@@ -2,10 +2,11 @@
 @using System.Collections.Generic
 @model BoardView
 
-
 @{
     ViewData["Title"] = $"{Model.Board.Title}";
 }
+
+
 <div class=row>
     <div>
         <a asp-action=Edit asp-route-id="@Model.Board.Id" class="btn btn-warning"> Edit <i class="fa fa-cog" aria-hidden="true"></i></a> |
@@ -25,17 +26,17 @@
         </li>
         @foreach (var task in Model.TaskL1)
         {
-            <li class="collection-item">
+            <li class="collection-item ">
                 <div class="card hoverable blue-grey">
                     <div class="card-content white-text activator">
                         <span class="card-title center-align"> @task.Title </span>
                         <br>
-                        <br>
-                        <br>
-                        <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">
-                            open
-                            <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
-                        </a>
+                        <center>
+                            <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">
+                                open
+                                <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+                            </a>
+                        </center>
                     </div>
                     <div class="card-reveal blue-grey white-text">
                         <span class="card-title white-text text-darken-4 center-align">@task.Title<i class="fa fa-times" aria-hidden="true"></i></span>
@@ -46,11 +47,9 @@
                         </a>
                     </div>
                 </div>
-
             </li>
         }
     </ul>
-
     <ul class="collection with-header col s12 m4 l4">
         <li class="collection-header center">
             <h4>In Progress</h4>
@@ -62,12 +61,12 @@
                     <div class="card-content white-text activator">
                         <span class="card-title center-align"> @task.Title </span>
                         <br>
-                        <br>
-                        <br>
-                        <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">
-                            open
-                            <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
-                        </a>
+                        <center>
+                            <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">
+                                open
+                                <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+                            </a>
+                        </center>
                     </div>
                     <div class="card-reveal blue-grey white-text">
                         <span class="card-title white-text text-darken-4 center-align">@task.Title<i class="fa fa-times" aria-hidden="true"></i></span>
@@ -78,11 +77,9 @@
                         </a>
                     </div>
                 </div>
-
             </li>
         }
     </ul>
-
     <ul class="collection with-header col s12 m4 l4">
         <li class="collection-header center">
             <h4>Done</h4>
@@ -94,12 +91,12 @@
                     <div class="card-content white-text activator">
                         <span class="card-title center-align"> @task.Title </span>
                         <br>
-                        <br>
-                        <br>
-                        <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">
-                            open
-                            <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
-                        </a>
+                        <center>
+                            <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">
+                                open
+                                <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+                            </a>
+                        </center>
                     </div>
                     <div class="card-reveal blue-grey white-text">
                         <span class="card-title white-text text-darken-4 center-align">@task.Title<i class="fa fa-times" aria-hidden="true"></i></span>
@@ -110,8 +107,8 @@
                         </a>
                     </div>
                 </div>
-
             </li>
         }
     </ul>
 </div>
+

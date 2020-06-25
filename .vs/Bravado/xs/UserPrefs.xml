@@ -1,7 +1,12 @@
 ﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Data/ApplicationDbContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Properties/launchSettings.json">
     <Files>
-      <File FileName="Bravado/Data/ApplicationDbContext.cs" Line="18" Column="1" />
+      <File FileName="Bravado/Views/Boards/Open.cshtml" Line="8" Column="1" />
+      <File FileName="Bravado/wwwroot/css/site.css" Line="4" Column="1" />
+      <File FileName="Bravado/Areas/Identity/Pages/Error.cshtml" Line="22" Column="265" />
+      <File FileName="Bravado/Views/Boards/Error.cshtml" Line="22" Column="265" />
+      <File FileName="Bravado/Views/Shared/Error.cshtml" Line="23" Column="101" />
+      <File FileName="Bravado/Properties/launchSettings.json" Line="15" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -9,11 +14,17 @@
           <Node name="Bravado" expanded="True">
             <Node name="Bravado" expanded="True">
               <Node name="Dependencies" expanded="True" />
-              <Node name="Data" expanded="True">
-                <Node name="ApplicationDbContext.cs" selected="True" />
+              <Node name="Areas" expanded="True">
+                <Node name="Identity" expanded="True">
+                  <Node name="Pages" expanded="True" />
+                </Node>
               </Node>
-              <Node name="Models" expanded="True">
-                <Node name="Services" expanded="True" />
+              <Node name="Properties" expanded="True">
+                <Node name="launchSettings.json" selected="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Boards" expanded="True" />
+                <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True" />

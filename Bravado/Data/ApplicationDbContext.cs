@@ -21,11 +21,7 @@ namespace Bravado.Data
         #endregion
 
         #region SERVICE DBSETS
-        public DbSet<BrandService> Brand { get; set; }
-        public DbSet<DevelopmemtService> Development { get; set; }
-        public DbSet<EmailService> EmailServices { get; set; }
-        public DbSet<HostService> Host { get; set; }
-        public DbSet<SeoService> SEO { get; set; }
+        public DbSet<ServiceEntity> ServiceEntity { get; set; }
         #endregion
     }
 }
