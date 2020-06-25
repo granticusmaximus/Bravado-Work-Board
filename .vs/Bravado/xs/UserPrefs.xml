@@ -1,11 +1,7 @@
 ﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/wwwroot/css/site.css">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Data/ApplicationDbContext.cs">
     <Files>
-      <File FileName="Bravado/wwwroot/css/site.css" Line="9382" Column="1" />
-      <File FileName="Bravado/Views/Tasks/Edit.cshtml" Line="16" Column="13" />
-      <File FileName="Bravado/Views/Tasks/Add.cshtml" Line="23" Column="15" />
-      <File FileName="Bravado/Views/Boards/Open.cshtml" Line="35" Column="100" />
-      <File FileName="Bravado/wwwroot/css/materialize.css" Line="5718" Column="19" />
+      <File FileName="Bravado/Data/ApplicationDbContext.cs" Line="18" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,21 +9,18 @@
           <Node name="Bravado" expanded="True">
             <Node name="Bravado" expanded="True">
               <Node name="Dependencies" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Boards" expanded="True" />
-                <Node name="Entry" expanded="True" />
+              <Node name="Data" expanded="True">
+                <Node name="ApplicationDbContext.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True">
+                <Node name="Services" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True">
-                  <Node name="site.css" selected="True" />
-                </Node>
+                <Node name="css" expanded="True" />
               </Node>
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

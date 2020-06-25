@@ -31,5 +31,7 @@
     <Folder Include="Models\TaskViewModels\" />
     <Folder Include="Views\Tasks\" />
     <Folder Include="Views\Boards\" />
+    <Folder Include="Models\Services\" />
+    <Folder Include="Models\Agile\" />
   </ItemGroup>
 </Project>
