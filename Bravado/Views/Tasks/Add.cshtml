@@ -21,6 +21,11 @@
                 <option value="3">Done</option>
             </select>
         </div>
+        <label asp-for="Priority" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            @*<select asp-for="Priority" asp-items="Html.GetEnumSelectList<PriorityTypes>()"></select>*@
+            <span asp-validation-for="Priority" class="text-danger" />
+        </div>
         <button asp-route-id="Model.BoardId" class="btn center-align" type="submit">
             Create <i class="fa fa-paper-plane" aria-hidden="true"></i>
         </button>

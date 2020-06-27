@@ -9,16 +9,13 @@
 
 <div class=row>
     <div>
-        <a asp-action=Edit asp-route-id="@Model.Board.Id" class="btn btn-warning"> Edit <i class="fa fa-cog" aria-hidden="true"></i></a> |
-        <a asp-action=Delete asp-route-id="@Model.Board.Id" class="btn btn-danger"> Delete <i class="fa fa-times" aria-hidden="true"></i></a>
+        <a asp-action=Add asp-controller="Tasks" asp-route-id="@Model.Board.Id" class="btn btn-success">New Task <i class="fa fa-plus" aria-hidden="true"></i></a> |
+        <a asp-action=Edit asp-route-id="@Model.Board.Id" class="btn btn-warning"> Edit Board <i class="fa fa-cog" aria-hidden="true"></i></a> |
+        <a asp-action=Delete asp-route-id="@Model.Board.Id" class="btn btn-danger"> Delete Board <i class="fa fa-times" aria-hidden="true"></i></a>
+
     </div>
 </div>
 <hr />
-<div class="fixed-action-btn">
-    <a asp-action=Add asp-controller="Tasks" asp-route-id="@Model.Board.Id" class="btn btn-success">
-        New Task <i class="fa fa-plus" aria-hidden="true"></i>
-    </a>
-</div>
 <div class="row">
     <ul class="collection with-header col s12 m4 l4">
         <li class="collection-header center">
@@ -111,4 +108,5 @@
         }
     </ul>
 </div>
-
+<br />
+<hr />

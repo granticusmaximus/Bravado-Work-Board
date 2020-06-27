@@ -22,6 +22,7 @@ for details on configuring this project to bundle and minify static web assets. 
     margin-right: 5px;
 }
 
+
 a.navbar-brand {
     white-space: normal;
     text-align: center;
@@ -4685,9 +4686,6 @@ nav ul {
                 line-height: inherit;
             }
 
-        nav ul a:hover {
-            background-color: rgba(0, 0, 0, 0.1);
-        }
 
     nav ul.left {
         float: left;

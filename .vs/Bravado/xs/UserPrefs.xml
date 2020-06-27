@@ -1,14 +1,10 @@
 ﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Controllers/EntryController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Views/Tasks/Add.cshtml">
     <Files>
-      <File FileName="Bravado/Views/Boards/Open.cshtml" Line="8" Column="1" />
-      <File FileName="Bravado/wwwroot/css/site.css" Line="4" Column="1" />
-      <File FileName="Bravado/Areas/Identity/Pages/Error.cshtml" Line="22" Column="265" />
-      <File FileName="Bravado/Views/Boards/Error.cshtml" Line="22" Column="265" />
-      <File FileName="Bravado/Views/Shared/Error.cshtml" Line="23" Column="101" />
-      <File FileName="Bravado/Properties/launchSettings.json" Line="15" Column="10" />
-      <File FileName="Bravado/Controllers/TasksController.cs" Line="1" Column="1" />
-      <File FileName="Bravado/Controllers/EntryController.cs" Line="11" Column="15" />
+      <File FileName="Bravado/wwwroot/css/site.css" Line="4671" Column="22" />
+      <File FileName="Bravado/Views/Boards/Open.cshtml" Line="13" Column="95" />
+      <File FileName="Bravado/Models/Agile/Task.cs" Line="21" Column="43" />
+      <File FileName="Bravado/Views/Tasks/Add.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,18 +12,14 @@
           <Node name="Bravado" expanded="True">
             <Node name="Bravado" expanded="True">
               <Node name="Dependencies" expanded="True" />
-              <Node name="Areas" expanded="True">
-                <Node name="Identity" expanded="True">
-                  <Node name="Pages" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="Controllers" expanded="True">
-                <Node name="EntryController.cs" selected="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Agile" expanded="True" />
               </Node>
               <Node name="Properties" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Boards" expanded="True" />
-                <Node name="Shared" expanded="True" />
+                <Node name="Tasks" expanded="True">
+                  <Node name="Add.cshtml" selected="True" />
+                </Node>
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True" />
