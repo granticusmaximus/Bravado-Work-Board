@@ -8,18 +8,35 @@
 <div class="container">
     <form method="post">
         <div class="row">
-            <input asp-for="Title" placeholder="Title" Model.Title required>
-            <input hidden asp-for="Id" Model.Id>
-            <input hidden asp-for="BoardId" Model.BoardId>
+            <div class="col-md-12">
+                <input asp-for="Title" placeholder="Title" Model.Title required>
+                <input hidden asp-for="Id" Model.Id>
+                <input hidden asp-for="BoardId" Model.BoardId>
+            </div>
         </div>
         <div class="row">
-            <textarea class="textarea" asp-for="Description" Model.Description></textarea>
-            <select class="browser-default" asp-for="ListNum" required Model.ListNum>
-                <option value="" disabled>Choose the starting list for this task</option>
-                <option value="1">To Do</option>
-                <option value="2">In Progress</option>
-                <option value="3">Done</option>
-            </select>
+            <div class="col-md-12">
+                <textarea class="textarea" asp-for="Description" Model.Description></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label class="col-md-2 control-label">Board</label>
+                <select class="browser-default" asp-for="ListNum" required Model.ListNum>
+                    <option value="" disabled>Choose the starting list for this task</option>
+                    <option value="1">To Do</option>
+                    <option value="2">In Progress</option>
+                    <option value="3">Done</option>
+                </select>
+            </div>
+            <label asp-for="Priority" class="col-md-2 control-label"></label>
+            <div class="col-md-7">
+                <select class="browser-default" asp-for="Priority" asp-items="Html.GetEnumSelectList<PriorityTypes>()" Model.Priority></select>
+            </div>
+        </div>
+        <div class="row">
+            <h2>Date Task Opened</h2><br />
+            <input asp-for="DateOpened" class="form-control" id="datepicker" required Model.DateOpened />
         </div>
         <button asp-route-id="Model.BoardId" class="btn center-align" type="submit">
             Update <i class="fa fa-cog" aria-hidden="true"></i>

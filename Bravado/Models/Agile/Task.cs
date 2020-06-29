@@ -20,13 +20,12 @@ namespace Bravado.Models
 
         [EnumDataType(typeof(PriorityTypes))]
         public PriorityTypes Priority { get; set; }
+    }
 
-        public enum PriorityTypes
-        {
-            Low,
-            Medium,
-            High
-        }
-
+    public enum PriorityTypes
+    {
+        Low,
+        Medium,
+        High
     }
 }
