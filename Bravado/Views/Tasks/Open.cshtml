@@ -19,7 +19,13 @@
             <hr />
             <span class="title"><h3>Priority</h3></span>
             <p> @Html.Raw(Model.Task.Priority)</p>
+            <p> @Html.Raw(Model.Task.Priority)</p>
+            <span class="title">
+                <h3>Date Task Opened</h3>
+            </span>
+            <p>@Html.Raw(Model.Task.DateOpened)</p>
         </li>
+
         <!-- <li class="collection-item avatar">
             <span class="title"><h3>Due Date</h3></span>
             <p> @Model.Task.DueDate.ToString() </p>

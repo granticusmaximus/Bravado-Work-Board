@@ -338,7 +338,6 @@
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
-/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Bravado.csprojAssemblyReference.cache
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Bravado.AssemblyInfoInputs.cache
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Bravado.AssemblyInfo.cs
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Bravado.csproj.CoreCompileInputs.cache

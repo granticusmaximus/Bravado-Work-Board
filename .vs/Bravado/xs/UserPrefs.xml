@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Views/Tasks/Edit.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Views/Tasks/Open.cshtml">
     <Files>
       <File FileName="Bravado/wwwroot/css/site.css" Line="32" Column="12" />
-      <File FileName="Bravado/Views/Tasks/Add.cshtml" Line="49" Column="12" />
-      <File FileName="Bravado/Views/Tasks/Edit.cshtml" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Bravado/Views/Tasks/Add.cshtml" Line="25" Column="88" />
+      <File FileName="Bravado/Views/Tasks/Edit.cshtml" Line="37" Column="9" />
+      <File FileName="Bravado/Views/Tasks/Open.cshtml" Line="22" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,7 +19,7 @@
                 <Node name="Boards" expanded="True" />
                 <Node name="Entry" expanded="True" />
                 <Node name="Tasks" expanded="True">
-                  <Node name="Edit.cshtml" selected="True" />
+                  <Node name="Open.cshtml" selected="True" />
                 </Node>
               </Node>
               <Node name="wwwroot" expanded="True">
