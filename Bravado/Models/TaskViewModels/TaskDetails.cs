@@ -1,4 +1,6 @@
-﻿namespace Bravado.Models.TaskViewModels
+﻿using Bravado.Models.Agile;
+
+namespace Bravado.Models.TaskViewModels
 {
     /// <summary>
     /// Models the detailed view of a task

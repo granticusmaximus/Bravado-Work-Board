@@ -34,5 +34,7 @@
     <Folder Include="Models\Services\" />
     <Folder Include="Models\Agile\" />
     <Folder Include="Views\ServiceEntity\" />
+    <Folder Include="Controllers\Api\" />
+    <Folder Include="ViewModel\" />
   </ItemGroup>
 </Project>

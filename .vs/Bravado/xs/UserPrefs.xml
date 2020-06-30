@@ -1,29 +1,19 @@
 ﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Views/Boards/Open.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/ViewModel/BoardList.cs">
     <Files>
-      <File FileName="Bravado/wwwroot/css/site.css" Line="32" Column="12" />
-      <File FileName="Bravado/Views/Shared/_Layout.cshtml" Line="88" Column="21" />
-      <File FileName="Bravado/Views/Boards/Open.cshtml" Line="25" Column="10" />
+      <File FileName="Bravado/ViewModel/NewBoard.cs" Line="8" Column="2" />
+      <File FileName="Bravado/ViewModel/CardDetails.cs" Line="3" Column="1" />
+      <File FileName="Bravado/ViewModel/BoardView.cs" Line="2" Column="1" />
+      <File FileName="Bravado/ViewModel/AddCard.cs" Line="2" Column="1" />
+      <File FileName="Bravado/ViewModel/BoardList.cs" Line="1" Column="20" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Bravado" expanded="True">
             <Node name="Bravado" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="Agile" expanded="True" />
-              </Node>
-              <Node name="Views" expanded="True">
-                <Node name="Boards" expanded="True">
-                  <Node name="Open.cshtml" selected="True" />
-                </Node>
-                <Node name="Entry" expanded="True" />
-                <Node name="Shared" expanded="True" />
-                <Node name="Tasks" expanded="True" />
-              </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
+              <Node name="ViewModel" expanded="True">
+                <Node name="BoardList.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -33,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Bravado PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.Bravado PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

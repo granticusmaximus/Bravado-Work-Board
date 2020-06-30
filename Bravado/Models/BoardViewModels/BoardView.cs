@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Bravado.Models.Agile;
 
 namespace Bravado.Models.BoardViewModels
 {

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Bravado.Data;
+using Bravado.Models.Agile;
 using Bravado.Models;
 using Bravado.Models.BoardViewModels;
 using Microsoft.AspNetCore.Authorization;
