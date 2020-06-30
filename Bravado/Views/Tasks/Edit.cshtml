@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <label class="col-md-2 control-label">Board</label>
                 <select class="browser-default" asp-for="ListNum" required Model.ListNum>
                     <option value="" disabled>Choose the starting list for this task</option>
@@ -29,21 +29,22 @@
                     <option value="3">Done</option>
                 </select>
             </div>
-            <label asp-for="Priority" class="col-md-2 control-label"></label>
             <div class="col-md-7">
+                <label asp-for="Priority" class="col-md-2 control-label"></label>
                 <select class="browser-default" asp-for="Priority" asp-items="Html.GetEnumSelectList<PriorityTypes>()" Model.Priority></select>
             </div>
         </div>
         <div class="row">
             <h2>Date Task Opened</h2><br />
-            @Html.DisplayFor(model => model.DateOpened)
+            <label asp-for="DateOpened" class="col-md-2 control-label"></label>
         </div>
-        <button asp-route-id="Model.BoardId" class="btn center-align" type="submit">
+        <button asp-route-id="Model.BoardId" class="btn btn-warning" type="submit">
             Update <i class="fa fa-cog" aria-hidden="true"></i>
         </button>
     </form>
 </div>
-
+<br />
+<br />
 
 <script>$(document).ready(function () {
         M.updateTextFields();
