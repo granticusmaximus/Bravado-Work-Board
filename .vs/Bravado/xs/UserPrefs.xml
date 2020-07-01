@@ -5,16 +5,14 @@
       <File FileName="Bravado/ViewModel/CardDetails.cs" Line="3" Column="1" />
       <File FileName="Bravado/ViewModel/BoardView.cs" Line="2" Column="1" />
       <File FileName="Bravado/ViewModel/AddCard.cs" Line="2" Column="1" />
-      <File FileName="Bravado/ViewModel/BoardList.cs" Line="1" Column="20" />
+      <File FileName="Bravado/ViewModel/BoardList.cs" Line="14" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Bravado" expanded="True">
             <Node name="Bravado" expanded="True">
-              <Node name="ViewModel" expanded="True">
-                <Node name="BoardList.cs" selected="True" />
-              </Node>
+              <Node name="Services" expanded="True" />
             </Node>
           </Node>
         </State>
