@@ -1,18 +1,23 @@
 ﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/ViewModel/BoardList.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Services/BoardService.cs">
     <Files>
-      <File FileName="Bravado/ViewModel/NewBoard.cs" Line="8" Column="2" />
-      <File FileName="Bravado/ViewModel/CardDetails.cs" Line="3" Column="1" />
-      <File FileName="Bravado/ViewModel/BoardView.cs" Line="2" Column="1" />
-      <File FileName="Bravado/ViewModel/AddCard.cs" Line="2" Column="1" />
-      <File FileName="Bravado/ViewModel/BoardList.cs" Line="14" Column="2" />
+      <File FileName="Bravado/Services/ColumnService.cs" Line="2" Column="1" />
+      <File FileName="Bravado/Data/ApplicationDbContext.cs" />
+      <File FileName="Bravado/Services/BoardService.cs" Line="11" Column="38" />
+      <File FileName="Bravado/Services/CardService.cs" Line="73" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Bravado" expanded="True">
             <Node name="Bravado" expanded="True">
-              <Node name="Services" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Agile" expanded="True" />
+              </Node>
+              <Node name="Services" expanded="True">
+                <Node name="BoardService.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
