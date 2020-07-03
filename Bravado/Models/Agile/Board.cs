@@ -12,7 +12,7 @@ namespace Bravado.Models
     /// </summary>
     public class Board
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public int Id { get; set; }
 
         public string Title { get; set; }

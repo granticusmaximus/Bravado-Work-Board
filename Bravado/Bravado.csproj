@@ -29,12 +29,14 @@
     <Folder Include="Services\" />
     <Folder Include="Models\BoardViewModels\" />
     <Folder Include="Models\TaskViewModels\" />
-    <Folder Include="Views\Tasks\" />
-    <Folder Include="Views\Boards\" />
     <Folder Include="Models\Services\" />
     <Folder Include="Models\Agile\" />
     <Folder Include="Views\ServiceEntity\" />
     <Folder Include="Controllers\Api\" />
     <Folder Include="ViewModel\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Views\Board\" />
+    <Folder Include="Views\Card\" />
   </ItemGroup>
 </Project>

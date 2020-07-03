@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Bravado.Migrations
 {
-    public partial class ServiceEntityCreation : Migration
+    public partial class EntityCreation : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -53,7 +53,8 @@ namespace Bravado.Migrations
                 name: "Boards",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -86,7 +87,9 @@ namespace Bravado.Migrations
                     Title = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
                     DueDate = table.Column<DateTime>(nullable: false),
-                    Open = table.Column<bool>(nullable: false)
+                    DateOpened = table.Column<DateTime>(nullable: false),
+                    Open = table.Column<bool>(nullable: false),
+                    Priority = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -221,6 +224,47 @@ namespace Bravado.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Columns",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(nullable: true),
+                    BoardId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Columns", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Columns_Boards_BoardId",
+                        column: x => x.BoardId,
+                        principalTable: "Boards",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Cards",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Contents = table.Column<string>(nullable: false),
+                    Notes = table.Column<string>(nullable: true),
+                    ColumnId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Cards", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Cards_Columns_ColumnId",
+                        column: x => x.ColumnId,
+                        principalTable: "Columns",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -261,6 +305,16 @@ namespace Bravado.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Cards_ColumnId",
+                table: "Cards",
+                column: "ColumnId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Columns_BoardId",
+                table: "Columns",
+                column: "BoardId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Entry_AppUserId",
                 table: "Entry",
                 column: "AppUserId");
@@ -284,7 +338,7 @@ namespace Bravado.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Boards");
+                name: "Cards");
 
             migrationBuilder.DropTable(
                 name: "Entry");
@@ -299,7 +353,13 @@ namespace Bravado.Migrations
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
+                name: "Columns");
+
+            migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Boards");
         }
     }
 }

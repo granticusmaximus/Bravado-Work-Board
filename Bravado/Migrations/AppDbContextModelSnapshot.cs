@@ -53,24 +53,22 @@ namespace Bravado.Migrations
                     b.Property<int>("BoardId")
                         .HasColumnType("int");
 
-                    b.Property<Guid?>("BoardId1")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BoardId1");
+                    b.HasIndex("BoardId");
 
                     b.ToTable("Columns");
                 });
 
             modelBuilder.Entity("Bravado.Models.Board", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
@@ -394,7 +392,9 @@ namespace Bravado.Migrations
                 {
                     b.HasOne("Bravado.Models.Board", null)
                         .WithMany("Columns")
-                        .HasForeignKey("BoardId1");
+                        .HasForeignKey("BoardId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Bravado.Models.Entry", b =>
