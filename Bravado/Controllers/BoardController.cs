@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Bravado.Services;
+﻿using Bravado.Services;
 using Bravado.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,6 +13,13 @@ namespace Bravado.Controllers
         public BoardController(BoardService boardService)
         {
             _boardService = boardService;
+        }
+
+        public IActionResult Home()
+        {
+            var model = _boardService.ListBoard();
+
+            return View(model);
         }
 
         public IActionResult Index(int id)
@@ -42,6 +45,20 @@ namespace Bravado.Controllers
             if (!ModelState.IsValid) return View(viewModel);
             _boardService.AddCard(viewModel);
             return RedirectToAction(nameof(Index), new { id = viewModel.Id });
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(NewBoard viewModel)
+        {
+            _boardService.AddBoard(viewModel);
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }

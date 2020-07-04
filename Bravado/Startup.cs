@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Bravado.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Bravado
 {
@@ -27,12 +28,14 @@ namespace Bravado
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<AppDbContext>();
-            services.AddControllersWithViews();
+            services.AddControllersWithViews(options =>
+            {
+                options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+            });
             services.AddRazorPages();
 
-            // requires
-            // using Microsoft.AspNetCore.Identity.UI.Services;
-            // using Bravado.Services;
+            services.AddScoped<BoardService>();
+            services.AddScoped<CardService>();
             services.AddTransient<IEmailSender, EmailSender>();
             services.Configure<AuthMessageSenderOptions>(Configuration);
         }

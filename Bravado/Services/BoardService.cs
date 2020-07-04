@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using Bravado.Data;
-using Bravado.Models.Agile;
 using Bravado.ViewModel;
 
 namespace Bravado.Services
@@ -82,15 +81,15 @@ namespace Bravado.Services
 
                 if (firstColumn == null || secondColumn == null || thirdColumn == null)
                 {
-                    firstColumn = new Column { Title = "Todo" };
-                    secondColumn = new Column { Title = "Doing" };
-                    thirdColumn = new Column { Title = "Done" };
+                    firstColumn = new Models.Agile.Column { Title = "Todo" };
+                    secondColumn = new Models.Agile.Column { Title = "Doing" };
+                    thirdColumn = new Models.Agile.Column { Title = "Done" };
                     board.Columns.Add(firstColumn);
                     board.Columns.Add(secondColumn);
                     board.Columns.Add(thirdColumn);
                 }
 
-                firstColumn.Cards.Add(new Card
+                firstColumn.Cards.Add(new Models.Agile.Card
                 {
                     Contents = viewModel.Contents
                 });

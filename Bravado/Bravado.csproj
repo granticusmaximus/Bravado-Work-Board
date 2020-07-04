@@ -38,5 +38,6 @@
     <Folder Include="Interfaces\" />
     <Folder Include="Views\Board\" />
     <Folder Include="Views\Card\" />
+    <Folder Include="Data\Config\" />
   </ItemGroup>
 </Project>
