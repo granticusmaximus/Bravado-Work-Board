@@ -27,8 +27,6 @@
   <ItemGroup>
     <Folder Include="Migrations\" />
     <Folder Include="Services\" />
-    <Folder Include="Models\BoardViewModels\" />
-    <Folder Include="Models\TaskViewModels\" />
     <Folder Include="Models\Services\" />
     <Folder Include="Models\Agile\" />
     <Folder Include="Views\ServiceEntity\" />
