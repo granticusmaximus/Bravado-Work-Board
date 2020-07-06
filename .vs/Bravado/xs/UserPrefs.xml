@@ -1,24 +1,59 @@
 ﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Controllers/BoardController.cs">
-    <Files>
-      <File FileName="Bravado/Startup.cs" Line="67" Column="37" />
-      <File FileName="Bravado/Models/ApplicationUser.cs" Line="8" Column="48" />
-      <File FileName="Bravado/Views/Board/Home.cshtml" Line="9" Column="53" />
-      <File FileName="Bravado/Controllers/BoardController.cs" Line="1" Column="1" />
-      <File FileName="Bravado/Views/Board/Create.cshtml" Line="8" Column="66" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Bravado" expanded="True">
             <Node name="Bravado" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="BoardController.cs" selected="True" />
+              <Node name="Areas" expanded="True">
+                <Node name="Identity" expanded="True">
+                  <Node name="Pages" expanded="True">
+                    <Node name="Account" expanded="True">
+                      <Node name="Manage" expanded="True">
+                        <Node name="ChangePassword.cshtml" expanded="True" />
+                        <Node name="DeletePersonalData.cshtml" expanded="True" />
+                        <Node name="Disable2fa.cshtml" expanded="True" />
+                        <Node name="DownloadPersonalData.cshtml" expanded="True" />
+                        <Node name="Email.cshtml" expanded="True" />
+                        <Node name="EnableAuthenticator.cshtml" expanded="True" />
+                        <Node name="ExternalLogins.cshtml" expanded="True" />
+                        <Node name="GenerateRecoveryCodes.cshtml" expanded="True" />
+                        <Node name="Index.cshtml" expanded="True" />
+                        <Node name="PersonalData.cshtml" expanded="True" />
+                        <Node name="ResetAuthenticator.cshtml" expanded="True" />
+                        <Node name="SetPassword.cshtml" expanded="True" />
+                        <Node name="TwoFactorAuthentication.cshtml" expanded="True">
+                          <Node name="TwoFactorAuthentication.cshtml.cs" selected="True" />
+                        </Node>
+                      </Node>
+                      <Node name="ConfirmEmail.cshtml" expanded="True" />
+                      <Node name="ConfirmEmailChange.cshtml" expanded="True" />
+                      <Node name="ExternalLogin.cshtml" expanded="True" />
+                      <Node name="ForgotPassword.cshtml" expanded="True" />
+                      <Node name="Login.cshtml" expanded="True" />
+                      <Node name="LoginWith2fa.cshtml" expanded="True" />
+                      <Node name="LoginWithRecoveryCode.cshtml" expanded="True" />
+                      <Node name="Logout.cshtml" expanded="True" />
+                      <Node name="Register.cshtml" expanded="True" />
+                      <Node name="RegisterConfirmation.cshtml" expanded="True" />
+                      <Node name="ResendEmailConfirmation.cshtml" expanded="True" />
+                      <Node name="ResetPassword.cshtml" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
               </Node>
-              <Node name="Data" expanded="True" />
-              <Node name="Migrations" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True">
+                <Node name="Config" expanded="True" />
+              </Node>
+              <Node name="Migrations" expanded="True">
+                <Node name="20200703204514_EntityCreation.cs" expanded="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
               <Node name="ViewModel" expanded="True" />
-              <Node name="Views" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Shared" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
