@@ -8,6 +8,7 @@ namespace Bravado.ViewModel
 
         [Required]
         public string Contents { get; set; }
+        public string Notes { get; set; }
     }
 }
 

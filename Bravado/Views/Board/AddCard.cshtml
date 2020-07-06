@@ -10,6 +10,11 @@
             <div asp-validation-summary="All" class="text-danger"></div>
             <label asp-for="Contents"></label>
             <input type="text" asp-for="Contents" />
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea placeholder="Notes" asp-for="Notes" class="textarea"></textarea>
+                </div>
+            </div>
             <button type="submit" class="btn"><i class="fa fa-plus-circle"></i> Add Card</button>
         </form>
     </div>
