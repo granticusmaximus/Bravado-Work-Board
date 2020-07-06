@@ -1,4 +1,4 @@
-@model Bravado.ViewModel.BoardView
+﻿@model Bravado.ViewModel.BoardView
 
 @{
     ViewData["Title"] = "Index";
@@ -55,6 +55,7 @@
                asp-action="AddCard"
                asp-route-id="@Model.Id"
                class="wave-effect waves-light btn">
+                <i class="fa fa-plus-circle"></i>
                 Add A Card
             </a>
         </div>

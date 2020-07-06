@@ -6,7 +6,9 @@
 <div class="container">
     <div class="row">
         <h2>Boards</h2>
+        <hr />
         <a asp-action="Create" asp-controller="Board" class="waves-effect waves-light btn">
+            <i class="fa fa-plus-circle"></i>
             Add New Board
         </a>
 
@@ -15,19 +17,17 @@
     <div class="row">
         @foreach (var board in Model.Boards)
         {
-            <div class="card s12">
-                <div style="float: left; margin-right: 2em; width: 22em;">
-                    <div class="card blue-grey darken-1">
-                        <div class="card-content white-text">
-                            <span class="card-title">
-                                @board.Title
-                            </span>
-                        </div>
-                        <div class="card-action">
-                            <a asp-action="Index" asp-controller="Board"
-                               asp-route-id="@board.Id"
-                               class="collction-item">View</a>
-                        </div>
+            <div style="float: left; margin-right: 2em; width: 22em;">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">
+                            @board.Title
+                        </span>
+                    </div>
+                    <div class="card-action">
+                        <a asp-action="Index" asp-controller="Board"
+                           asp-route-id="@board.Id"
+                           class="collction-item"><i class="fa fa-paper-plane"></i> View</a>
                     </div>
                 </div>
             </div>
