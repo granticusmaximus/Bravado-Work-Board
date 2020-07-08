@@ -1,11 +1,13 @@
 ﻿using Bravado.Services;
 using Bravado.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Bravado.Controllers
 {
+    [Authorize]
     public class BoardController : Controller
     {
         private readonly BoardService _boardService;

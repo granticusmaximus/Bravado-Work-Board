@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Bravado.Data;
 using Bravado.Services;
 using Bravado.ViewModel;
 using Microsoft.AspNetCore.Mvc;
@@ -13,10 +14,12 @@ namespace Bravado.Controllers
     public class CardController : Controller
     {
         private readonly CardService _cardService;
+        private readonly AppDbContext _context;
 
-        public CardController(CardService cardService)
+        public CardController(CardService cardService, AppDbContext context)
         {
             _cardService = cardService;
+            _context = context;
         }
 
         [HttpGet]
@@ -27,6 +30,22 @@ namespace Bravado.Controllers
             return View(viewModel);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var card = await _context.Cards.FindAsync(id);
+            if (card == null)
+            {
+                return NotFound();
+            }
+            return View(card);
+        }
+
         [HttpPost]
         public IActionResult Update(CardDetails cardDetails)
         {
@@ -34,7 +53,9 @@ namespace Bravado.Controllers
 
             TempData["Message"] = "Saved card Details";
 
-            return RedirectToAction(nameof(Details), new { id = cardDetails.Id });
+            return Redirect("~/Board/Home");
         }
+
+
     }
 }
