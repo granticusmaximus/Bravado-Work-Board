@@ -1,7 +1,10 @@
-﻿using Bravado.Services;
+﻿using System.Threading.Tasks;
+using Bravado.Data;
+using Bravado.Services;
 using Bravado.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,10 +14,12 @@ namespace Bravado.Controllers
     public class BoardController : Controller
     {
         private readonly BoardService _boardService;
+        private readonly AppDbContext _context;
 
-        public BoardController(BoardService boardService)
+        public BoardController(BoardService boardService, AppDbContext context)
         {
             _boardService = boardService;
+            _context = context;
         }
 
         public IActionResult Home()
@@ -60,6 +65,35 @@ namespace Bravado.Controllers
         {
             _boardService.AddBoard(viewModel);
 
+            return RedirectToAction(nameof(Index));
+        }
+
+        // GET: Entry/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var entry = await _context.Boards
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (entry == null)
+            {
+                return NotFound();
+            }
+
+            return View(entry);
+        }
+
+        // POST: Entry/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var board = await _context.Boards.FindAsync(id);
+            _context.Boards.Remove(board);
+            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
     }

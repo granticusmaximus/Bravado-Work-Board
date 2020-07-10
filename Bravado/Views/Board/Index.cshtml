@@ -54,9 +54,16 @@
                 <a asp-controller="Board"
                    asp-action="AddCard"
                    asp-route-id="@Model.Id"
-                   class="wave-effect waves-light btn">
+                   class="btn btn-success">
                     <i class="fa fa-plus-circle"></i>
                     Add A Card
+                </a> |
+                <a asp-controller="Board"
+                   asp-action="Delete"
+                   asp-route-id="@Model.Id"
+                   class="btn btn-danger">
+                    <i class="fa fa-window-close" aria-hidden="true"></i>
+                    Delete Board
                 </a>
             </div>
         }

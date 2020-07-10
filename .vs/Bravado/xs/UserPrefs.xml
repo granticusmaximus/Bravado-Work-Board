@@ -1,18 +1,14 @@
 ﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Controllers/CardController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Controllers/BoardController.cs">
     <Files>
-      <File FileName="Bravado/Views/Card/Details.cshtml" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Bravado/Views/Card/Edit.cshtml" Line="7" Column="19" NotebookId="1" />
-      <File FileName="Bravado/Controllers/CardController.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Bravado/Controllers/BoardController.cs" Line="87" Column="10" />
+      <File FileName="Bravado/Views/Board/Delete.cshtml" Line="19" Column="41" />
+      <File FileName="Bravado/Views/Entry/Delete.cshtml" Line="37" Column="7" />
+      <File FileName="Bravado/Views/Board/Details.cshtml" Line="1" Column="1" />
+      <File FileName="Bravado/Views/Board/Index.cshtml" Line="66" Column="33" />
+      <File FileName="Bravado/Views/Board/Home.cshtml" Line="10" Column="77" />
+      <File FileName="Bravado/Views/Board/AddCard.cshtml" Line="1" Column="1" />
     </Files>
-    <FloatingWindows>
-      <FloatingWindow WindowId="1" X="1080" Y="23" Width="1440" Height="782">
-        <Files>
-          <File FileName="Bravado/Views/Entry/Details.cshtml" Line="12" Column="13" />
-          <File FileName="Bravado/Views/Entry/Edit.cshtml" Line="5" Column="1" />
-        </Files>
-      </FloatingWindow>
-    </FloatingWindows>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -25,9 +21,8 @@
               </Node>
               <Node name="Controllers" expanded="True">
                 <Node name="Api" expanded="True" />
-                <Node name="CardController.cs" selected="True" />
+                <Node name="BoardController.cs" selected="True" />
               </Node>
-              <Node name="Services" expanded="True" />
               <Node name="ViewModel" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Board" expanded="True" />
