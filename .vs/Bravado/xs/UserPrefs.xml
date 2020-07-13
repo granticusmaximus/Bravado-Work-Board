@@ -1,14 +1,32 @@
 ﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Controllers/BoardController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Views/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="Bravado/Controllers/BoardController.cs" Line="87" Column="10" />
-      <File FileName="Bravado/Views/Board/Delete.cshtml" />
-      <File FileName="Bravado/Views/Entry/Delete.cshtml" />
-      <File FileName="Bravado/Views/Board/Details.cshtml" />
-      <File FileName="Bravado/Views/Board/Index.cshtml" />
-      <File FileName="Bravado/Views/Board/Home.cshtml" />
-      <File FileName="Bravado/Views/Board/AddCard.cshtml" />
+      <File FileName="Bravado/Views/Shared/_LoginPartial.cshtml" Line="1" Column="1" NotebookId="1" />
     </Files>
+    <FloatingWindows>
+      <FloatingWindow WindowId="1" X="1080" Y="23" Width="1440" Height="782">
+        <Files>
+          <File FileName="Bravado/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+        </Files>
+      </FloatingWindow>
+    </FloatingWindows>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Bravado" expanded="True">
+            <Node name="Bravado" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True">
+                  <Node name="_Layout.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
