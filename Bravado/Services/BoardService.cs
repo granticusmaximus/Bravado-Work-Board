@@ -98,6 +98,16 @@ namespace Bravado.Services
             _dbContext.SaveChanges();
         }
 
+        public void DeleteCard(CardDetails Id)
+        {
+            var model = new CardDetails();
+
+            var card = _dbContext.Cards
+                .Include(b => b.Id);
+            _dbContext.Remove(card);
+            _dbContext.SaveChanges();
+        }
+
         public void AddBoard(NewBoard viewModel)
         {
             _dbContext.Boards.Add(new Models.Board

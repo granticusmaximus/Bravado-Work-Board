@@ -68,32 +68,18 @@ namespace Bravado.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpGet]
         // GET: Entry/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public IActionResult Delete()
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var entry = await _context.Boards
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (entry == null)
-            {
-                return NotFound();
-            }
-
-            return View(entry);
+            return View();
         }
 
         // POST: Entry/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        [HttpPost]
+        public IActionResult Delete(CardDetails card)
         {
-            var board = await _context.Boards.FindAsync(id);
-            _context.Boards.Remove(board);
-            await _context.SaveChangesAsync();
+            _boardService.DeleteCard(card);
             return RedirectToAction(nameof(Index));
         }
     }
