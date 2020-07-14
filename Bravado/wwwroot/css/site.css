@@ -10,6 +10,19 @@ for details on configuring this project to bundle and minify static web assets. 
         background-color: #ffdfb3 !important;
     }
 
+
+.bg-white {
+    background: linear-gradient(180deg, rgba(136,136,136,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+.navbar-light .navbar-brand {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
 .dragItem {
     display: inline-block;
     background: gray;

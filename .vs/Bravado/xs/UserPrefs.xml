@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Controllers/BoardController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/wwwroot/css/site.css">
     <Files>
       <File FileName="Bravado/Views/Card/Delete.cshtml" Line="5" Column="46" NotebookId="1" />
       <File FileName="Bravado/Views/Entry/Delete.cshtml" Line="38" Column="1" NotebookId="1" />
-      <File FileName="Bravado/Services/BoardService.cs" Line="108" Column="38" NotebookId="1" />
+      <File FileName="Bravado/Services/BoardService.cs" Line="106" Column="25" NotebookId="1" />
       <File FileName="Bravado/ViewModel/AddCard.cs" Line="5" Column="18" NotebookId="1" />
+      <File FileName="Bravado/wwwroot/css/site.css" Line="1" Column="1" NotebookId="1" />
     </Files>
     <FloatingWindows>
       <FloatingWindow WindowId="1" X="1080" Y="23" Width="1440" Height="782">
         <Files>
           <File FileName="Bravado/Views/Shared/_Layout.cshtml" Line="61" Column="22" />
-          <File FileName="Bravado/Controllers/BoardController.cs" Line="16" Column="34" />
+          <File FileName="Bravado/Controllers/BoardController.cs" Line="82" Column="38" />
         </Files>
       </FloatingWindow>
     </FloatingWindows>
@@ -19,9 +20,7 @@
         <State name="__root__">
           <Node name="Bravado" expanded="True">
             <Node name="Bravado" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="BoardController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True">
                 <Node name="Agile" expanded="True" />
               </Node>
@@ -34,6 +33,9 @@
                 <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True">
+                  <Node name="site.css" selected="True" />
+                </Node>
                 <Node name="img" expanded="True" />
               </Node>
             </Node>
