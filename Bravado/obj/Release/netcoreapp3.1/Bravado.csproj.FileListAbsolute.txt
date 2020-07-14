@@ -233,3 +233,5 @@
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Release/netcoreapp3.1/Razor/Views/Board/Index.cshtml.g.cs
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Release/netcoreapp3.1/Razor/Views/Card/Details.cshtml.g.cs
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Release/netcoreapp3.1/Razor/Views/Card/Edit.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Release/netcoreapp3.1/Razor/Views/Board/Delete.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Release/netcoreapp3.1/Razor/Views/Card/Delete.cshtml.g.cs
