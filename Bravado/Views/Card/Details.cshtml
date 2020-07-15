@@ -1,4 +1,4 @@
-@model Bravado.ViewModel.CardDetails
+@model Bravado.Models.Agile.Card
 
 @{
     ViewData["Title"] = "Details";
@@ -8,19 +8,13 @@
     <input asp-for="Id" type="hidden" />
     <div class="row">
         <div class="input-field col s12">
-            <h2>Task: @Html.Display("Contents")</h2>
+            <h2>Task: @Html.DisplayFor(model => model.Contents)</h2>
         </div>
     </div>
     <div class="row">
         <div class="input-field col s12">
             <h2>Task Details</h2>
-            @Html.Raw(Model.Notes)
-        </div>
-    </div>
-    <div class="row">
-        <div class="input-field col s12">
-            <select asp-for="Column" asp-items="Model.Columns"></select>
-            <label asp-for="Column"></label>
+            @Html.DisplayFor(model => model.Notes)
         </div>
     </div>
     <div class="row">

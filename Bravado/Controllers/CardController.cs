@@ -6,6 +6,7 @@ using Bravado.Data;
 using Bravado.Services;
 using Bravado.ViewModel;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -44,6 +45,34 @@ namespace Bravado.Controllers
                 return NotFound();
             }
             return View(card);
+        }
+
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var entry = await _context.Cards
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (entry == null)
+            {
+                return NotFound();
+            }
+
+            return View(entry);
+        }
+
+        // POST: Entry/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var card = await _context.Cards.FindAsync(id);
+            _context.Cards.Remove(card);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
         [HttpPost]

@@ -1,4 +1,4 @@
-@model Bravado.ViewModel.AddCard
+@model Bravado.Models.Agile.Card
 @{
     ViewData["Title"] = "AddCard";
 }
@@ -10,6 +10,10 @@
             <div asp-validation-summary="All" class="text-danger"></div>
             <label asp-for="Contents"></label>
             <input type="text" asp-for="Contents" />
+            <label>Start Date</label>
+            <input asp-for="StartDate" class="form-control" id="datepicker" type="text" />
+            <label>Due Date</label>
+            <input asp-for="DueDate" class="form-control" id="datepicker" type="text" />
             <div class="row">
                 <div class="input-field col s12">
                     <textarea placeholder="Notes" asp-for="Notes" class="textarea"></textarea>
