@@ -1,17 +1,9 @@
 ﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
   <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Views/Shared/_LoginPartial.cshtml">
     <Files>
-      <File FileName="Bravado/wwwroot/css/site.css" Line="23" Column="28" NotebookId="1" />
-      <File FileName="Bravado/Views/Shared/_LoginPartial.cshtml" Line="21" Column="14" NotebookId="1" />
+      <File FileName="Bravado/wwwroot/css/site.css" Line="23" Column="28" />
+      <File FileName="Bravado/Views/Shared/_LoginPartial.cshtml" Line="21" Column="14" />
     </Files>
-    <FloatingWindows>
-      <FloatingWindow WindowId="1" X="1080" Y="23" Width="1440" Height="782">
-        <Files>
-          <File FileName="Bravado/Views/Shared/_Layout.cshtml" Line="52" Column="51" />
-          <File FileName="Bravado/Controllers/BoardController.cs" Line="82" Column="38" />
-        </Files>
-      </FloatingWindow>
-    </FloatingWindows>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
