@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Bravado.Data;
+using Bravado.Models.Agile;
 using Bravado.Services;
 using Bravado.ViewModel;
 using Microsoft.AspNetCore.Mvc;
@@ -23,12 +24,21 @@ namespace Bravado.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public IActionResult Details(int id)
+        public async Task<IActionResult> Details(int? id)
         {
-            var viewModel = _cardService.GetDetails(id);
+            if (id == null)
+            {
+                return NotFound();
+            }
 
-            return View(viewModel);
+            var card = await _context.Cards
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (card == null)
+            {
+                return NotFound();
+            }
+
+            return View(card);
         }
 
         [HttpGet]
@@ -43,6 +53,38 @@ namespace Bravado.Controllers
             if (card == null)
             {
                 return NotFound();
+            }
+            return View(card);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Contents,Notes,DueDate,Column,ColumnId")] Card card)
+        {
+            if (id != card.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(card);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!EntryExists(card.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
             }
             return View(card);
         }
@@ -85,6 +127,9 @@ namespace Bravado.Controllers
             return Redirect("~/Board/Home");
         }
 
-
+        private bool EntryExists(int id)
+        {
+            return _context.Cards.Any(e => e.Id == id);
+        }
     }
 }
