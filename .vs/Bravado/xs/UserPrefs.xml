@@ -4,34 +4,6 @@
       <File FileName="Bravado/wwwroot/css/site.css" Line="23" Column="28" />
       <File FileName="Bravado/Views/Shared/_LoginPartial.cshtml" Line="21" Column="14" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Bravado" expanded="True">
-            <Node name="Bravado" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="Agile" expanded="True" />
-              </Node>
-              <Node name="Services" expanded="True" />
-              <Node name="ViewModel" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Card" expanded="True" />
-                <Node name="Entry" expanded="True" />
-                <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True">
-                  <Node name="_LoginPartial.cshtml" selected="True" />
-                </Node>
-              </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
-                <Node name="img" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
