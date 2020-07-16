@@ -1,17 +1,16 @@
 ﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Views/Card/Edit.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Views/Card/Details.cshtml">
     <Files>
       <File FileName="Bravado/Views/Card/Details.cshtml" Line="24" Column="9" NotebookId="1" />
-      <File FileName="Bravado/Models/Agile/Card.cs" Line="12" Column="32" NotebookId="1" />
-      <File FileName="Bravado/Controllers/EntryController.cs" Line="147" Column="8" NotebookId="1" />
-      <File FileName="Bravado/Views/Card/Edit.cshtml" Line="50" Column="1" NotebookId="1" />
+      <File FileName="Bravado/Views/Card/Edit.cshtml" Line="9" Column="69" NotebookId="1" />
+      <File FileName="Bravado/Controllers/EntryController.cs" NotebookId="1" />
     </Files>
     <FloatingWindows>
-      <FloatingWindow WindowId="1" X="1081" Y="537" Width="1440" Height="782">
+      <FloatingWindow WindowId="1" X="1080" Y="537" Width="1440" Height="782">
         <Files>
           <File FileName="Bravado/Views/Card/Delete.cshtml" Line="14" Column="19" />
-          <File FileName="Bravado/Views/Board/AddCard.cshtml" Line="12" Column="49" />
-          <File FileName="Bravado/Controllers/CardController.cs" Line="117" Column="44" />
+          <File FileName="Bravado/Views/Board/AddCard.cshtml" />
+          <File FileName="Bravado/Controllers/CardController.cs" Line="1" Column="1" />
         </Files>
       </FloatingWindow>
     </FloatingWindows>
@@ -19,20 +18,11 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Bravado" expanded="True">
-            <Node name="Bravado" expanded="True" selected="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="Agile" expanded="True" />
-              </Node>
+            <Node name="Bravado" expanded="True">
               <Node name="Views" expanded="True">
-                <Node name="Board" expanded="True" />
-                <Node name="Card" expanded="True" />
-                <Node name="Entry" expanded="True" />
-                <Node name="Shared" expanded="True" />
-              </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
-                <Node name="img" expanded="True" />
+                <Node name="Card" expanded="True">
+                  <Node name="Details.cshtml" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
