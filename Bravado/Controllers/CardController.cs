@@ -114,7 +114,7 @@ namespace Bravado.Controllers
             var card = await _context.Cards.FindAsync(id);
             _context.Cards.Remove(card);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return Redirect("~/Board/Home");
         }
 
         [HttpPost]

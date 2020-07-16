@@ -6,17 +6,39 @@
 <div class="container">
     <div class="row">
         <h2>Add Card</h2>
+        <hr />
         <form asp-action="AddCard" asp-controller="Board">
             <div asp-validation-summary="All" class="text-danger"></div>
-            <label asp-for="Contents"></label>
-            <input type="text" asp-for="Contents" />
-            <label>Start Date</label>
-            <input asp-for="StartDate" class="form-control" id="datepicker" type="text" />
-            <label>Due Date</label>
-            <input asp-for="DueDate" class="form-control" id="datepicker" type="text" />
+            <input type="hidden" asp-for="Id" />
             <div class="row">
-                <div class="input-field col s12">
-                    <textarea placeholder="Notes" asp-for="Notes" class="textarea"></textarea>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Contents" class="control-label"></label>
+                        <input asp-for="Contents" class="form-control" />
+                        <span asp-validation-for="Contents" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="StartDate" class="control-label"></label>
+                        <input asp-for="StartDate" class="form-control" />
+                        <span asp-validation-for="StartDate" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="DueDate" class="control-label"></label>
+                    <input asp-for="DueDate" class="form-control" />
+                    <span asp-validation-for="DueDate" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="Notes" class="control-label"></label>
+                    <textarea cols="250" asp-for="Notes" class="textarea" placeholder="Place some text here"
+                              style="height: 550px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; border-radius:3px; padding: 10px;"></textarea>
+                    <span asp-validation-for="Notes" class="text-danger"></span>
                 </div>
             </div>
             <button type="submit" class="btn"><i class="fa fa-plus-circle"></i> Add Card</button>
