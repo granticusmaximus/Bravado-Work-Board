@@ -2,14 +2,21 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 .dropZone {
-    border-radius: 2px;
+    border-radius: 5px;
     padding: 5px;
+    background-color: #85A7B7;
+    z-index: auto;
+    border: 1px solid #707070;
 }
 
     .dropZone.awe-highlight {
         background-color: #ffdfb3 !important;
     }
 
+.boardHeader {
+    background-color: #4A4949 !important;
+    color: white !important;
+}
 
 .bg-white {
     background: linear-gradient(180deg, rgba(136,136,136,1) 0%, rgba(0,0,0,1) 100%);

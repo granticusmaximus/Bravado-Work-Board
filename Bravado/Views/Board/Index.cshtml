@@ -71,9 +71,10 @@
     <div class="row">
         @foreach (var column in Model.Columns)
         {
+            <center>
+                <div class="boardHeader">@column.Title</div>
+            </center>
             <div class="col m2 dropZone">
-                <h3>@column.Title</h3>
-
                 <div class="column" style="min-height: 600px;" id="@column.Id">
 
                     @foreach (var card in column.Cards)

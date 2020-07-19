@@ -42,7 +42,8 @@ a.navbar-brand {
 
 .loginBox {
     border-radius: 3px !important;
-    padding: 20px;
+    padding: 30px;
+    border: 1px solid;
 }
 
 /* Provide sufficient contrast against white background */
