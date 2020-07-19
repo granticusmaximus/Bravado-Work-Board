@@ -1,28 +1,32 @@
 ﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Views/Card/Details.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Areas/Identity/Pages/Account/Login.cshtml">
     <Files>
-      <File FileName="Bravado/Views/Card/Details.cshtml" Line="24" Column="9" NotebookId="1" />
-      <File FileName="Bravado/Views/Card/Edit.cshtml" Line="9" Column="69" NotebookId="1" />
-      <File FileName="Bravado/Controllers/EntryController.cs" NotebookId="1" />
+      <File FileName="Bravado/Views/Home/Index.cshtml" Line="28" Column="11" />
+      <File FileName="Bravado/Views/Shared/_Layout.cshtml" Line="3" Column="1" />
+      <File FileName="Bravado/wwwroot/css/site.css" Line="45" Column="15" />
+      <File FileName="Bravado/Areas/Identity/Pages/Account/Login.cshtml" Line="1" Column="1" />
+      <File FileName="Bravado/Areas/Identity/Pages/Account/Register.cshtml" Line="1" Column="1" />
     </Files>
-    <FloatingWindows>
-      <FloatingWindow WindowId="1" X="1080" Y="537" Width="1440" Height="782">
-        <Files>
-          <File FileName="Bravado/Views/Card/Delete.cshtml" Line="14" Column="19" />
-          <File FileName="Bravado/Views/Board/AddCard.cshtml" />
-          <File FileName="Bravado/Controllers/CardController.cs" Line="1" Column="1" />
-        </Files>
-      </FloatingWindow>
-    </FloatingWindows>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Bravado" expanded="True">
             <Node name="Bravado" expanded="True">
-              <Node name="Views" expanded="True">
-                <Node name="Card" expanded="True">
-                  <Node name="Details.cshtml" selected="True" />
+              <Node name="Areas" expanded="True">
+                <Node name="Identity" expanded="True">
+                  <Node name="Pages" expanded="True">
+                    <Node name="Account" expanded="True">
+                      <Node name="Login.cshtml" selected="True" />
+                    </Node>
+                  </Node>
                 </Node>
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
               </Node>
             </Node>
           </Node>

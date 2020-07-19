@@ -1,16 +1,30 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <img src="~/img/logo.png" alt="Image">
-    <p>Welcome to the Bravado Suite. This is a suite of applications. </p>
 </div>
-<p>The following is a list of what is included:</p>
-<ol>
-    <li>Agile Work Board</li>
-    <li>Document Entry</li>
-    <li>Pomodoro Clock</li>
-    <li>File System</li>
-</ol>
+@if (SignInManager.IsSignedIn(User))
+{
+
+    <p>The following is a list of what is included:</p>
+    <ol>
+        <li>Agile Work Board</li>
+        <li>Document Entry</li>
+        <li>Pomodoro Clock</li>
+        <li>File System</li>
+    </ol>
+}
+else
+{
+    <div class="text-center">
+        <p>Welcome to Bravado, a dev made application for developers and engineers for a better workflow</p>
+        <p>Please log in to use the application</p>
+    </div>
+}
 
