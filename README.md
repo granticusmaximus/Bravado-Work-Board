@@ -12,5 +12,11 @@
 - Azure Database
 - SQLite for debugging
 
-What I am currently working on is the UI of the work board/agile area.
-I am also working on the javascript of drag and drop of tasks
+Tasks Working on Currently:
+- [x] Working on UI to match Wireframe
+- [ ] Bug with drag/drop not saving to column
+- [ ] Add Start Date/Due Date with overdue display tag
+- [ ] Adding descriptive tags to each task
+- [ ] Ability to add subtasks if needed/desired
+- [ ] Ability to add multiple columns
+- [ ] Ability to Add Weekly Sprints if desired
