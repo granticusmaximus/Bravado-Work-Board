@@ -15,6 +15,9 @@ for details on configuring this project to bundle and minify static web assets. 
 .boardHeader {
     background-color: #4A4949 !important;
     color: white !important;
+    height: 50px;
+    font-size: 35px;
+    font-weight: bold;
 }
 
 .bg-white {
@@ -37,7 +40,6 @@ for details on configuring this project to bundle and minify static web assets. 
     border-radius: 2px;
     cursor: default;
     margin-right: 5px;
-    z-index: 0;
 }
 
 
@@ -50,7 +52,7 @@ a.navbar-brand {
 .loginBox {
     border-radius: 3px !important;
     padding: 30px;
-    border: 1px solid;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 /* Provide sufficient contrast against white background */
