@@ -27,20 +27,20 @@
             drop: function (event, ui) {
                 var dropped = ui.draggable;
                 var droppedOn = $(this);
-                $(dropped).detach().css({ top: 0, left: 0 }).appendTo(droppedOn);
+                $(dropped).detach().css({ top: 0, left: 0, z- index: -1 }).appendTo(droppedOn);
 
-                $.ajax({
-                    type: "POST",
-                    dataType: "json",
-                    contentType: "application/json",
-                    url: "/api/Board/movecard",
-                    beforeSend: function (request) {
-                        request.setRequestHeader(
-                            "RequestVarificationToken", $('#RequestVarificationToken').val());
-                    },
-                    data: JSON.stringify({ cardId: dropped[0].id, columnId: droppedOn[0].id }),
-                });
-            }
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json",
+            url: "/api/Board/movecard",
+            beforeSend: function (request) {
+                request.setRequestHeader(
+                    "RequestVarificationToken", $('#RequestVarificationToken').val());
+            },
+            data: JSON.stringify({ cardId: dropped[0].id, columnId: droppedOn[0].id }),
+        });
+    }
         });
     });</script>
 

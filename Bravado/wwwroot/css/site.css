@@ -5,7 +5,6 @@ for details on configuring this project to bundle and minify static web assets. 
     border-radius: 5px;
     padding: 5px;
     background-color: #85A7B7;
-    z-index: auto;
     border: 1px solid #707070;
 }
 
@@ -38,6 +37,7 @@ for details on configuring this project to bundle and minify static web assets. 
     border-radius: 2px;
     cursor: default;
     margin-right: 5px;
+    z-index: 0;
 }
 
 
