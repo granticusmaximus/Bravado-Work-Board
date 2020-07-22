@@ -20546,11 +20546,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Views/Boards/All.cshtml",
-      "TargetPath": "Views\\Boards\\All.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Areas/Identity/Pages/Account/ResetPassword.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
       "FileKind": "mvc"
@@ -20563,16 +20558,6 @@
     {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\DownloadPersonalData.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Views/Boards/Add.cshtml",
-      "TargetPath": "Views\\Boards\\Add.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Views/Tasks/Open.cshtml",
-      "TargetPath": "Views\\Tasks\\Open.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20651,18 +20636,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Views/Boards/Open.cshtml",
-      "TargetPath": "Views\\Boards\\Open.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Views/Entry/Details.cshtml",
       "TargetPath": "Views\\Entry\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Views/Boards/Error.cshtml",
-      "TargetPath": "Views\\Boards\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20673,11 +20648,6 @@
     {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Areas/Identity/Pages/Account/ConfirmEmail.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Views/Tasks/Edit.cshtml",
-      "TargetPath": "Views\\Tasks\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20723,11 +20693,6 @@
     {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Views/_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Views/Tasks/Add.cshtml",
-      "TargetPath": "Views\\Tasks\\Add.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20798,11 +20763,6 @@
     {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Views/Boards/Edit.cshtml",
-      "TargetPath": "Views\\Boards\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
