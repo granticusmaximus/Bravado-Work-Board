@@ -38,8 +38,7 @@ namespace Bravado
             });
             services.AddRazorPages();
 
-            services.AddScoped<BoardService>();
-            services.AddScoped<CardService>();
+
             services.AddTransient<IEmailSender, EmailSender>();
             services.Configure<AuthMessageSenderOptions>(Configuration);
         }

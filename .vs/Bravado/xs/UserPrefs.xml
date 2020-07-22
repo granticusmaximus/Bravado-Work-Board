@@ -1,19 +1,20 @@
 ﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Controllers/TasksController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Startup.cs">
     <Files>
       <File FileName="Bravado/Controllers/BoardsController.cs" Line="21" Column="11" />
       <File FileName="Bravado/Data/ApplicationDbContext.cs" Line="23" Column="47" />
-      <File FileName="Bravado/Controllers/TasksController.cs" Line="1" Column="1" />
+      <File FileName="Bravado/Controllers/TasksController.cs" Line="106" Column="2" />
+      <File FileName="Bravado/Startup.cs" Line="41" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Bravado" expanded="True">
             <Node name="Bravado" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="TasksController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>

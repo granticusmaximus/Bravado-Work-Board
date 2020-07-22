@@ -101,7 +101,7 @@ namespace Bravado.Controllers
             var tasks = await _context.Tasks.Where(task => task.BoardId == id.ToString()).ToListAsync();
 
             // Removes all tasks associated with the board
-            foreach (Task task in tasks)
+            foreach (Models.Agile.Task task in tasks)
             {
                 _context.Tasks.Remove(task);
             }

@@ -31,9 +31,6 @@
     <Folder Include="Models\Agile\" />
     <Folder Include="Views\ServiceEntity\" />
     <Folder Include="ViewModel\" />
-    <Folder Include="Repositories\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Data\Config\" />
     <Folder Include="ViewModel\BoardViewModels\" />
     <Folder Include="ViewModel\TaskViewModels\" />
     <Folder Include="ViewModel\AccountViewModels\" />
