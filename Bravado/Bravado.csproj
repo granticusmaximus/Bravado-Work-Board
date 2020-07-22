@@ -36,5 +36,6 @@
     <Folder Include="Data\Config\" />
     <Folder Include="ViewModel\BoardViewModels\" />
     <Folder Include="ViewModel\TaskViewModels\" />
+    <Folder Include="ViewModel\AccountViewModels\" />
   </ItemGroup>
 </Project>

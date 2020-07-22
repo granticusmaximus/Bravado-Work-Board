@@ -20,8 +20,7 @@ namespace Bravado.Data
         #region AGILE WORKBOARD
         public DbSet<Entry> Entry { get; set; }
         public DbSet<Board> Boards { get; set; }
-        public DbSet<Column> Columns { get; set; }
-        public DbSet<Card> Cards { get; set; }
+        public DbSet<Task> Tasks { get; set; }
         #endregion
 
         #region SERVICE DBSETS
