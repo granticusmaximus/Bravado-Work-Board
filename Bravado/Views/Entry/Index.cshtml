@@ -8,14 +8,16 @@
 <p>
     <button type="button" class="btn btn-primary"><a asp-action="Create" style="color:white"><i class="fa fa-file-text-o" aria-hidden="true"></i> Create New Entry</a></button>
 </p>
-<div class="input-group add-on">
+
 <form asp-controller="Entry" asp-action="Index" method="GET">
+    <div class="input-group add-on">
         <input class="form-control" type="text" name="SearchString" placeholder="Search for Entry Title">
         <div class="input-group-btn">
-        <button class="btn btn-success" type="submit">Search <i class="fa fa-search" aria-hidden="true"></i></button>
+        <button class="btn btn-default" type="submit">Search <i class="fa fa-search" aria-hidden="true"></i></button>
         </div>
+    </div>
 </form>
-</div>
+
 
 <table class="table">
     <thead>
