@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using Bravado.Data;
 using Bravado.Models;
 using Microsoft.AspNetCore.Authorization;
+using System;
+using Bravado.ViewModel.EntryViewModels;
 
 namespace Bravado.Controllers
 {
@@ -19,9 +21,22 @@ namespace Bravado.Controllers
         }
 
         // GET: Entry
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Entry.ToListAsync());
+            var entries = from e in _context.Entry
+                 select e;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                entries = entries.Where(s => s.Title.Contains(searchString));
+            }
+            
+            var entryVM = new EntryViewModel
+            {
+                Entries = await entries.ToListAsync()
+            };
+
+            return View(entryVM);
         }
 
         // GET: Entry/Details/5
