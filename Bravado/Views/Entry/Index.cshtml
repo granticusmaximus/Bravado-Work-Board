@@ -9,12 +9,13 @@
     <button type="button" class="btn btn-primary"><a asp-action="Create" style="color:white"><i class="fa fa-file-text-o" aria-hidden="true"></i> Create New Entry</a></button>
 </p>
 
-<form asp-controller="Entry" asp-action="Index" method="GET">
+<form asp-controller="Entry" asp-action="Index" method="GET" class="navbar-form">
+    
     <div class="input-group add-on">
-        <input class="form-control" type="text" name="SearchString" placeholder="Search for Entry Title">
-        <div class="input-group-btn">
-        <button class="btn btn-default" type="submit">Search <i class="fa fa-search" aria-hidden="true"></i></button>
-        </div>
+      <input class="form-control" placeholder="Search for Entry Title" name="SearchString" type="text">
+      <div class="input-group-btn">
+        <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+      </div>
     </div>
 </form>
 
