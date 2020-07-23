@@ -8,15 +8,15 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
 }
 <div class=row>
     <div>
-        <a asp-action=Edit asp-route-id="@Model.Board.Id" class="waves-effect waves-light btn"> Edit <i class="material-icons">edit</i></a>
+        <a asp-action=Edit asp-route-id="@Model.Board.Id" class="waves-effect waves-light btn"><i class="icon-edit"></i> Edit <i class="material-icons">edit</i></a>
     </div>
     <div>
-        <a asp-action=Delete asp-route-id="@Model.Board.Id" class="waves-effect waves-light red btn"> Delete <i class="material-icons">delete</i></a>
+        <a asp-action=Delete asp-route-id="@Model.Board.Id" class="waves-effect waves-light red btn"><i class="fa fa-window-close" aria-hidden="true"></i> Delete <i class="material-icons">delete</i></a>
     </div>
 </div>
 <div class="fixed-action-btn">
     <a asp-action=Add asp-controller="Tasks" asp-route-id="@Model.Board.Id" class="btn-floating btn-large waves-effect waves-light red"><i
-            class="large material-icons">add</i></a>
+            class="large material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i></i></a>
 </div>
 <div class="row">
     <ul class="collection with-header col s12 m4 l4">
