@@ -7,14 +7,10 @@
 
 <p>
     <button type="button" class="btn btn-primary"><a asp-action="Create" style="color:white"><i class="fa fa-file-text-o" aria-hidden="true"></i> Create New Entry</a></button>
-
-
-    <form class="search-wrapper cf" asp-controller="Entry" asp-action="Index" method="GET">
-        <input class="form-control" placeholder="Search for Entry Title" name="SearchString" type="text">
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
 </p>
-
+    <form class="search-wrapper cf" asp-controller="Entry" asp-action="Index" method="GET">
+        <input class="form-control" placeholder="&#xF002; Search for Entry Title" name="SearchString" type="text">
+    </form>
 <table class="table">
     <thead>
         <tr>
