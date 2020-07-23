@@ -8,12 +8,12 @@
 <p>
     <button type="button" class="btn btn-primary"><a asp-action="Create" style="color:white"><i class="fa fa-file-text-o" aria-hidden="true"></i> Create New Entry</a></button>
 </p>
-<div>
+<div class="input-group add-on">
 <form asp-controller="Entry" asp-action="Index" method="GET">
-    <p>
-        <input type="text" name="SearchString" placeholder="Search for Entry Title">
-        <button class="btn btn-success" type="submit">Search</button>
-    </p>
+        <input class="form-control" type="text" name="SearchString" placeholder="Search for Entry Title">
+        <div class="input-group-btn">
+        <button class="btn btn-success" type="submit">Search <i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
 </form>
 </div>
 
