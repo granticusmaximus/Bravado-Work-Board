@@ -410,3 +410,11 @@
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Bravado.pdb
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Bravado.genruntimeconfig.cache
 /Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Bravado.csprojAssemblyReference.cache
+/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Boards/Add.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Boards/All.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Boards/Edit.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Boards/Error.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Boards/Open.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Tasks/Add.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Tasks/Edit.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Tasks/Open.cshtml.g.cs
