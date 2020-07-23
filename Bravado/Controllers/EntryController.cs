@@ -23,7 +23,7 @@ namespace Bravado.Controllers
         // GET: Entry
         public async Task<IActionResult> Index(string searchString)
         {
-            var entries = from e in _context.Entry
+            var entries = from e in _context.Entries
                  select e;
 
             if (!String.IsNullOrEmpty(searchString))
@@ -47,7 +47,7 @@ namespace Bravado.Controllers
                 return NotFound();
             }
 
-            var entry = await _context.Entry
+            var entry = await _context.Entries
                 .FirstOrDefaultAsync(m => m.ContentID == id);
             if (entry == null)
             {
@@ -87,7 +87,7 @@ namespace Bravado.Controllers
                 return NotFound();
             }
 
-            var entry = await _context.Entry.FindAsync(id);
+            var entry = await _context.Entries.FindAsync(id);
             if (entry == null)
             {
                 return NotFound();
@@ -138,7 +138,7 @@ namespace Bravado.Controllers
                 return NotFound();
             }
 
-            var entry = await _context.Entry
+            var entry = await _context.Entries
                 .FirstOrDefaultAsync(m => m.ContentID == id);
             if (entry == null)
             {
@@ -153,15 +153,15 @@ namespace Bravado.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var entry = await _context.Entry.FindAsync(id);
-            _context.Entry.Remove(entry);
+            var entry = await _context.Entries.FindAsync(id);
+            _context.Entries.Remove(entry);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool EntryExists(int id)
         {
-            return _context.Entry.Any(e => e.ContentID == id);
+            return _context.Entries.Any(e => e.ContentID == id);
         }
     }
 }
