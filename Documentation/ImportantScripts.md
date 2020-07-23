@@ -68,14 +68,36 @@
 
 ## To Clean Application
 
-        dotnet ef clean
+        dotnet clean
 
 ## To Build Application
 
-        dotnet ef build
+        dotnet build
 
-## To Run Application
+## To Run Application with Verbosity
 
-## To push and commit to Branch
+        dotnet run -v
+
+## To commit to Branch
+
+        git commit -m "what did I change"
+
+## To push to current branch
+
+        git push origin BranchNane
 
 ## To pull from current branch
+
+        git pull
+
+## View Local and Remote branches
+
+        git branch -a
+
+## Create New Branch
+
+        git checkout -b NewBranchName
+
+## Compare Branches
+
+        git diff FirstBranch..SecondBranc
