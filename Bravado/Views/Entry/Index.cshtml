@@ -16,10 +16,10 @@
             <th width="50%">
                 @Html.DisplayNameFor(model => model.Description)
             </th>
-            <th width="25%">
+            <th width="15%">
                 @Html.DisplayNameFor(model => model.DateCreated)
             </th>
-            <th>Action</th>
+            <th width="10%">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -32,10 +32,10 @@
     <td width="50%">
         @Html.Raw((item.Description.Length > 200 ? item.Description.Substring(0, 200) : item.Description))
     </td>
-    <td width="25%">
+    <td width="15%">
         @item.DateCreated.ToString("dd-MMM-yyyy")
     </td>
-    <td>
+    <td width="10%">
         <button type="button" class="btn btn-outline-primary"><a asp-action="Edit" asp-route-id="@item.ContentID"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></button>
     </td>
 </tr>}
