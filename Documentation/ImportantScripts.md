@@ -80,7 +80,7 @@
 
 ## To commit to Branch
 
-        git commit -m "what did I change"
+        git commit -a -m "what did I change"
 
 ## To push to current branch
 
@@ -97,6 +97,14 @@
 ## Create New Branch
 
         git checkout -b NewBranchName
+
+## Merge branch to master
+
+        git checkout -b NewBranchName (creates new branch and checks out)
+        git commit -a -m "Push any changes made"
+        git push origin NewBranchName
+        git checkout master
+        git merge NewBranchName
 
 ## Compare Branches
 
