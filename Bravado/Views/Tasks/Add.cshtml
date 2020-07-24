@@ -7,16 +7,18 @@
 <div class="container">
 <form method="post">
     <input asp-for="Title" placeholder="Title" required>
+    <label asp-for="DueDate" class="control-label"></label>
+    <input asp-for="DueDate" class="form-control" id="datepicker" />
     <input hidden asp-for="BoardId" Model.BoardId>
-    <input asp-for="Description" placeholder="Description">
+    <input asp-for="Description" class="textarea" placeholder="Description">
     <select class="browser-default" asp-for="ListNum"required>
       <option value="" disabled selected>Choose the starting list for this task</option>
       <option value="1">To Do</option>
       <option value="2">In Progress</option>
       <option value="3">Done</option>
     </select>
-    <button asp-route-id="Model.BoardId" class="btn center-align" type="submit">
-        Create <i class="material-icons right">send</i>
+    <button asp-route-id="Model.BoardId" class="btn btn-primary" type="submit">
+        <i class="fa fa-floppy-o" aria-hidden="true"></i> Create
     </button>
 </form>
 </div>
