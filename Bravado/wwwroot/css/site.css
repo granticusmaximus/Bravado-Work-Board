@@ -128,8 +128,8 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
     text-align: center;
 }
 
-.collection .with-header{
-    background-color: #85A7B7;
+.agileBoard{
+    background-color: #85A7B7 !important;
     column-gap: 10px;
 }
 

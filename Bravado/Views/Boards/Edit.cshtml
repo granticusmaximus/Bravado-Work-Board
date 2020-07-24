@@ -8,8 +8,8 @@
 <form method="post">
     <input asp-for="Title" placeholder="Title" Model.Title required>
     <input hidden asp-for="Id" Model.Id>
-    <button asp-route-id="Model.Id" class="btn center-align" type="submit">
-       Update <i class="material-icons right">send</i>
+    <button asp-route-id="Model.Id" class="btn btn-primary" type="submit">
+      <i class="fa fa-floppy-o" aria-hidden="true"></i>  Update
     </button>
 </form>
 </div>
