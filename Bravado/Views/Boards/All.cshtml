@@ -19,12 +19,12 @@ ViewData["Title"] = "Your Boards:";
       <div class="card stickey-action blue-grey darken-1 hoverable activation">
         <div class="card-content white-text">
           <span class="card-title center-align">
-          <a asp-action="Open" asp-route-id="@board.Id">@board.Title</a>
+          <a asp-action="Open" asp-route-id="@board.Id" class="white-text">@board.Title</a>
           </span>
         </div>
 
         <div class="card-reveal">
-          <span class="card-title white-text text-darken-4 center-align">@board.Title<i class="material-icons right">close</i></span>
+          <span class="card-title white-text text-darken-4 center-align" style="color:white;">@board.Title<i class="material-icons right">close</i></span>
         </div>
         <div class="card-action">
           <a asp-action="Open" asp-route-id="@board.Id"><i class="fa fa-paper-plane" aria-hidden="true"></i> View</a>
