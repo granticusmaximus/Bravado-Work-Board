@@ -20,7 +20,7 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
             class="large material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i></i></a>
 </div>
 <div class="row">
-    <ul class="collection with-header col s12 m4 l4">
+    <ul class="collection with-header col s12 m4 l4 agileBoard">
         <li class="boardHeader">
             <h4>To Do</h4>
         </li>
@@ -31,7 +31,7 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
                 <div class="card-content white-text activator">
                     <span class="card-title center-align"> @task.Title </span>
                     <br>
-                    <br>
+                    <span class="card-title center-align"> @task.DueDate </span>
                     <br>
                     <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
                         <i class="material-icons">present_to_all</i></a>
@@ -48,7 +48,7 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
         }
     </ul>
 
-    <ul class="collection with-header col s12 m4 l4">
+    <ul class="collection with-header col s12 m4 l4 agileBoard">
         <li class="boardHeader">
             <h4>In Progress</h4>
         </li>
@@ -59,7 +59,7 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
                 <div class="card-content white-text activator">
                     <span class="card-title center-align"> @task.Title </span>
                     <br>
-                    <br>
+                    <span class="card-title center-align"> @task.DueDate </span>
                     <br>
                     <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
                         <i class="material-icons">present_to_all</i></a>
@@ -76,7 +76,7 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
         }
     </ul>
 
-    <ul class="collection with-header col s12 m4 l4">
+    <ul class="collection with-header col s12 m4 l4 agileBoard">
         <li class="boardHeader">
             <h4>Done</h4>
         </li>
@@ -87,7 +87,7 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
                 <div class="card-content white-text activator">
                     <span class="card-title center-align"> @task.Title </span>
                     <br>
-                    <br>
+                    <span class="card-title center-align"> @task.DueDate </span>
                     <br>
                     <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
                         <i class="material-icons">present_to_all</i></a>

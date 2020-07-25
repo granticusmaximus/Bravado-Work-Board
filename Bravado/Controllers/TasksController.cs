@@ -51,10 +51,11 @@ namespace Bravado.Controllers
             var routeValues = new RouteValueDictionary {
                {"id", task.BoardId}
            };
-            _context.Tasks.Add(new Models.Agile.Task { Title = task.Title, Description = task.Description, BoardId = task.BoardId.ToString(), ListNum = task.ListNum });
+            _context.Tasks.Add(new Models.Agile.Task { Title = task.Title,DueDate = task.DueDate, Description = task.Description, BoardId = task.BoardId.ToString(), ListNum = task.ListNum });
             await _context.SaveChangesAsync();
             return RedirectToAction("Open", "Boards", routeValues);
         }
+
 
         [HttpGet]
         public async Task<IActionResult> Edit([FromRoute] Guid id)
