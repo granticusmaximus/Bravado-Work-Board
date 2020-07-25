@@ -12,11 +12,12 @@
             <input asp-for="Title" class="form-control" required>
         </div>
         <div class="col-md-6">
-            <label asp-for="DueDate" class="control-label"></label>
+            <label>Due Date</label>
             <input asp-for="DueDate" class="form-control" id="datepicker" />
         </div>
     </div>
     <input hidden asp-for="BoardId" Model.BoardId>
+    <label>Add Description for Task</label>
     <input asp-for="Description" class="textarea" placeholder="Description">
     <br/>
     <label>Column Selection:</label>
@@ -26,6 +27,7 @@
       <option value="2">In Progress</option>
       <option value="3">Done</option>
     </select>
+    <hr/>
     <button asp-route-id="Model.BoardId" class="btn btn-primary" type="submit">
         <i class="fa fa-floppy-o" aria-hidden="true"></i> Create
     </button>
