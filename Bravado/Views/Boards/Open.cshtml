@@ -3,6 +3,7 @@
 @model BoardView
 
 
+
 @{
 ViewData["Title"] = $"{Model.Board.Title}" ;
 }
@@ -20,87 +21,83 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
             class="large material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i></i></a>
 </div>
 <div class="row">
-    <ul class="collection with-header col s12 m4 l4 agileBoard">
-        <li class="boardHeader">
-            <h4>To Do</h4>
-        </li>
-        @foreach (var task in Model.TaskL1)
-        {
-        <li class="collection-item">
-            <div class="card hoverable blue-grey">
-                <div class="card-content white-text activator">
-                    <span class="card-title center-align"> @task.Title </span>
-                    <br>
-                    <span class="card-title center-align"> @task.DueDate </span>
-                    <br>
-                    <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
-                        <i class="material-icons">present_to_all</i></a>
-                </div>
-                <div class="card-reveal blue-grey white-text">
-                    <span class="card-title white-text text-darken-4 center-align">@task.Title<i class="material-icons right">close</i></span>
-                    <p class="flow-text">@task.Description</p>
-                    <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
-                        <i class="material-icons">present_to_all</i></a>
-                </div>
-            </div>
+        <ul class="collection with-header col s12 m4 l4 agileBoard">
+            <li class="boardHeader">
+                <h4>To Do</h4>
+            </li>
+            @foreach (var task in Model.TaskL1)
+            {
+                    <li class="collection-item">
+                        <div class="card hoverable blue-grey">
+                            <div class="card-content white-text activator">
+                                <span class="card-title center-align"> @task.Title </span>
+                                <br>
+                                <span class="card-title center-align"> @task.DueDate.ToString("dd-MMM-yyyy") </span>
+                                <br>
+                                <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
+                                    <i class="material-icons">present_to_all</i></a>
+                            </div>
+                            <div class="card-reveal blue-grey white-text">
+                                <span class="card-title white-text text-darken-4 center-align">@task.Title<i class="material-icons right">close</i></span>
+                                <p class="flow-text">@task.Description</p>
+                                <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
+                                    <i class="material-icons">present_to_all</i></a>
+                            </div>
+                        </div>
+                    </li>
+            }
+        </ul>
+        <ul class="collection with-header col s12 m4 l4 agileBoard">
+            <li class="boardHeader">
+                <h4>In Progress</h4>
+            </li>
+            @foreach (var task in Model.TaskL2)
+            {
+                    <li class="collection-item">
+                        <div class="card hoverable blue-grey">
+                            <div class="card-content white-text activator">
+                                <span class="card-title center-align"> @task.Title </span>
+                                <br>
+                                <span class="card-title center-align"> @task.DueDate </span>
+                                <br>
+                                <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
+                                    <i class="material-icons">present_to_all</i></a>
+                            </div>
+                            <div class="card-reveal blue-grey white-text">
+                                <span class="card-title white-text text-darken-4 center-align">@task.Title<i class="material-icons right">close</i></span>
+                                <p class="flow-text">@task.Description</p>
+                                <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
+                                    <i class="material-icons">present_to_all</i></a>
+                            </div>
+                        </div>
 
-        </li>
-        }
-    </ul>
-
-    <ul class="collection with-header col s12 m4 l4 agileBoard">
-        <li class="boardHeader">
-            <h4>In Progress</h4>
-        </li>
-        @foreach (var task in Model.TaskL2)
-        {
-       <li class="collection-item">
-            <div class="card hoverable blue-grey">
-                <div class="card-content white-text activator">
-                    <span class="card-title center-align"> @task.Title </span>
-                    <br>
-                    <span class="card-title center-align"> @task.DueDate </span>
-                    <br>
-                    <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
-                        <i class="material-icons">present_to_all</i></a>
-                </div>
-                <div class="card-reveal blue-grey white-text">
-                    <span class="card-title white-text text-darken-4 center-align">@task.Title<i class="material-icons right">close</i></span>
-                    <p class="flow-text">@task.Description</p>
-                    <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
-                        <i class="material-icons">present_to_all</i></a>
-                </div>
-            </div>
-
-        </li>
-        }
-    </ul>
-
-    <ul class="collection with-header col s12 m4 l4 agileBoard">
-        <li class="boardHeader">
-            <h4>Done</h4>
-        </li>
-        @foreach (var task in Model.TaskL3)
-        {
-        <li class="collection-item">
-            <div class="card hoverable blue-grey">
-                <div class="card-content white-text activator">
-                    <span class="card-title center-align"> @task.Title </span>
-                    <br>
-                    <span class="card-title center-align"> @task.DueDate </span>
-                    <br>
-                    <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
-                        <i class="material-icons">present_to_all</i></a>
-                </div>
-                <div class="card-reveal blue-grey white-text">
-                    <span class="card-title white-text text-darken-4 center-align">@task.Title<i class="material-icons right">close</i></span>
-                    <p class="flow-text">@task.Description</p>
-                    <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
-                        <i class="material-icons">present_to_all</i></a>
-                </div>
-            </div>
-
-        </li>
-        }
-    </ul>
+                    </li>
+            }
+        </ul>
+        <ul class="collection with-header col s12 m4 l4 agileBoard">
+            <li class="boardHeader">
+                <h4>Done</h4>
+            </li>
+            @foreach (var task in Model.TaskL3)
+            {
+                    <li class="collection-item">
+                        <div class="card hoverable blue-grey">
+                            <div class="card-content white-text activator">
+                                <span class="card-title center-align"> @task.Title </span>
+                                <br>
+                                <span class="card-title center-align"> @task.DueDate </span>
+                                <br>
+                                <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
+                                    <i class="material-icons">present_to_all</i></a>
+                            </div>
+                            <div class="card-reveal blue-grey white-text">
+                                <span class="card-title white-text text-darken-4 center-align">@task.Title<i class="material-icons right">close</i></span>
+                                <p class="flow-text">@task.Description</p>
+                                <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
+                                    <i class="material-icons">present_to_all</i></a>
+                            </div>
+                        </div>
+                    </li>
+            }
+        </ul>
 </div>
