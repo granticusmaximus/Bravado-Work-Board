@@ -30,7 +30,7 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
                     <li class="collection-item">
                         <div class="card hoverable blue-grey">
                             <div class="card-content white-text activator">
-                                <span class="card-title center-align"> @task.Title </span>
+                                <span class="card-title center-align"><a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="white-text"> @task.Title </a></span>
                                 <br>
                                 <span class="card-title center-align"> @task.DueDate.ToString("dd-MMM-yyyy") </span>
                                 <br>
@@ -54,7 +54,7 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
                     <li class="collection-item">
                         <div class="card hoverable blue-grey">
                             <div class="card-content white-text activator">
-                                <span class="card-title center-align"> @task.Title </span>
+                                <span class="card-title center-align"><a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="white-text"> @task.Title </a></span>
                                 <br>
                                 <span class="card-title center-align"> @task.DueDate.ToString("dd-MMM-yyyy") </span>
                                 <br>
@@ -79,7 +79,7 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
                     <li class="collection-item">
                         <div class="card hoverable blue-grey">
                             <div class="card-content white-text activator">
-                                <span class="card-title center-align"> @task.Title </span>
+                                <span class="card-title center-align"><a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="white-text"> @task.Title </a></span>
                                 <br>
                                 <span class="card-title center-align"> @task.DueDate.ToString("dd-MMM-yyyy") </span>
                                 <br>
