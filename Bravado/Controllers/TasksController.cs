@@ -46,12 +46,12 @@ namespace Bravado.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add([FromForm] Models.Agile.Task task)
+        public async Task<IActionResult> Add([FromForm][Bind("Id, BoardId,Title,Description,ListNum, DueDate")] Models.Agile.Task task)
         {
             var routeValues = new RouteValueDictionary {
                {"id", task.BoardId}
            };
-            _context.Tasks.Add(new Models.Agile.Task { Title = task.Title,DueDate = task.DueDate, Description = task.Description, BoardId = task.BoardId.ToString(), ListNum = task.ListNum });
+            _context.Tasks.Add(task);
             await _context.SaveChangesAsync();
             return RedirectToAction("Open", "Boards", routeValues);
         }
@@ -65,7 +65,7 @@ namespace Bravado.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit([FromForm] Models.Agile.Task taskUpdate)
+        public async Task<IActionResult> Edit([FromForm] [Bind("Id, BoardId,Title,Description,DueDate,ListNum")]Models.Agile.Task taskUpdate)
         {
             var task = await _context.Tasks.FindAsync(taskUpdate.Id);
 

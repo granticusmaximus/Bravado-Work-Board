@@ -18,7 +18,9 @@
     </div>
     <input hidden asp-for="BoardId" Model.BoardId>
     <label>Add Description for Task</label>
-    <input asp-for="Description" class="textarea" placeholder="Description">
+    <textarea cols="250" asp-for="Description" class="textarea" placeholder="Place some text here"
+                              style="height: 550px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; border-radius:3px; padding: 10px;"></textarea>
+    <span asp-validation-for="Description" class="text-danger"></span>
     <br/>
     <label>Column Selection:</label>
     <select class="browser-default" asp-for="ListNum"required>
