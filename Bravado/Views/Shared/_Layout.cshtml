@@ -16,23 +16,44 @@
     <link rel="stylesheet" href="~/css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="~/plugins/jquery-ui/jquery-ui.css" rel="stylesheet" />
+    
     <link rel="stylesheet" href="~/plugins/summernote/summernote-bs4.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>$(function () {
-            $("#draggable").draggable();
-            $("#droppable").droppable({
-                drop: function (event, ui) {
-                    $(this)
-                        .addClass("ui-state-highlight")
-                        .find("p")
-                        .html("Dropped!");
-                }
+    <script>    $(function () {
+        awem.dragReor({ from: $('#board1 .card'), to: '#board1 .card', sel: '.item' });
+
+        // don't drag board when mouse down on .item
+        function cancel(cx) { return $(cx.e.target).closest('.item').length; }
+
+        awem.dragReor({ from: $('#board1'), to: '#board1', sel: '.card', cancel: cancel });
+
+        // write to log
+        $('#board1').on('awedrop',
+            function (e, data) {
+                var o = $(e.target);
+                var msg = name(o) +
+                    ' moved from ' +
+                    name(data.from) +
+                    ' to ' +
+                    name(o.parent()) +
+                    ' | previ = ' +
+                    data.previ +
+                    ' newi = ' +
+                    o.index();
+                $('#logci').html(msg + '</br>');
             });
-        });</script>
+
+        function name(o) {
+            var r = o.attr('class');
+            if (o.data('k')) r += ' ' + o.data('k');
+            if (o.hasClass('item')) r = o.html();
+            return r;
+        }
+    });</script>
 </head>
 <body>
     <header>
@@ -76,6 +97,8 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/dragndrop.js"></script>
+    <script src="~/js/aweui.js"></script>
     <script src="~/plugins/jquery/jquery.min.js"></script>
     <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="~/plugins/jquery-ui/jquery-ui.min.js"></script>

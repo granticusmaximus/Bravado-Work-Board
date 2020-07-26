@@ -15,11 +15,11 @@
 <ul class="collection">
     <li class="collection-item avatar">
         <span class="title"><h3>Description</h3></span>
-        <p> @Model.Task.Description</p>
+        <p> @Model.Task.Description.ToString()</p>
     </li>
     <li class="collection-item avatar">
         <span class="title"><h3>Due Date</h3></span>
-        <p> @Model.Task.DueDate.ToString() </p>
+        <p> @Model.Task.DueDate.ToString("dd-MMM-yyyy") </p>
     </li>
 </ul>
 <a asp-action=Open asp-controller=Boards asp-route-id="@Model.Board.Id" class="btn-large waves-effect center-align" > Return to Board <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
