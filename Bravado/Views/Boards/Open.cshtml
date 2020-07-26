@@ -34,14 +34,12 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
                                 <br>
                                 <span class="card-title center-align"> @task.DueDate.ToString("dd-MMM-yyyy") </span>
                                 <br>
-                                <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
-                                    <i class="material-icons">present_to_all</i></a>
+                                <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                             </div>
                             <div class="card-reveal blue-grey white-text">
-                                <span class="card-title white-text text-darken-4 center-align">@task.Title<i class="material-icons right">close</i></span>
+                                <span class="card-title white-text text-darken-4 center-align">@task.Title<i class="fa fa-close">close</i></span>
                                 <p class="flow-text">@task.Description</p>
-                                <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
-                                    <i class="material-icons">present_to_all</i></a>
+                                <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </li>
@@ -58,16 +56,14 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
                             <div class="card-content white-text activator">
                                 <span class="card-title center-align"> @task.Title </span>
                                 <br>
-                                <span class="card-title center-align"> @task.DueDate </span>
+                                <span class="card-title center-align"> @task.DueDate.ToString("dd-MMM-yyyy") </span>
                                 <br>
-                                <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
-                                    <i class="material-icons">present_to_all</i></a>
+                                <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align"><i class="fa fa-paper-plane" aria-hidden="true"></i>/a>
                             </div>
                             <div class="card-reveal blue-grey white-text">
-                                <span class="card-title white-text text-darken-4 center-align">@task.Title<i class="material-icons right">close</i></span>
+                                <span class="card-title white-text text-darken-4 center-align">@task.Title<i class="fa fa-close">close</i></span>
                                 <p class="flow-text">@task.Description</p>
-                                <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
-                                    <i class="material-icons">present_to_all</i></a>
+                                <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                             </div>
                         </div>
 
@@ -85,16 +81,15 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
                             <div class="card-content white-text activator">
                                 <span class="card-title center-align"> @task.Title </span>
                                 <br>
-                                <span class="card-title center-align"> @task.DueDate </span>
+                                <span class="card-title center-align"> @task.DueDate.ToString("dd-MMM-yyyy") </span>
                                 <br>
                                 <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
                                     <i class="material-icons">present_to_all</i></a>
                             </div>
                             <div class="card-reveal blue-grey white-text">
-                                <span class="card-title white-text text-darken-4 center-align">@task.Title<i class="material-icons right">close</i></span>
+                                <span class="card-title white-text text-darken-4 center-align">@task.Title<i class="fa fa-close">close</i></span>
                                 <p class="flow-text">@task.Description</p>
-                                <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align">open
-                                    <i class="material-icons">present_to_all</i></a>
+                                <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </li>
