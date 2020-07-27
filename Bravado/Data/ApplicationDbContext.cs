@@ -21,6 +21,7 @@ namespace Bravado.Data
         public DbSet<Entry> Entries { get; set; }
         public DbSet<Board> Boards { get; set; }
         public DbSet<Task> Tasks { get; set; }
+        public DbSet<TaskComment> TaskComments { get; set; }
         #endregion
 
         #region SERVICE DBSETS
