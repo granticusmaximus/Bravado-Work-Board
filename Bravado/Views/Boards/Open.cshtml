@@ -21,7 +21,7 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
             class="large material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i></i></a>
 </div>
 <div class="row">
-        <ul class="collection with-header agileBoard">
+        <ul class="collection with-header col s12 m4 l4 agileBoard">
             <li class="boardHeader">
                 <h4>To Do</h4>
             </li>
@@ -45,7 +45,7 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
                     </li>
             }
         </ul>
-        <ul class="collection with-header agileBoard">
+        <ul class="collection with-header col s12 m4 l4 agileBoard">
             <li class="boardHeader">
                 <h4>In Progress</h4>
             </li>
@@ -70,28 +70,28 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
                     </li>
             }
         </ul>
-        <ul class="collection with-header agileBoard">
+        <ul class="collection with-header col s12 m4 l4 agileBoard">
             <li class="boardHeader">
                 <h4>Done</h4>
             </li>
             @foreach (var task in Model.TaskL3)
             {
-                <li class="collection-item">
-                    <div class="card hoverable blue-grey">
-                        <div class="card-content white-text activator">
-                            <span class="card-title center-align"><a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="white-text"> @task.Title </a></span>
-                            <br>
-                            <span class="card-title center-align"> @task.DueDate.ToString("dd-MMM-yyyy") </span>
-                            <br>
-                            <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                    <li class="collection-item">
+                        <div class="card hoverable blue-grey">
+                            <div class="card-content white-text activator">
+                                <span class="card-title center-align"><a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="white-text"> @task.Title </a></span>
+                                <br>
+                                <span class="card-title center-align"> @task.DueDate.ToString("dd-MMM-yyyy") </span>
+                                <br>
+                                <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="card-reveal blue-grey white-text">
+                                <span class="card-title white-text text-darken-4 center-align">@task.Title<i class="fa fa-close">close</i></span>
+                                <p class="flow-text">@task.Description</p>
+                                <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                            </div>
                         </div>
-                        <div class="card-reveal blue-grey white-text">
-                            <span class="card-title white-text text-darken-4 center-align">@task.Title<i class="fa fa-close">close</i></span>
-                            <p class="flow-text">@task.Description</p>
-                            <a asp-controller="Tasks" asp-action="Open" asp-route-id="@task.Id" class="waves-effect waves-light btn-small center-align"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </li>
+                    </li>
             }
         </ul>
 </div>
