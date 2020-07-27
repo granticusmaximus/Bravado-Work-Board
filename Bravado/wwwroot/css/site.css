@@ -19,6 +19,12 @@
     margin-right: 5px;
 }
 
+.flexCol {
+    column-gap: 20px;
+    height: auto;
+    width: 100px;
+}
+
 .openTask {
     background-color:#85A7B7;
     color: white;
