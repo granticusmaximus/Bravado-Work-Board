@@ -1,0 +1,6 @@
+{
+    "files.autoSave": "afterDelay",
+    "csharpfixformat.sort.usings.splitGroups": true,
+    "csharpfixformat.style.spaces.beforeBracket": true,
+    "csharpToTypeScript.generateImports": true
+}
