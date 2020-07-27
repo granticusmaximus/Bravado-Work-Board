@@ -77,6 +77,34 @@ namespace Bravado.Migrations
                     b.ToTable("Tasks");
                 });
 
+            modelBuilder.Entity("Bravado.Models.Agile.TaskComment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DueDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("PriorityProp")
+                        .HasColumnType("int");
+
+                    b.Property<Guid?>("TaskId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TaskId");
+
+                    b.ToTable("TaskComments");
+                });
+
             modelBuilder.Entity("Bravado.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
@@ -324,6 +352,13 @@ namespace Bravado.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("Bravado.Models.Agile.TaskComment", b =>
+                {
+                    b.HasOne("Bravado.Models.Agile.Task", "Task")
+                        .WithMany()
+                        .HasForeignKey("TaskId");
                 });
 
             modelBuilder.Entity("Bravado.Models.Entry", b =>
