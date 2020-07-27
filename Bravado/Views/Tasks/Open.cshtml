@@ -4,7 +4,7 @@
 @{
     ViewData["Title"] = "Task: " + Model.Task.Title;
 }
-<a asp-action=Open asp-controller=Boards asp-route-id="@Model.Board.Id" class="btn-large waves-effect center-align"><i class="fa fa-arrow-left" aria-hidden="true"></i> Return to Board</a>
+<a asp-action=Open asp-controller=Boards asp-route-id="@Model.Board.Id" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i> Return to Board</a>
 
 <div class="container">
     <h2>Task For:</h2>
