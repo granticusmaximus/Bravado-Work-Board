@@ -1,4 +1,5 @@
 ﻿using Bravado.Models.Agile;
+using System.Collections.Generic;
 
 namespace Bravado.ViewModel.TaskViewModels
 {
@@ -6,6 +7,5 @@ namespace Bravado.ViewModel.TaskViewModels
     {
         public Board Board { get; set; }
         public Task Task { get; set; }
-        public Task Description { get; set; }
     }
 }

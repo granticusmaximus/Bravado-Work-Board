@@ -18,6 +18,15 @@ namespace Bravado.Models.Agile
         public bool Open { get; set; }
         #endregion
 
+        #region TASK COMMENT
+        public Guid CommentId { get; set; }
+        public string CommentTitle { get; set; }
+        [DataType(DataType.MultilineText)]
+        public string Comment { get; set; }
+        public DateTime CommentDueDate { get; set; }
+        public Priority PriorityProp { get; set; }
+        #endregion
+
         #region
         public Guid SubId { get; set; }
         public string SubTitle { get; set; }
@@ -25,5 +34,12 @@ namespace Bravado.Models.Agile
         public string SubDescription { get; set; }
         public DateTime SubDueDate { get; set; }
         #endregion
+    }
+    public enum Priority
+    {
+        Select,
+        Low,
+        Medium,
+        High
     }
 }
