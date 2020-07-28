@@ -14,11 +14,8 @@
 <table class="table">
     <thead>
         <tr>
-            <th width="25%">
+            <th width="70%">
                 @Html.DisplayNameFor(model => model.Entries[0].Title)
-            </th>
-            <th width="45%">
-                @Html.DisplayNameFor(model => model.Entries[0].Description)
             </th>
             <th width="20%">
                 @Html.DisplayNameFor(model => model.Entries[0].DateCreated)
@@ -30,11 +27,8 @@
         @foreach (var item in Model.Entries)
         {
 <tr>
-    <td width="25%">
+    <td width="70%">
         <a asp-action="Details" asp-route-id="@item.ContentID">@Html.DisplayFor(modelItem => item.Title)</a>
-    </td>
-    <td width="50%">
-        @Html.Raw((item.Description.Length > 200 ? item.Description.Substring(0, 200) : item.Description))
     </td>
     <td width="15%">
         @item.DateCreated.ToString("dd-MMM-yyyy")

@@ -104,16 +104,16 @@ namespace Bravado.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> AddTaskComment([FromForm][Bind("Id,Task,Title,Description,DueDate,PriorityProp")] TaskComment comment, Models.Agile.Task papaTask)
+        public async Task<IActionResult> AddTaskComment([FromForm][Bind("Id,Task,Title,Description,DueDate,PriorityProp")] TaskComment form)
         {
-            var task = await _context.Tasks.FindAsync(papaTask.Id);
+            var task = await _context.Tasks.FindAsync(form.MainTaskId.Id);
             var routeValues = new RouteValueDictionary
             {
                {"id", task.Id.ToString()}
             };
             if (ModelState.IsValid)
             {
-                _context.TaskComments.Update(comment);
+                _context.TaskComments.Update(form);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Open), "Tasks", routeValues);
             }

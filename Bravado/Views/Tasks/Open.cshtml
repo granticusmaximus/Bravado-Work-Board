@@ -1,26 +1,26 @@
 @using Bravado.Models
 @using System.Collections.Generic
-@using Bravado.ViewModel.BoardViewModels
-@model Bravado.Models.Agile.Task
+@using Bravado.ViewModel.TaskViewModels
+@model TaskCommentForm
 
 @{
-    ViewData["Title"] = "Task: " + Model.Title;
+    ViewData["Title"] = "Task: " + Model.Task.Title;
 }
-<a asp-action=Open asp-controller=Boards asp-route-id="@Model.Id" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i> Return to Board</a>
+<a asp-action=Open asp-controller=Boards asp-route-id="@Model.Task.Id" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i> Return to Board</a>
 
 <div class="container">
     <h2>Task For:</h2>
-    <p>@Model.Title</p>
+    <p>@Model.Task.Title</p>
     <div class="openTask">
         <span class="title"><h3>Description</h3></span>
-        <p>@Html.Raw(Model.Description)</p>
+        <p>@Html.Raw(Model.Task.Description)</p>
         <span class="title"><h3>Due Date</h3></span>
-        <p> @Model.DueDate.ToString("dd-MMM-yyyy") </p>
+        <p> @Model.Task.DueDate.ToString("dd-MMM-yyyy") </p>
     </div>
     <br />
     <div>
         <a  asp-action=Edit asp-controller="Tasks" asp-route-id="@Model.Task.Id" class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"> Edit</i></a>
-        <a  asp-action=Delete asp-route-id="@Model.Id" class="btn btn-danger"><i class="fa fa-close"> Delete</i></a>
+        <a  asp-action=Delete asp-route-id="@Model.Task.Id" class="btn btn-danger"><i class="fa fa-close"> Delete</i></a>
     </div>
 </div>
 <hr />
@@ -29,16 +29,17 @@
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
         Add Commemnt 
     </button>
-    @foreach (var comment in Model.Comment)
+    <!--Previously added Comments Area-->
+    @foreach (var comment in Model.TaskComments)
         {
             <li class="collection-item">
                 <div class="card hoverable blue-grey">
                     <div class="card-content white-text activator">
-                        <span class="card-title center-align"> @comment.Title</span>
+                        <span class="card-title center-align"> @comment.CommentTitle</span>
                         <br>
-                        <p> @comment.DueDate.ToString("dd-MMM-yyyy") </p>
+                        <p> @comment.CommentDueDate.ToString("dd-MMM-yyyy") </p>
                         <br>
-                        <p>@comment.DueDate</p>
+                        <p>@comment.Comment</p>
                     </div>
                 </div>
             </li>
@@ -59,26 +60,26 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label asp-for="Comment.Title" class="control-label"></label>
-                                <input asp-for="Comment.Title" class="form-control" />
-                                <span asp-validation-for="Comment.Title" class="text-danger"></span>
+                                <label asp-for="TaskComment.CommentTitle" class="control-label"></label>
+                                <input asp-for="TaskComment.CommentTitle" class="form-control" />
+                                <span asp-validation-for="TaskComment.CommentTitle" class="text-danger"></span>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label asp-for="Comment.DueDate" class="control-label"></label>
-                                <input asp-for="Comment.DueDate" class="form-control" id="datepicker" />
-                                <span asp-validation-for="Comment.DueDate" class="text-danger"></span>
+                                <label asp-for="TaskComment.CommentDueDate" class="control-label"></label>
+                                <input asp-for="TaskComment.CommentDueDate" class="form-control" id="datepicker" />
+                                <span asp-validation-for="TaskComment.CommentDueDate" class="text-danger"></span>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label asp-for="Comment.Description" class="control-label"></label>
-                                <textarea cols="250" asp-for="Comment.Description" class="textarea" placeholder="Place some text here"
+                                <label asp-for="TaskComment.Comment" class="control-label"></label>
+                                <textarea cols="250" asp-for="TaskComment.Comment" class="textarea" placeholder="Place some text here"
                                         style="height: 550px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; border-radius:3px; padding: 10px;"></textarea>
-                                <span asp-validation-for="Comment.Description" class="text-danger"></span>
+                                <span asp-validation-for="TaskComment.Comment" class="text-danger"></span>
                             </div>
                         </div>
                     </div>
