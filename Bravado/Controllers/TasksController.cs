@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Bravado.Data;
 using Bravado.Models;
+using Bravado.Models.Agile;
 using Bravado.ViewModel.TaskViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -35,6 +36,7 @@ namespace Bravado.Controllers
             var task = await _context.Tasks.FindAsync(id);
             var boardId = Guid.Parse(task.BoardId);
             var board = await _context.Boards.FindAsync(boardId);
+            var comment = await _context.TaskComments.FindAsync(id);
             return View(model: new TaskDetails { Task = task, Board = board });
         }
 
@@ -65,7 +67,7 @@ namespace Bravado.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit([FromForm] [Bind("Id, BoardId,Title,Description,DueDate,ListNum")]Models.Agile.Task taskUpdate)
+        public async Task<IActionResult> Edit([FromForm][Bind("Id, BoardId,Title,Description,DueDate,ListNum")] Models.Agile.Task taskUpdate)
         {
             var task = await _context.Tasks.FindAsync(taskUpdate.Id);
 
@@ -99,6 +101,24 @@ namespace Bravado.Controllers
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Open), "Boards", routeValues);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> AddTaskComment([FromForm][Bind("Id,Task,Title,Description,DueDate,PriorityProp")] TaskComment form)
+        {
+            var task = await _context.Tasks.FindAsync(form.MainTaskId.Id);
+            var routeValues = new RouteValueDictionary
+            {
+               {"id", task.Id.ToString()}
+            };
+            if (ModelState.IsValid)
+            {
+                _context.TaskComments.Update(form);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Open), "Tasks", routeValues);
+            }
+
+            return RedirectToAction(nameof(Open), "Tasks", routeValues);
         }
 
 

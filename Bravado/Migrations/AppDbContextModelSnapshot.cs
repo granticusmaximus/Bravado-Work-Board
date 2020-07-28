@@ -79,28 +79,28 @@ namespace Bravado.Migrations
 
             modelBuilder.Entity("Bravado.Models.Agile.TaskComment", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid>("CommentId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Description")
+                    b.Property<string>("Comment")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("DueDate")
+                    b.Property<DateTime>("CommentDueDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("CommentTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("MainTaskIdId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("PriorityProp")
                         .HasColumnType("int");
 
-                    b.Property<Guid?>("TaskId")
-                        .HasColumnType("uniqueidentifier");
+                    b.HasKey("CommentId");
 
-                    b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("TaskId");
+                    b.HasIndex("MainTaskIdId");
 
                     b.ToTable("TaskComments");
                 });
@@ -356,9 +356,9 @@ namespace Bravado.Migrations
 
             modelBuilder.Entity("Bravado.Models.Agile.TaskComment", b =>
                 {
-                    b.HasOne("Bravado.Models.Agile.Task", "Task")
+                    b.HasOne("Bravado.Models.Agile.Task", "MainTaskId")
                         .WithMany()
-                        .HasForeignKey("TaskId");
+                        .HasForeignKey("MainTaskIdId");
                 });
 
             modelBuilder.Entity("Bravado.Models.Entry", b =>

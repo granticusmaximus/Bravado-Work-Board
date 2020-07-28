@@ -18,6 +18,7 @@ namespace Bravado.Models.Agile
         public bool Open { get; set; }
         #endregion
 
+
         #region
         public Guid SubId { get; set; }
         public string SubTitle { get; set; }
@@ -25,5 +26,6 @@ namespace Bravado.Models.Agile
         public string SubDescription { get; set; }
         public DateTime SubDueDate { get; set; }
         #endregion
+
     }
 }
