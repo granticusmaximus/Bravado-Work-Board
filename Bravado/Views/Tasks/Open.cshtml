@@ -6,7 +6,7 @@
 @{
     ViewData["Title"] = "Task: " + Model.Task.Title;
 }
-<a asp-action=Open asp-controller=Boards asp-route-id="@Model.Task.Id" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i> Return to Board</a>
+<a asp-action=Open asp-controller=Boards asp-route-id="@Model.Board.Id" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i> Return to Board</a>
 
 <div class="container">
     <h2>Task For:</h2>
@@ -55,7 +55,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form asp-action="AddTaskComment">
+                <form asp-action="AddTaskComment" method="post">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="row">
                         <div class="col-md-6">
