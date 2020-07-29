@@ -36,8 +36,8 @@ namespace Bravado.Controllers
             var task = await _context.Tasks.FindAsync(id);
             var boardId = Guid.Parse(task.BoardId);
             var board = await _context.Boards.FindAsync(boardId);
-            var comment = await _context.TaskComments.FindAsync(id);
-            return View(model: new TaskDetails { Task = task, Board = board });
+            var comment = _context.TaskComments.ToList();
+            return View(model: new TaskCommentForm { Task = task, Board = board, TaskComments = comment });
         }
 
 

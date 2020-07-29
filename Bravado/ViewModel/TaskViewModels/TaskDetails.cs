@@ -7,5 +7,7 @@ namespace Bravado.ViewModel.TaskViewModels
     {
         public Board Board { get; set; }
         public Task Task { get; set; }
+        public TaskComment TaskComment { get; set; }
+        public IEnumerable<TaskComment> TaskComments { get; set; }
     }
 }
