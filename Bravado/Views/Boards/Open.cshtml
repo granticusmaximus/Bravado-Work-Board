@@ -29,7 +29,7 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
                                     <span class="card-title center-align">
                                         @if (@task.DaysOverDue > 0)
                                         {
-                                            <p bgcolor="#FF0000"><font color="white">@task.DaysOverDue.ToString("Task" + " " + "Overdue")</font></p>
+                                            <p bgcolor="#FF0000"><font color="white">@task.DaysOverDue.ToString(@task.DaysOverDue + "Days " + "Overdue")</font></p>
                                         }
                                         else
                                         {
@@ -64,7 +64,7 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
                                     <span class="card-title center-align">
                                         @if (@task.DaysOverDue > 0)
                                         {
-                                            <p bgcolor="#FF0000"><font color="white">@task.DaysOverDue.ToString("Task" + " " + "Overdue")</font></p>
+                                            <p bgcolor="#FF0000"><font color="white">@task.DaysOverDue.ToString(@task.DaysOverDue + "Days " + "Overdue")</font></p>
                                         }
                                         else
                                         {
@@ -99,7 +99,7 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
                                     <span class="card-title center-align">
                                         @if (@task.DaysOverDue > 0)
                                         {
-                                            <p bgcolor="#FF0000 !important"><font color="white">@task.DaysOverDue.ToString( @task.DaysOverDue + " " + "Overdue")</font></p>
+                                            <p bgcolor="#FF0000 !important"><font color="white">@task.DaysOverDue.ToString(@task.DaysOverDue + "Days " + "Overdue")</font></p>
                                         }
                                         else
                                         {
