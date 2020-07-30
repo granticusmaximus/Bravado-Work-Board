@@ -17,7 +17,7 @@
         <span class="title"><h3>Due Date</h3></span>
         @if (@Model.Task.DaysOverDue > 0)
         {
-            <p bgcolor="#FF0000"><font color="white">@Model.Task.DaysOverDue.ToString("Task" + " " + "Overdue")</font></p>
+            <p bgcolor="#FF0000 !important"><font color="white">@task.DaysOverDue.ToString( @task.DaysOverDue + " " + "Overdue")</font></p>
         }
         else
         {
