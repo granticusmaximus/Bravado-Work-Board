@@ -14,6 +14,19 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
 </div>
 
 <div class="row">
+    <div class="dropZone">
+        <p>drag source</p>
+        <div class="dragItem">a</div>
+        <div class="dragItem">b</div>
+        <div class="dragItem">c</div>
+    </div>
+    <br />
+    <div class="dropZone">
+        <p>drop target</p>
+    </div>
+</div>
+
+<div class="row">
         <div class="col-md-4 flexCol">
                 <ul>
                     <li class="boardHeader">
@@ -121,4 +134,29 @@ ViewData["Title"] = $"{Model.Board.Title}" ;
         </div>
 </div>
 <br/>
-<hr 
+<hr />
+
+<script>
+        $(function () {
+            awem.dragAndDrop({
+                from: $('.dropZone'),
+                sel: '.dragItem', // what we can drag
+                dropSel: '.dropZone', // where we can drop
+                //tof: function() {
+                //    // alternative way to determine where we are allowed to drop
+                //    // evaluated when we start dragging
+                //    return $('.dropZone').map(function (i, el) { return $(el); }).get();
+                //},
+                hover: function (cx) {
+                    cx.cont.addClass('awe-highlight');
+                },
+                drop: function (cx) {
+                    cx.cont.append(cx.drgo);
+                },
+                reshov: function () {
+                    $('.dropZone').removeClass('awe-highlight');
+                },
+                hide: 1 // hide drag object while dragging
+            });
+        });
+    </script>
