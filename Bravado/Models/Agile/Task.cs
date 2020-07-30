@@ -15,6 +15,7 @@ namespace Bravado.Models.Agile
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
         public DateTime DueDate { get; set; }
+        public double DaysOverDue => DateTime.Now.Subtract(DueDate).TotalDays;
         public bool Open { get; set; }
         #endregion
 
@@ -28,4 +29,6 @@ namespace Bravado.Models.Agile
         #endregion
 
     }
+
+
 }
