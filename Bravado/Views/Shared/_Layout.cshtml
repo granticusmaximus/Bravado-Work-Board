@@ -106,18 +106,30 @@
     <script>$(function () {
 
             $('.textarea').summernote()
-        })</script>
-    <script>$(function () {
-            $("#draggable").draggable();
-            $("#droppable").droppable({
-                drop: function (event, ui) {
-                    $(this)
-                        .addClass("ui-state-highlight")
-                        .find("p")
-                        .html("Dropped!");
-                }
+        });
+        $(function () {
+            awem.dragAndDrop({
+                from: $('.dropZone'),
+                sel: '.dragItem', // what we can drag
+                dropSel: '.dropZone', // where we can drop
+                //tof: function() {
+                //    // alternative way to determine where we are allowed to drop
+                //    // evaluated when we start dragging
+                //    return $('.dropZone').map(function (i, el) { return $(el); }).get();
+                //},
+                hover: function (cx) {
+                    cx.cont.addClass('awe-highlight');
+                },
+                drop: function (cx) {
+                    cx.cont.append(cx.drgo);
+                },
+                reshov: function () {
+                    $('.dropZone').removeClass('awe-highlight');
+                },
+                hide: 1 // hide drag object while dragging
             });
-        });</script>
+        });
+    </script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
