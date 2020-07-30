@@ -15,7 +15,14 @@
         <span class="title"><h3>Description</h3></span>
         <p>@Html.Raw(Model.Task.Description)</p>
         <span class="title"><h3>Due Date</h3></span>
-        <p> @Model.Task.DueDate.ToString("dd-MMM-yyyy") </p>
+        @if (@Model.Task.DaysOverDue > 0)
+        {
+            <p bgcolor="#FF0000"><font color="white">@Model.Task.DaysOverDue.ToString("Task" + " " + "Overdue")</font></p>
+        }
+        else
+        {
+            <p>@Model.Task.DueDate.ToString("dd-MMM-yyyy")</p>
+        }
     </div>
     <br />
     <div>

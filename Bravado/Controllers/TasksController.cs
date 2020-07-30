@@ -28,7 +28,6 @@ namespace Bravado.Controllers
             _userManager = userManager;
         }
 
-
         [HttpGet]
         public async Task<IActionResult> Open([FromRoute] Guid id)
         {
