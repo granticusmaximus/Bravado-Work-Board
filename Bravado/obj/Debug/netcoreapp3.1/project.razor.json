@@ -20576,8 +20576,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Tasks/Open.cshtml",
-      "TargetPath": "Views\\Tasks\\Open.cshtml",
+      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Boards/AddCard.cshtml",
+      "TargetPath": "Views\\Boards\\AddCard.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20636,18 +20636,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Boards/Open.cshtml",
-      "TargetPath": "Views\\Boards\\Open.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Areas/Identity/Pages/Account/Manage/Email.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Tasks/Add.cshtml",
-      "TargetPath": "Views\\Tasks\\Add.cshtml",
+      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Boards/Index.cshtml",
+      "TargetPath": "Views\\Boards\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20716,8 +20711,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Tasks/Edit.cshtml",
-      "TargetPath": "Views\\Tasks\\Edit.cshtml",
+      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Boards/Details.cshtml",
+      "TargetPath": "Views\\Boards\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20763,6 +20758,11 @@
     {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Areas/Identity/Pages/Account/LoginWith2fa.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Tasks/Details.cshtml",
+      "TargetPath": "Views\\Tasks\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
