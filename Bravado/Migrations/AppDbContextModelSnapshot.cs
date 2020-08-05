@@ -36,6 +36,29 @@ namespace Bravado.Migrations
                     b.ToTable("Boards");
                 });
 
+            modelBuilder.Entity("Bravado.Models.Agile.Column", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BoardId")
+                        .HasColumnType("int");
+
+                    b.Property<Guid?>("BoardId1")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BoardId1");
+
+                    b.ToTable("Column");
+                });
+
             modelBuilder.Entity("Bravado.Models.Agile.Task", b =>
                 {
                     b.Property<Guid>("Id")
@@ -44,6 +67,9 @@ namespace Bravado.Migrations
 
                     b.Property<string>("BoardId")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ColumnId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -70,9 +96,12 @@ namespace Bravado.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ColumnId");
 
                     b.ToTable("Tasks");
                 });
@@ -352,6 +381,22 @@ namespace Bravado.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("Bravado.Models.Agile.Column", b =>
+                {
+                    b.HasOne("Bravado.Models.Agile.Board", null)
+                        .WithMany("Columns")
+                        .HasForeignKey("BoardId1");
+                });
+
+            modelBuilder.Entity("Bravado.Models.Agile.Task", b =>
+                {
+                    b.HasOne("Bravado.Models.Agile.Column", "Column")
+                        .WithMany("Tasks")
+                        .HasForeignKey("ColumnId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Bravado.Models.Agile.TaskComment", b =>

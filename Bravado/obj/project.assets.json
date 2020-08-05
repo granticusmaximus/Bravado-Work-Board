@@ -9760,11 +9760,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Bravado.csproj",
+      "projectUniqueName": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Bravado.csproj",
       "projectName": "Bravado",
-      "projectPath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/Bravado.csproj",
+      "projectPath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Bravado.csproj",
       "packagesPath": "/Users/grantwatson/.nuget/packages/",
-      "outputPath": "/Users/grantwatson/Desktop/Dev/Bravado/Bravado-Work-Board/Bravado/obj/",
+      "outputPath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
