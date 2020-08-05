@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Bravado.Models.Agile {
-    public class Task : BaseEntity {
+    public class Task {
         #region MAIN TASK
         [Key, DatabaseGenerated (DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }

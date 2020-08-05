@@ -1,6 +1,9 @@
+using System;
 using System.Linq;
 
 using Bravado.Data;
+using Bravado.ViewModel.BoardViewModels;
+using Bravado.ViewModel.TaskViewModels;
 
 using Microsoft.EntityFrameworkCore;
 
@@ -25,12 +28,12 @@ namespace Bravado.Services {
             return model;
         }
 
-        public BoardView GetBoard (int id) {
+        public BoardView GetBoard (Guid id) {
             var model = new BoardView ();
 
             var board = _dbContext.Boards
                 .Include (b => b.Columns)
-                .ThenInclude (c => c.Cards)
+                .ThenInclude (c => c.Tasks)
                 .SingleOrDefault (x => x.Id == id);
 
             if (board == null) return model;
@@ -42,10 +45,10 @@ namespace Bravado.Services {
                     Id = column.Id
                 };
 
-                foreach (var card in column.Cards) {
+                foreach (var card in column.Tasks) {
                     var modelCard = new BoardView.Card {
                         Id = card.Id,
-                        Content = card.Contents
+                        Content = card.Title
                     };
 
                     modelColumn.Cards.Add (modelCard);

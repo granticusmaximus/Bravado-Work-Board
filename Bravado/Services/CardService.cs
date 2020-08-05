@@ -2,7 +2,9 @@ using System;
 using System.Linq;
 
 using Bravado.Data;
+using Bravado.ViewModel.TaskViewModels;
 
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bravado.Services {
@@ -13,7 +15,7 @@ namespace Bravado.Services {
             _dbContext = dbContext;
         }
 
-        public CardDetails GetDetails (int id) {
+        public CardDetails GetDetails (Guid id) {
             var card = _dbContext
                 .Tasks
                 .Include (c => c.Column)
@@ -39,8 +41,8 @@ namespace Bravado.Services {
 
                 return new CardDetails {
                     Id = card.Id,
-                        Contents = card.Contents,
-                        Notes = card.Notes,
+                        Contents = card.Title,
+                        Notes = card.Description,
                         Columns = availableColumns.ToList (), // list available columns
                         Column = card.ColumnId // map current column
                 };
@@ -49,10 +51,10 @@ namespace Bravado.Services {
         }
 
         public void Update (CardDetails cardDetails) {
-            var card = _dbContext.Cards.SingleOrDefault (x => x.Id == cardDetails.Id);
+            var card = _dbContext.Tasks.SingleOrDefault (x => x.Id == cardDetails.Id);
             if (card != null) {
-                card.Contents = cardDetails.Contents;
-                card.Notes = cardDetails.Notes;
+                card.Title = cardDetails.Contents;
+                card.Description = cardDetails.Notes;
                 card.ColumnId = cardDetails.Column;
             }
 

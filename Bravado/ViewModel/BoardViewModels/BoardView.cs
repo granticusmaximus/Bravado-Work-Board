@@ -1,14 +1,22 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+
 using Bravado.Models.Agile;
 
-namespace Bravado.ViewModel.BoardViewModels
-{
-    public class BoardView
-    {
-        public Board Board { get; set; }
-        public IEnumerable<Task> Tasks { get; set; }
-        public IEnumerable<Task> TaskL1 { get; set; }
-        public IEnumerable<Task> TaskL2 { get; set; }
-        public IEnumerable<Task> TaskL3 { get; set; }
+namespace Bravado.ViewModel.BoardViewModels {
+    public class BoardView {
+        public Guid Id { get; set; }
+        public readonly List<Column> Columns = new List<Column> ();
+
+        public class Column {
+            public Guid Id { get; set; }
+            public string Title { get; set; }
+            public readonly List<Card> Cards = new List<Card> ();
+        }
+
+        public class Card {
+            public Guid Id { get; set; }
+            public string Content { get; set; }
+        }
     }
 }
