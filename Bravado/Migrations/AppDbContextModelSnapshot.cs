@@ -38,15 +38,11 @@ namespace Bravado.Migrations
 
             modelBuilder.Entity("Bravado.Models.Agile.Column", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("BoardId")
-                        .HasColumnType("int");
-
-                    b.Property<Guid?>("BoardId1")
+                    b.Property<Guid>("BoardId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Title")
@@ -54,7 +50,7 @@ namespace Bravado.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BoardId1");
+                    b.HasIndex("BoardId");
 
                     b.ToTable("Column");
                 });
@@ -70,6 +66,9 @@ namespace Bravado.Migrations
 
                     b.Property<int>("ColumnId")
                         .HasColumnType("int");
+
+                    b.Property<Guid?>("ColumnId1")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -101,7 +100,7 @@ namespace Bravado.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ColumnId");
+                    b.HasIndex("ColumnId1");
 
                     b.ToTable("Tasks");
                 });
@@ -387,16 +386,16 @@ namespace Bravado.Migrations
                 {
                     b.HasOne("Bravado.Models.Agile.Board", null)
                         .WithMany("Columns")
-                        .HasForeignKey("BoardId1");
+                        .HasForeignKey("BoardId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Bravado.Models.Agile.Task", b =>
                 {
                     b.HasOne("Bravado.Models.Agile.Column", "Column")
                         .WithMany("Tasks")
-                        .HasForeignKey("ColumnId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ColumnId1");
                 });
 
             modelBuilder.Entity("Bravado.Models.Agile.TaskComment", b =>
