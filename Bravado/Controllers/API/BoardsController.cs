@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 namespace Bravado.Controllers.API {
     [Route ("api/[controller]")]
     [ApiController]
-    public class BoardController : ControllerBase {
+    public class BoardsController : ControllerBase {
         private readonly BoardService _boardService;
-        public BoardController (BoardService boardService) {
+        public BoardsController (BoardService boardService) {
             _boardService = boardService;
         }
 
