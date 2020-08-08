@@ -71,9 +71,9 @@ namespace Bravado.Services {
                 var thirdColumn = board.Columns.FirstOrDefault ();
 
                 if (firstColumn == null || secondColumn == null || thirdColumn == null) {
-                    firstColumn = new Models.Agile.Column { Title = "Todo" };
-                    secondColumn = new Models.Agile.Column { Title = "Doing" };
-                    thirdColumn = new Models.Agile.Column { Title = "Done" };
+                    firstColumn = new Models.Agile.Column { Title = "Backlog" };
+                    secondColumn = new Models.Agile.Column { Title = "In Progress" };
+                    thirdColumn = new Models.Agile.Column { Title = "Done/Review" };
                     board.Columns.Add (firstColumn);
                     board.Columns.Add (secondColumn);
                     board.Columns.Add (thirdColumn);
