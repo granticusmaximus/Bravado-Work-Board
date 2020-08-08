@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bravado.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200807130609_EntityControl2")]
-    partial class EntityControl2
+    [Migration("20200808051056_EntityCreation")]
+    partial class EntityCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

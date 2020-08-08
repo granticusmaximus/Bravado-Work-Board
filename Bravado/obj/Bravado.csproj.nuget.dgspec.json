@@ -13,9 +13,6 @@
         "packagesPath": "/Users/grantwatson/.nuget/packages/",
         "outputPath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "/Users/grantwatson/.nuget/NuGet/NuGet.Config"
         ],
