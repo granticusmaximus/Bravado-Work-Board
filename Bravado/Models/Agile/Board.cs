@@ -9,6 +9,7 @@ namespace Bravado.Models.Agile
         [Key]
         public int BoardID {get;set;}
         public string BoardTitle {get;set;}
+        public string UserId { get; set; }
         public List<Column> Columns {get;set;}
     
     }
@@ -18,6 +19,7 @@ namespace Bravado.Models.Agile
         [Key]
         public int ColumnID {get;set;}
         public string ColumnName {get;set;}
+        public Board BID {get;set;}
         public List<Card> Cards {get;set;}
     }
 
@@ -25,6 +27,7 @@ namespace Bravado.Models.Agile
     {
         [Key]
         public int CardID {get;set;}
+        public Column CID {get;set;}
 
         [Display(Name = "Task Name:")]
         public string CardName {get;set;}

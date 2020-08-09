@@ -20526,6 +20526,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Agile/Index.cshtml",
+      "TargetPath": "Views\\Agile\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml",
       "FileKind": "mvc"
@@ -20573,11 +20578,6 @@
     {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Entry/Details.cshtml",
       "TargetPath": "Views\\Entry\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Boards/AddCard.cshtml",
-      "TargetPath": "Views\\Boards\\AddCard.cshtml",
       "FileKind": "mvc"
     },
     {

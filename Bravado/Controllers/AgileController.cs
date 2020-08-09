@@ -7,6 +7,9 @@ using Bravado.Models.Agile;
 using Microsoft.AspNetCore.Authorization;
 using System;
 using Bravado.ViewModel.AgileViewModels;
+using Microsoft.AspNetCore.Identity;
+using Bravado.Models;
+using System.Security.Claims;
 
 namespace Bravado.Controllers
 {
@@ -14,24 +17,57 @@ namespace Bravado.Controllers
     public class AgileController : Controller
     {
         private readonly AppDbContext _context;
+        private UserManager<ApplicationUser> _userManager;
 
-        public AgileController(AppDbContext context)
+        public AgileController(AppDbContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
-        public async Task<IActionResult> Index(string searchString)
+        #region BOARD REGION
+        [HttpGet]
+        public IActionResult Index()
         {
-            var boards = from e in _context.Boards
-                 select e;
-            
-            var indexVM = new AgileIndexViewModel
-            {
-                Boards = await boards.ToListAsync()
-            };
-
-            return View(indexVM);
+            var Claims = this.User;
+            ClaimsPrincipal currentUser = this.User;
+            var uId = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var Boards = _context.Boards.Where(board => board.UserId == uId).ToList();
+            return View(Boards);
         }
+
+        [HttpGet]
+        public IActionResult NewBoard()
+        {
+            ClaimsPrincipal currentUser = this.User;
+            var uId = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+            return View(new Board { UserId = uId });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddNewBoard([Bind("BoardID,BoardTitle")] Board board)
+        {
+            _context.Boards.Add(board);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> OpenBoard(int ID)
+        {   
+            var board = await _context.Boards.FindAsync(ID);
+            return View(model: new OpenBoardViewModel { Board = board });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddColumn([FromForm] Column column)
+        {
+
+            _context.Columns.Add(column);
+            await _context.SaveChangesAsync();
+            return View();
+        }
+        #endregion
 
     }
 }
