@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Bravado.Data;
-using Bravado.Models;
+using Bravado.Models.Wiki;
 using Microsoft.AspNetCore.Authorization;
 using System;
 using Bravado.ViewModel.EntryViewModels;

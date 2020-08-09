@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-using Bravado.Models;
+using Bravado.Models.Wiki;
 
 namespace Bravado.ViewModel.EntryViewModels
 {

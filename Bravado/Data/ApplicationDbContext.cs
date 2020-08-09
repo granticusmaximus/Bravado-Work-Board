@@ -1,7 +1,7 @@
 ﻿using System;
 
 using Bravado.Models;
-using Bravado.Models.Agile;
+using Bravado.Models.Wiki;
 using Bravado.Models.Services;
 
 using Microsoft.AspNetCore.Identity;
@@ -14,12 +14,8 @@ namespace Bravado.Data {
 
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
 
-        #region AGILE WORKBOARD
+        #region WIKIS 
         public DbSet<Entry> Entries { get; set; }
-        public DbSet<Board> Boards { get; set; }
-        public DbSet<Task> Tasks { get; set; }
-        public DbSet<Column> Columns { get; set; }
-        public DbSet<TaskComment> TaskComments { get; set; }
         #endregion
 
         #region SERVICE DBSETS
