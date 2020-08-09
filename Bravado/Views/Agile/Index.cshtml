@@ -1,0 +1,38 @@
+@{
+ViewData["Title"] = "Your Boards:";
+}
+@using Bravado.Models.Agile
+@using System.Collections.Generic
+@model IEnumerable<Board>
+
+<div class="fixed-action-btn">
+    <a asp-action=Add asp-controller="Boards" class="btn-floating btn-large waves-effect waves-light red"><i
+            class="large material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i></i></a>
+</div>
+
+<div class="container">
+   <div class="row">
+  @foreach (var board in Model) 
+  {
+ 
+    <div class="col s12 m6 l3">
+      <div class="card stickey-action blue-grey darken-1 hoverable activation">
+        <div class="card-content white-text">
+          <span class="card-title center-align">
+          <a asp-action="Open" asp-route-id="@board.BoardID" class="white-text">@board.BoardTitle</a>
+          </span>
+        </div>
+
+        <div class="card-reveal">
+          <span class="card-title white-text text-darken-4 center-align" style="color:white;">@board.BoardTitle<i class="material-icons right">close</i></span>
+        </div>
+        <div class="card-action">
+          <a asp-action="Open" asp-route-id="@board.BoardID"><i class="fa fa-paper-plane" aria-hidden="true"></i> View</a>
+        </div>
+      </div>
+    </div>
+ 
+  }
+   </div>
+  
+</div>
