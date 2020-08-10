@@ -1,0 +1,48 @@
+@using Bravado.ViewModel.AgileViewModels
+@using System.Collections.Generic
+@model OpenBoardViewModel
+
+@{
+ViewData["Title"] = $"{Model.Board.BoardTitle}" ;
+}
+<div class=row>
+    <div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Add New Column
+        </button>
+        <a asp-action=Edit asp-route-id="@Model.Board.BoardTitle" class="waves-effect waves-light btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Board</a>
+        <a asp-action=Delete asp-route-id="@Model.Board.BoardTitle" class="waves-effect waves-light red btn"><i class="fa fa-window-close" aria-hidden="true"></i> Delete Board</a>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New Column</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post">
+                    <label>Column Name:</label>
+                    <input asp-for="Column.ColumnName" placeholder="Column Name">
+                    <input hidden asp-for="Column.BID" >
+                    <input hidden asp-for="Column.ColumnID" >
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="submit">
+                        Create <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br/>
+<hr />
