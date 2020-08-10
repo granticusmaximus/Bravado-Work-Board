@@ -5,9 +5,17 @@ ViewData["Title"] = "Your Boards:";
 @using System.Collections.Generic
 @model IEnumerable<Board>
 
-<div class="fixed-action-btn">
-    <a asp-action=Add asp-controller="Boards" class="btn-floating btn-large waves-effect waves-light red"><i
-            class="large material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i></i></a>
+<div>
+  <h3>Agile Boards</h3>
+</div>
+<hr />
+<div>
+    <a asp-action=NewBoard asp-controller="Boards" class="btn btn-success">
+      <i class="large material-icons">
+        <i class="fa fa-plus-circle" aria-hidden="true"></i> 
+          Add New Board
+      </i>
+    </a>
 </div>
 
 <div class="container">
