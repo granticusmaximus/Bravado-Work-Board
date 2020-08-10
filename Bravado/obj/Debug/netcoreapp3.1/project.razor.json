@@ -20581,6 +20581,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Agile/Open.cshtml",
+      "TargetPath": "Views\\Agile\\Open.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Shared/_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -20623,6 +20628,11 @@
     {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Areas/Identity/Pages/Error.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Agile/NewBoard.cshtml",
+      "TargetPath": "Views\\Agile\\NewBoard.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20748,11 +20758,6 @@
     {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Areas/Identity/Pages/Account/LoginWith2fa.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Tasks/Details.cshtml",
-      "TargetPath": "Views\\Tasks\\Details.cshtml",
       "FileKind": "mvc"
     },
     {

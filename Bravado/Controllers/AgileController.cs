@@ -45,15 +45,15 @@ namespace Bravado.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddNewBoard([Bind("BoardID,BoardTitle")] Board board)
+        public async Task<IActionResult> NewBoard([FromForm] Board board)
         {
+
             _context.Boards.Add(board);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        public async Task<IActionResult> OpenBoard(int ID)
+        public async Task<IActionResult> Open([FromRoute] int ID)
         {   
             var board = await _context.Boards.FindAsync(ID);
             return View(model: new OpenBoardViewModel { Board = board });

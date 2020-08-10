@@ -1,23 +1,25 @@
 @{
-ViewData["Title"] = "Your Boards:";
+ViewData["Title"] = "Local Boards:";
 }
 @using Bravado.Models.Agile
 @using System.Collections.Generic
 @model IEnumerable<Board>
 
 <div>
-  <h3>Agile Boards</h3>
+  <center>
+    <h3>Agile Boards</h3>
+  </center>
 </div>
 <hr />
 <div>
-    <a asp-action=NewBoard asp-controller="Boards" class="btn btn-success">
+    <a asp-action=NewBoard asp-controller="Agile" class="btn btn-success">
       <i class="large material-icons">
         <i class="fa fa-plus-circle" aria-hidden="true"></i> 
           Add New Board
       </i>
     </a>
 </div>
-
+<hr />
 <div class="container">
    <div class="row">
   @foreach (var board in Model) 

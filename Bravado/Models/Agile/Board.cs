@@ -8,6 +8,8 @@ namespace Bravado.Models.Agile
     {
         [Key]
         public int BoardID {get;set;}
+
+        [Display(Name = "Board Name:")]
         public string BoardTitle {get;set;}
         public string UserId { get; set; }
         public List<Column> Columns {get;set;}
@@ -18,6 +20,8 @@ namespace Bravado.Models.Agile
     {
         [Key]
         public int ColumnID {get;set;}
+
+        [Display(Name = "Column Name:")]
         public string ColumnName {get;set;}
         public Board BID {get;set;}
         public List<Card> Cards {get;set;}
