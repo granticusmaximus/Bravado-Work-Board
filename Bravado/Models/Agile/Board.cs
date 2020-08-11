@@ -16,7 +16,4 @@ namespace Bravado.Models.Agile
     
     }
 
-
-
-
 }

@@ -21,116 +21,72 @@ namespace Bravado.Migrations
 
             modelBuilder.Entity("Bravado.Models.Agile.Board", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("BoardID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Title")
+                    b.Property<string>("BoardTitle")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("BoardID");
 
                     b.ToTable("Boards");
                 });
 
-            modelBuilder.Entity("Bravado.Models.Agile.Column", b =>
+            modelBuilder.Entity("Bravado.Models.Agile.Card", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("CardID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<Guid>("BoardId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BoardId");
-
-                    b.ToTable("Columns");
-                });
-
-            modelBuilder.Entity("Bravado.Models.Agile.Task", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("BoardId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ColumnId")
+                    b.Property<int?>("CIDColumnID")
                         .HasColumnType("int");
 
-                    b.Property<Guid?>("ColumnId1")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Description")
+                    b.Property<string>("CardComments")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CardName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CardNotes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DueDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("ListNum")
-                        .HasColumnType("int");
+                    b.HasKey("CardID");
 
-                    b.Property<bool>("Open")
-                        .HasColumnType("bit");
+                    b.HasIndex("CIDColumnID");
 
-                    b.Property<string>("SubDescription")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("SubDueDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("SubId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("SubTitle")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ColumnId1");
-
-                    b.ToTable("Tasks");
+                    b.ToTable("Cards");
                 });
 
-            modelBuilder.Entity("Bravado.Models.Agile.TaskComment", b =>
+            modelBuilder.Entity("Bravado.Models.Agile.Column", b =>
                 {
-                    b.Property<Guid>("CommentId")
+                    b.Property<int>("ColumnID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Comment")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CommentDueDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CommentTitle")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid?>("MainTaskIdId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("PriorityProp")
+                    b.Property<int?>("BIDBoardID")
                         .HasColumnType("int");
 
-                    b.HasKey("CommentId");
+                    b.Property<string>("ColumnName")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("MainTaskIdId");
+                    b.HasKey("ColumnID");
 
-                    b.ToTable("TaskComments");
+                    b.HasIndex("BIDBoardID");
+
+                    b.ToTable("Columns");
                 });
 
             modelBuilder.Entity("Bravado.Models.ApplicationUser", b =>
@@ -204,7 +160,28 @@ namespace Bravado.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("Bravado.Models.Entry", b =>
+            modelBuilder.Entity("Bravado.Models.Services.ServiceEntity", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<float>("Price")
+                        .HasColumnType("real");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("ServiceEntity");
+                });
+
+            modelBuilder.Entity("Bravado.Models.Wiki.Entry", b =>
                 {
                     b.Property<int>("ContentID")
                         .ValueGeneratedOnAdd()
@@ -228,27 +205,6 @@ namespace Bravado.Migrations
                     b.HasIndex("AppUserId");
 
                     b.ToTable("Entries");
-                });
-
-            modelBuilder.Entity("Bravado.Models.Services.ServiceEntity", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<float>("Price")
-                        .HasColumnType("real");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("ServiceEntity");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -382,30 +338,21 @@ namespace Bravado.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Bravado.Models.Agile.Card", b =>
+                {
+                    b.HasOne("Bravado.Models.Agile.Column", "CID")
+                        .WithMany("Cards")
+                        .HasForeignKey("CIDColumnID");
+                });
+
             modelBuilder.Entity("Bravado.Models.Agile.Column", b =>
                 {
-                    b.HasOne("Bravado.Models.Agile.Board", null)
+                    b.HasOne("Bravado.Models.Agile.Board", "BID")
                         .WithMany("Columns")
-                        .HasForeignKey("BoardId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BIDBoardID");
                 });
 
-            modelBuilder.Entity("Bravado.Models.Agile.Task", b =>
-                {
-                    b.HasOne("Bravado.Models.Agile.Column", "Column")
-                        .WithMany("Tasks")
-                        .HasForeignKey("ColumnId1");
-                });
-
-            modelBuilder.Entity("Bravado.Models.Agile.TaskComment", b =>
-                {
-                    b.HasOne("Bravado.Models.Agile.Task", "MainTaskId")
-                        .WithMany()
-                        .HasForeignKey("MainTaskIdId");
-                });
-
-            modelBuilder.Entity("Bravado.Models.Entry", b =>
+            modelBuilder.Entity("Bravado.Models.Wiki.Entry", b =>
                 {
                     b.HasOne("Bravado.Models.ApplicationUser", "AppUser")
                         .WithMany()

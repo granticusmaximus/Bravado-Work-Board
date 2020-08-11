@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Bravado.Models
+namespace Bravado.Models.Wiki
 {
     public class Entry
     {

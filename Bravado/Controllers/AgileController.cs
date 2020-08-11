@@ -53,13 +53,10 @@ namespace Bravado.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-
         public async Task<IActionResult> Open([FromRoute] int ID)
         {   
             var board = await _context.Boards.FindAsync(ID);
-            var column = await _context.Columns.FindAsync(ID);
-            var calumns = await _context.Columns.Where(x => x.ColumnID === ID).ToList();
-            return View(model: new OpenBoardViewModel { Board = board, Column = column });
+            return View(model: new OpenBoardViewModel { Board = board });
         }
 
         [HttpPost]
