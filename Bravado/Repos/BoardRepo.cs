@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Bravado.Data;
 using Bravado.Models.Agile;
 
