@@ -34,7 +34,7 @@ namespace Bravado {
                 options.Filters.Add (new AutoValidateAntiforgeryTokenAttribute ());
             });
             services.AddRazorPages ();
-
+            services.AddTransient<IBoardService, BoardService> ();
             services.AddTransient<IEmailSender, EmailSender> ();
             services.Configure<AuthMessageSenderOptions> (Configuration);
         }

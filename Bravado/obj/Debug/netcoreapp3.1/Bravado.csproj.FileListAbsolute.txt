@@ -646,7 +646,6 @@
 /Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Bravado.dll
 /Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Bravado.pdb
 /Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Bravado.genruntimeconfig.cache
-/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Boards/AddCard.cshtml.g.cs
-/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Boards/Details.cshtml.g.cs
-/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Boards/Index.cshtml.g.cs
-/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Tasks/Details.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Agile/Index.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Agile/NewBoard.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Agile/Open.cshtml.g.cs
