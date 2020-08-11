@@ -9754,7 +9754,8 @@
     ]
   },
   "packageFolders": {
-    "/Users/grantwatson/.nuget/packages/": {}
+    "/Users/grantwatson/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -9765,6 +9766,9 @@
       "packagesPath": "/Users/grantwatson/.nuget/packages/",
       "outputPath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "/Users/grantwatson/.nuget/NuGet/NuGet.Config"
       ],
