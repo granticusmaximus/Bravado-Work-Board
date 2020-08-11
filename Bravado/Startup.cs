@@ -2,6 +2,7 @@ using System;
 
 using Bravado.Data;
 using Bravado.Models;
+using Bravado.Repos;
 using Bravado.Services;
 
 using Microsoft.AspNetCore.Builder;
@@ -34,8 +35,10 @@ namespace Bravado {
                 options.Filters.Add (new AutoValidateAntiforgeryTokenAttribute ());
             });
             services.AddRazorPages ();
-            services.AddTransient<IBoardService, BoardService> ();
+            
             services.AddTransient<IEmailSender, EmailSender> ();
+            services.AddTransient<IBoardRepo, BoardRepo> ();
+            services.AddTransient<IBoardService, BoardService> ();
             services.Configure<AuthMessageSenderOptions> (Configuration);
         }
 

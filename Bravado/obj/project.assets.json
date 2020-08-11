@@ -9754,7 +9754,8 @@
     ]
   },
   "packageFolders": {
-    "/Users/grantwatson/.nuget/packages/": {}
+    "/Users/grantwatson/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -9765,6 +9766,9 @@
       "packagesPath": "/Users/grantwatson/.nuget/packages/",
       "outputPath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "/Users/grantwatson/.nuget/NuGet/NuGet.Config"
       ],
@@ -9852,13 +9856,5 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.302/RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file /Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
