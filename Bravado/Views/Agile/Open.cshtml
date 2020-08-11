@@ -1,0 +1,62 @@
+@using Bravado.ViewModel.AgileViewModels
+@using Bravado.Models.Agile
+@using System.Collections.Generic
+@model OpenBoardViewModel
+
+@{
+ViewData["Title"] = $"Board" ;
+}
+<div class=row>
+    <div>
+      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+        New Column
+      </button>
+        @*<a asp-action=Edit asp-route-id="@Model.Board.BoardTitle" class="waves-effect waves-light btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Board</a>
+        <a asp-action=Delete asp-route-id="@Model.Board.BoardTitle" class="waves-effect waves-light red btn"><i class="fa fa-window-close" aria-hidden="true"></i> Delete Board</a>*@
+    </div>
+</div>
+
+<!--Start Column Area-->
+<div class="container">
+  <div class="row">
+      @foreach (var column in Model.Columns) 
+      {
+        <div class="col-md-3">
+          <div class="card stickey-action blue-grey darken-1 hoverable activation">
+            <div class="card-content white-text">
+              <span class="card-title center-align">
+                <h4>@column.ColumnName</h4>
+              </span>
+            </div>
+          </div>
+        </div>
+      }
+  </div>
+</div>
+<!-- End Column Area -->
+<!-- Start Column Form -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New Column</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form asp-action="AddColumn" method="post">
+            <input asp-for="Column.ColumnName" placeholder="Column.ColumColumnNamenTitle">
+            <input hidden asp-for="Column.ColumnID" >
+            <input hidden asp-for="Column.BID" >
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary"><i class="fa fa-paper-plane" aria-hidden="true"> Save changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Column Form -->
+
+<br/>
+<hr />
