@@ -6,7 +6,8 @@
 <h1>List of Current Entries</h1>
 
 <p>
-    <button type="button" class="btn btn-primary"><a asp-action="Create" style="color:white"><i class="fa fa-file-text-o" aria-hidden="true"></i> Create New Entry</a></button>
+    <!-- Create Modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-file-text-o" aria-hidden="true"></i> Add New Entry</button>
 </p>
     <form class="search-wrapper cf" asp-controller="Entry" asp-action="Index" method="GET">
         <input class="form-control" placeholder="Search for Entry Title" name="SearchString" type="text">
@@ -39,6 +40,58 @@
 </tr>}
     </tbody>
 </table>
+
+
+<!--Start Create New Entry Modal-->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New Entry</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Entry.Title" class="control-label"></label>
+                        <input asp-for="Entry.Title" class="form-control" />
+                        <span asp-validation-for="Entry.Title" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Entry.DateCreated" class="control-label"></label>
+                        <input asp-for="Entry.DateCreated" class="form-control" id="datepicker" />
+                        <span asp-validation-for="Entry.DateCreated" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label asp-for="Entry.Description" class="control-label"></label>
+                        <textarea cols="250" asp-for="Entry.Description" class="textarea" placeholder="Place some text here"
+                                  style="height: 550px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; border-radius:3px; padding: 10px;"></textarea>
+                        <span asp-validation-for="Entry.Description" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" asp-for="Entry.AppUser.Id" name="ApplicationUser" />
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-floppy-o" aria-hidden="true"></i> Create Entry</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Create New Entry Modal-->
 
 
 <br />
