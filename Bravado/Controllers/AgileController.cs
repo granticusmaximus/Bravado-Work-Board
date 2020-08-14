@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Identity;
 using Bravado.Models;
 using System.Security.Claims;
 using Bravado.Services;
+using Bravado.Repos;
 
 namespace Bravado.Controllers
 {
@@ -19,13 +20,13 @@ namespace Bravado.Controllers
     {
         private readonly AppDbContext _context;
         private UserManager<ApplicationUser> _userManager;
-        private IBoardService _service;
+        private IBoardRepo service;
 
-        public AgileController(AppDbContext context, UserManager<ApplicationUser> userManager, IBoardService service)
+        public AgileController(AppDbContext context, UserManager<ApplicationUser> userManager, IBoardRepo service)
         {
             _context = context;
             _userManager = userManager;
-            _service = service;
+            this.service = service;
         }
 
         #region BOARD REGION
@@ -59,8 +60,8 @@ namespace Bravado.Controllers
         public async Task<IActionResult> Open([FromRoute] int ID)
         {   
             var board = await _context.Boards.FindAsync(ID);
-            var cardList = _service.GetCardList();
-            var columnList = _service.GetColumnList();
+            var cardList = service.GetCardList();
+            var columnList = service.GetColumnList();
             return View(model: new BoardDetails { Board = board, Columns = columnList, Cards = cardList });
         }
 
