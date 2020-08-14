@@ -10,11 +10,9 @@ using Bravado.Models.Agile;
 namespace Bravado.Data {
     public class AppDbContext : IdentityDbContext<ApplicationUser> {
 
-        public AppDbContext()
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base (options)
         {
         }
-
-        public AppDbContext (DbContextOptions<AppDbContext> options) : base (options) { }
 
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
 
