@@ -8,7 +8,7 @@ namespace Bravado.Repos
 {
     public class BoardRepo : IBoardRepo, IDisposable
     {
-        
+        private NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public BoardRepo(AppDbContext context)
         {
             this.context = context;
@@ -43,6 +43,45 @@ namespace Bravado.Repos
         {
             Dispose(true);
             GC.SuppressFinalize(this);
+        }
+
+        public Board GetBoardByID(int boardID)
+        {
+            try
+            {
+                return context.Boards.Single(x => x.BoardID == boardID);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "Repository Error: " + ex.Message);
+                throw;
+            }
+        }
+
+        public Card GetCardByID(int cardID)
+        {
+            try
+            {
+                return context.Cards.Single(x => x.CardID == cardID);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "Repository Error: " + ex.Message);
+                throw;
+            }
+        }
+
+        public Card GetColumnByID(int columnID)
+        {
+            try
+            {
+                return context.Columns.Single(x => x.ColumnID == columnID);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "Repository Error: " + ex.Message);
+                throw;
+            }
         }
     }
 }

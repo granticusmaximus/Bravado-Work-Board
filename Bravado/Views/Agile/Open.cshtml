@@ -3,7 +3,7 @@
 @model BoardDetails
 
 @{
-    ViewData["Title"] = $"{Model.Board.BoardTitle}" + "Work Board";
+    ViewData["Title"] = $"{Model.Board.BoardTitle}" + " " + "Work Board";
 }
 <div class=row>
     <div>
@@ -17,7 +17,7 @@
 
 <div class="container">
   <div class="row">
-  @if(Model.Board.BoardID == Model.Column.BID.BoardID){
+
         @foreach (var column in Model.Columns) 
         {
           <div class="col-md-4">
@@ -32,10 +32,7 @@
             </div>
           </div>
         }
-    }
-  else {
-      <p> No active work items</p>
-    }
+
   </div>
 </div>
 
@@ -106,7 +103,6 @@
             <div class="col-md-12">
                 <form asp-action="AddColumn" method="post">
                     <input asp-for="Column.ColumnName" placeholder="Column Name">
-                    <input hidden asp-for="Column.BID" >
                     <input hidden asp-for="Column.ColumnID" >
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button class="btn btn-primary" type="submit">
