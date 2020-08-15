@@ -17,7 +17,7 @@ ViewData["Title"] = $"{Model.Board.BoardTitle}" ;
 <h2>@Model.Board.BoardTitle Work Board</h2>
 <div class="container">
   <div class="row">
-  @if(Model.Board.BoardID == Model.Column.BID){
+  @if(Model.Board.BoardID == Model.Column.BID.BoardID){
         @foreach (var column in Model.Columns) 
         {
           <div class="col-md-4">
