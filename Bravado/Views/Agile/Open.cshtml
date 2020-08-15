@@ -14,7 +14,7 @@ ViewData["Title"] = $"{Model.Board.BoardTitle}" ;
         <a asp-action=Delete asp-route-id="@Model.Board.BoardTitle" class="waves-effect waves-light red btn"><i class="fa fa-window-close" aria-hidden="true"></i></a>
     </div>
 </div>
-<h2>@Model.Board.BoardTitle Work Board</h2>
+<h2>@ViewData["Title"] Work Board</h2>
 <div class="container">
   <div class="row">
   @if(Model.Board.BoardID == Model.Column.BID.BoardID){
