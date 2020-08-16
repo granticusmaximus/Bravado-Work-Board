@@ -17,7 +17,6 @@
 
 <div class="container">
   <div class="row">
-  @if(Model.Board.BoardID == Model.Column.BID.BoardID){
         @foreach (var column in Model.Columns) 
         {
           <div class="col-md-4">
@@ -33,9 +32,7 @@
           </div>
         }
     }
-  else {
-      <p> No active work items</p>
-    }
+
   </div>
 </div>
 
