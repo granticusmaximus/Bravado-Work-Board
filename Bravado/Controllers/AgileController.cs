@@ -66,11 +66,12 @@ namespace Bravado.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddColumn([FromForm] Column column, int ID)
+        public async Task<IActionResult> AddColumn([FromForm] Column column, BoardDetails boardDetails, [FromRoute] int ID)
         {
+            var board = await _context.Boards.FindAsync(ID);
             _context.Columns.Add(column);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Open));
+            return RedirectToAction(nameof(Open), new { id = boardDetails.Board.BoardID });
         }
         #endregion
 

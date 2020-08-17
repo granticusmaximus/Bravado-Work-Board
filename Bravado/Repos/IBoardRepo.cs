@@ -8,5 +8,8 @@ namespace Bravado.Repos
     {
         IEnumerable<Column> GetColumnList ();
         IEnumerable<Card> GetCardList ();
+        Board GetBoardByID(int boardID);
+        Card GetCardByID(int cardID);
+        Column GetColumnByID(int columnID);
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1G457jTo4Z8xZ2SKe7bTEUc9Y/ekiENV/NTVws8bHL5edRENCIMSARl9YIUxdGOe5cGVi79M45j8nH48bUtY7Q==",
+  "dgSpecHash": "sIRfR4mgLAW0otouTx0zWsU8cp3W2Wn3iPjkyOmn9fb4qSomdHX4UF1vmRMtaqXaH2ZeEGoPWTF62v5hJ5n7QQ==",
   "success": true,
   "projectFilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Bravado.csproj",
   "expectedPackageFiles": [
@@ -69,6 +69,7 @@
     "/Users/grantwatson/.nuget/packages/microsoft.win32.systemevents/4.7.0/microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/netstandard.library/1.6.1/netstandard.library.1.6.1.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/newtonsoft.json/12.0.2/newtonsoft.json.12.0.2.nupkg.sha512",
+    "/Users/grantwatson/.nuget/packages/nlog/4.7.3/nlog.4.7.3.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/nuget.frameworks/4.7.0/nuget.frameworks.4.7.0.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -193,12 +194,5 @@
     "/Users/grantwatson/.nuget/packages/system.xml.xmlserializer/4.3.0/system.xml.xmlserializer.4.3.0.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/websocket4net/0.15.1/websocket4net.0.15.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file /Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
