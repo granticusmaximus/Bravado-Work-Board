@@ -36,9 +36,9 @@ namespace Bravado.Services
             return column;
         }
 
-        public IEnumerable<Column> GetColumnList()
+        public IEnumerable<Column> GetColumnList(int ID)
         {
-            return _boardRepo.GetColumnList();
+            return _boardRepo.GetColumnList(ID);
         }
     }
 }

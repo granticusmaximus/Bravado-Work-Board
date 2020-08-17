@@ -71,7 +71,7 @@ namespace Bravado.Repos
             }
         }
 
-        public Card GetColumnByID(int columnID)
+        public Column GetColumnByID(int columnID)
         {
             try
             {
