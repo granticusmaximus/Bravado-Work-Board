@@ -7,5 +7,8 @@ namespace Bravado.Services
     {
         IEnumerable<Column> GetColumnList (int ID);
         IEnumerable<Card> GetCardList ();
+        Board GetBoardByID(int boardID);
+        Column GetColumnByID(int columnID);
+        Card GetCardByID(int cardID);
     }
 }
