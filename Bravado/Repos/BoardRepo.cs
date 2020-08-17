@@ -20,9 +20,9 @@ namespace Bravado.Repos
             return context.Cards.ToList();
         }
 
-        public IEnumerable<Column> GetColumnList()
+        public IEnumerable<Column> GetColumnList(int ID)
         {
-            return context.Columns.ToList();
+            return context.Columns.ToList().Where(x => x.BID.BoardID == ID);
         }
 
         private bool disposed = false;

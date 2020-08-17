@@ -5,7 +5,7 @@ namespace Bravado.Services
 {
     public interface IBoardService
     {
-        IEnumerable<Column> GetColumnList ();
+        IEnumerable<Column> GetColumnList (int ID);
         IEnumerable<Card> GetCardList ();
     }
 }

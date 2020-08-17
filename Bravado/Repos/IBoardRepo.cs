@@ -6,7 +6,7 @@ namespace Bravado.Repos
 {
     public interface IBoardRepo : IDisposable
     {
-        IEnumerable<Column> GetColumnList ();
+        IEnumerable<Column> GetColumnList (int ID);
         IEnumerable<Card> GetCardList ();
     }
 }
