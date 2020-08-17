@@ -14,9 +14,12 @@
 
 Tasks Working on Currently:
 - [x] Working on UI to match Wireframe
-- [ ] Bug with drag/drop not saving to column
+- [x] Ability to add multiple columns
+- [ ] Attach column to specific workboard instead of being available on each workboard
+- [ ] Assign an ID that shows, will be for searchablility (If board name is Side Hustle, ID addition show be SH-{ID})
+- [ ] Adding tags to task for search
+- [ ] Add Search ability for tasks
+- [ ] Drag and Drop Feature in Agile Board
 - [ ] Add Start Date/Due Date with overdue display tag
-- [ ] Adding descriptive tags to each task
-- [ ] Ability to add subtasks if needed/desired
-- [ ] Ability to add multiple columns
+- ~~[ ] Ability to add subtasks if needed/desired~~
 - [ ] Ability to Add Weekly Sprints if desired
