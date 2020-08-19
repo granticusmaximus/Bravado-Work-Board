@@ -102,6 +102,7 @@
                 <form asp-action="AddColumn" method="post">
                     <input asp-for="Column.ColumnName" placeholder="Column Name">
                     <input hidden asp-for="Column.ColumnID" >
+                    <input hidden asp-for="Column.BID" >
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button class="btn btn-primary" type="submit">
                         Create <i class="fa fa-paper-plane" aria-hidden="true"></i>

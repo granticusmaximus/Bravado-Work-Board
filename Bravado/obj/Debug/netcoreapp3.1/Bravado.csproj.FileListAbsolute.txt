@@ -649,3 +649,4 @@
 /Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Agile/Index.cshtml.g.cs
 /Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Agile/NewBoard.cshtml.g.cs
 /Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Agile/Open.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/bin/Debug/netcoreapp3.1/NLog.dll

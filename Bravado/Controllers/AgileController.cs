@@ -12,6 +12,7 @@ using Bravado.Models;
 using System.Security.Claims;
 using Bravado.Services;
 using Bravado.Repos;
+using Microsoft.AspNetCore.Http;
 
 namespace Bravado.Controllers
 {
@@ -61,17 +62,27 @@ namespace Bravado.Controllers
         {   
             var board = await _context.Boards.FindAsync(ID);
             var cardList = service.GetCardList();
-            var columnList = service.GetColumnList();
+            var columnList = service.GetColumnList(ID);
             return View(model: new BoardDetails { Board = board, Columns = columnList, Cards = cardList });
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddColumn([FromForm] Column column, BoardDetails boardDetails, [FromRoute] int ID)
+        public async Task<IActionResult> AddColumn(int ID, BoardDetails boarDetails)
         {
-            var board = await _context.Boards.FindAsync(ID);
+
+            var column = new Column();
+            var board = service.GetBoardByID(ID);
+
+            BoardDetails form = new BoardDetails()
+            {
+                Column = column,
+                Board = board
+            };
+            form.Board.BoardID = board.BoardID;
+            
             _context.Columns.Add(column);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Open), new { id = boardDetails.Board.BoardID });
+            return RedirectToAction(nameof(Open), new { id = board.BoardID });
         }
         #endregion
 
