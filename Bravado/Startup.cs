@@ -38,7 +38,7 @@ namespace Bravado {
             
             services.AddTransient<IEmailSender, EmailSender> ();
             services.AddTransient<IBoardRepo, BoardRepo> ();
-            services.AddTransient<IBoardService, BoardService> ();
+            services.AddTransient<BoardService> ();
             services.Configure<AuthMessageSenderOptions> (Configuration);
         }
 
