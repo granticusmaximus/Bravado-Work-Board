@@ -10,7 +10,8 @@ namespace Bravado.Models.Agile
 
         [Display(Name = "Column Name:")]
         public string ColumnName {get;set;}
-        public Board BID {get;set;}
+        public Board Board {get;set;}
+        public int BoardID {get;set;}
         public List<Card> Cards {get;set;}
     }
 }

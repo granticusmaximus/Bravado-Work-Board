@@ -7,8 +7,8 @@ namespace Bravado.Models.Agile
     {
         [Key]
         public int CardID {get;set;}
-        public Column CID {get;set;}
-
+        public Column Column {get;set;}
+        public int ColumnID {get;set;}
         [Display(Name = "Task Name:")]
         public string CardName {get;set;}
 

@@ -22,7 +22,7 @@ namespace Bravado.Repos
 
         public IEnumerable<Column> GetColumnList(int ID)
         {
-            return context.Columns.ToList().Where(x => x.BID.BoardID == ID);
+            return context.Columns.ToList();
         }
 
         private bool disposed = false;
