@@ -21,12 +21,14 @@ namespace Bravado.Controllers
     {
         private readonly AppDbContext _context;
         private UserManager<ApplicationUser> _userManager;
-        private IBoardRepo service;
+        private IBoardRepo repo;
+        private BoardService service;
 
-        public AgileController(AppDbContext context, UserManager<ApplicationUser> userManager, IBoardRepo service)
+        public AgileController(AppDbContext context, UserManager<ApplicationUser> userManager, IBoardRepo repo, BoardService service)
         {
             _context = context;
             _userManager = userManager;
+            this.repo = repo;
             this.service = service;
         }
 
@@ -61,28 +63,17 @@ namespace Bravado.Controllers
         public async Task<IActionResult> Open([FromRoute] int ID)
         {   
             var board = await _context.Boards.FindAsync(ID);
-            var cardList = service.GetCardList();
-            var columnList = service.GetColumnList(ID);
+            var cardList = repo.GetCardList();
+            var columnList = repo.GetColumnList(ID);
             return View(model: new BoardDetails { Board = board, Columns = columnList, Cards = cardList });
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddColumn(int ID, BoardDetails boarDetails)
+        public IActionResult AddCard(AddCard viewModel)
         {
-
-            var column = new Column();
-            var board = service.GetBoardByID(ID);
-
-            BoardDetails form = new BoardDetails()
-            {
-                Column = column,
-                Board = board
-            };
-            form.Board.BoardID = board.BoardID;
-            
-            _context.Columns.Add(column);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Open), new { id = board.BoardID });
+            if (!ModelState.IsValid) return View(viewModel);
+            service.AddCard(viewModel);
+            return RedirectToAction(nameof(Open), new { id = viewModel.Id });
         }
         #endregion
 
