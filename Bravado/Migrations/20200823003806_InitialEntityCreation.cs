@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Bravado.Migrations
 {
-    public partial class EntityCreation : Migration
+    public partial class InitialEntityCreation : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -52,13 +52,14 @@ namespace Bravado.Migrations
                 name: "Boards",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false),
-                    UserId = table.Column<string>(nullable: true),
-                    Title = table.Column<string>(nullable: true)
+                    BoardID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    BoardTitle = table.Column<string>(nullable: true),
+                    UserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Boards", x => x.Id);
+                    table.PrimaryKey("PK_Boards", x => x.BoardID);
                 });
 
             migrationBuilder.CreateTable(
@@ -208,70 +209,44 @@ namespace Bravado.Migrations
                 name: "Columns",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false),
-                    Title = table.Column<string>(nullable: true),
-                    BoardId = table.Column<Guid>(nullable: false)
+                    ColumnID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ColumnName = table.Column<string>(nullable: true),
+                    BoardID = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Columns", x => x.Id);
+                    table.PrimaryKey("PK_Columns", x => x.ColumnID);
                     table.ForeignKey(
-                        name: "FK_Columns_Boards_BoardId",
-                        column: x => x.BoardId,
+                        name: "FK_Columns_Boards_BoardID",
+                        column: x => x.BoardID,
                         principalTable: "Boards",
-                        principalColumn: "Id",
+                        principalColumn: "BoardID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Tasks",
+                name: "Cards",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false),
-                    BoardId = table.Column<string>(nullable: true),
-                    ListNum = table.Column<int>(nullable: false),
-                    Title = table.Column<string>(nullable: false),
-                    Description = table.Column<string>(nullable: true),
-                    DueDate = table.Column<DateTime>(nullable: false),
-                    Open = table.Column<bool>(nullable: false),
-                    ColumnId = table.Column<int>(nullable: false),
-                    ColumnId1 = table.Column<Guid>(nullable: true),
-                    SubId = table.Column<Guid>(nullable: false),
-                    SubTitle = table.Column<string>(nullable: true),
-                    SubDescription = table.Column<string>(nullable: true),
-                    SubDueDate = table.Column<DateTime>(nullable: false)
+                    CardID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ColumnID = table.Column<int>(nullable: false),
+                    CardName = table.Column<string>(nullable: true),
+                    CardNotes = table.Column<string>(nullable: true),
+                    CardComments = table.Column<string>(nullable: true),
+                    DateCreated = table.Column<DateTime>(nullable: false),
+                    DueDate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Tasks", x => x.Id);
+                    table.PrimaryKey("PK_Cards", x => x.CardID);
                     table.ForeignKey(
-                        name: "FK_Tasks_Columns_ColumnId1",
-                        column: x => x.ColumnId1,
+                        name: "FK_Cards_Columns_ColumnID",
+                        column: x => x.ColumnID,
                         principalTable: "Columns",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "TaskComments",
-                columns: table => new
-                {
-                    CommentId = table.Column<Guid>(nullable: false),
-                    MainTaskIdId = table.Column<Guid>(nullable: true),
-                    CommentTitle = table.Column<string>(nullable: true),
-                    Comment = table.Column<string>(nullable: true),
-                    CommentDueDate = table.Column<DateTime>(nullable: false),
-                    PriorityProp = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_TaskComments", x => x.CommentId);
-                    table.ForeignKey(
-                        name: "FK_TaskComments_Tasks_MainTaskIdId",
-                        column: x => x.MainTaskIdId,
-                        principalTable: "Tasks",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "ColumnID",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -314,24 +289,19 @@ namespace Bravado.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Columns_BoardId",
+                name: "IX_Cards_ColumnID",
+                table: "Cards",
+                column: "ColumnID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Columns_BoardID",
                 table: "Columns",
-                column: "BoardId");
+                column: "BoardID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Entries_AppUserId",
                 table: "Entries",
                 column: "AppUserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_TaskComments_MainTaskIdId",
-                table: "TaskComments",
-                column: "MainTaskIdId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Tasks_ColumnId1",
-                table: "Tasks",
-                column: "ColumnId1");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -352,25 +322,22 @@ namespace Bravado.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Cards");
+
+            migrationBuilder.DropTable(
                 name: "Entries");
 
             migrationBuilder.DropTable(
                 name: "ServiceEntity");
 
             migrationBuilder.DropTable(
-                name: "TaskComments");
-
-            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
-                name: "Tasks");
-
-            migrationBuilder.DropTable(
                 name: "Columns");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUsers");
 
             migrationBuilder.DropTable(
                 name: "Boards");

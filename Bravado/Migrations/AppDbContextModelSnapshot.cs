@@ -44,9 +44,6 @@ namespace Bravado.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CIDColumnID")
-                        .HasColumnType("int");
-
                     b.Property<string>("CardComments")
                         .HasColumnType("nvarchar(max)");
 
@@ -56,6 +53,9 @@ namespace Bravado.Migrations
                     b.Property<string>("CardNotes")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ColumnID")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
 
@@ -64,7 +64,7 @@ namespace Bravado.Migrations
 
                     b.HasKey("CardID");
 
-                    b.HasIndex("CIDColumnID");
+                    b.HasIndex("ColumnID");
 
                     b.ToTable("Cards");
                 });
@@ -76,7 +76,7 @@ namespace Bravado.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("BIDBoardID")
+                    b.Property<int>("BoardID")
                         .HasColumnType("int");
 
                     b.Property<string>("ColumnName")
@@ -84,7 +84,7 @@ namespace Bravado.Migrations
 
                     b.HasKey("ColumnID");
 
-                    b.HasIndex("BIDBoardID");
+                    b.HasIndex("BoardID");
 
                     b.ToTable("Columns");
                 });
@@ -340,16 +340,20 @@ namespace Bravado.Migrations
 
             modelBuilder.Entity("Bravado.Models.Agile.Card", b =>
                 {
-                    b.HasOne("Bravado.Models.Agile.Column", "CID")
+                    b.HasOne("Bravado.Models.Agile.Column", "Column")
                         .WithMany("Cards")
-                        .HasForeignKey("CIDColumnID");
+                        .HasForeignKey("ColumnID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Bravado.Models.Agile.Column", b =>
                 {
-                    b.HasOne("Bravado.Models.Agile.Board", "BID")
+                    b.HasOne("Bravado.Models.Agile.Board", "Board")
                         .WithMany("Columns")
-                        .HasForeignKey("BIDBoardID");
+                        .HasForeignKey("BoardID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Bravado.Models.Wiki.Entry", b =>
