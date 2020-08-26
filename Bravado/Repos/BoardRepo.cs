@@ -1,87 +1,44 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Bravado.Data;
 using Bravado.Models.Agile;
 
 namespace Bravado.Repos
 {
-    public class BoardRepo : IBoardRepo, IDisposable
+    public class BoardRepo : IBoardRepo
     {
-        private NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
-        public BoardRepo(AppDbContext context)
-        {
-            this.context = context;
-        }
-        private AppDbContext context;
+        private readonly AppDbContext _dbContext;
 
-        public IEnumerable<Card> GetCardList()
+        public BoardRepo(AppDbContext dbContext)
         {
-            return context.Cards.ToList();
+            _dbContext = dbContext;
         }
 
-        public IEnumerable<Column> GetColumnList(int ID)
+        public void Add<T>(T entity) where T : class
         {
-            return context.Columns.ToList();
+            throw new System.NotImplementedException();
         }
 
-        private bool disposed = false;
-
-        protected virtual void Dispose(bool disposing)
+        public void Delete<T>(T entity) where T : class
         {
-            if (!this.disposed)
-            {
-                if (disposing)
-                {
-                    context.Dispose();
-                }
-            }
-            this.disposed = true;
+            throw new System.NotImplementedException();
         }
 
-        public void Dispose()
+        public Task<Board> GetBoardByIdAsync(int id)
         {
-            Dispose(true);
-            GC.SuppressFinalize(this);
+            throw new System.NotImplementedException();
         }
 
-        public Board GetBoardByID(int boardID)
+        public Task<List<Board>> GetBoardsAsync()
         {
-            try
-            {
-                return context.Boards.Single(x => x.BoardID == boardID);
-            }
-            catch (Exception ex)
-            {
-                logger.Error(ex, "Repository Error: " + ex.Message);
-                throw;
-            }
+            throw new System.NotImplementedException();
         }
 
-        public Card GetCardByID(int cardID)
+        public Task<bool> SaveAllChangesAsync()
         {
-            try
-            {
-                return context.Cards.Single(x => x.CardID == cardID);
-            }
-            catch (Exception ex)
-            {
-                logger.Error(ex, "Repository Error: " + ex.Message);
-                throw;
-            }
-        }
-
-        public Column GetColumnByID(int columnID)
-        {
-            try
-            {
-                return context.Columns.Single(x => x.ColumnID == columnID);
-            }
-            catch (Exception ex)
-            {
-                logger.Error(ex, "Repository Error: " + ex.Message);
-                throw;
-            }
+            throw new System.NotImplementedException();
         }
     }
 }

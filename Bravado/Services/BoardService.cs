@@ -33,8 +33,8 @@ namespace Bravado.Services
             
                 if (firstColumn == null || secondColumn == null || thirdColumn == null)
                 {
-                    firstColumn = new Models.Agile.Column { ColumnName = "Todo"};
-                    secondColumn = new Models.Agile.Column { ColumnName = "Doing" };
+                    firstColumn = new Models.Agile.Column { ColumnName = "Backlog"};
+                    secondColumn = new Models.Agile.Column { ColumnName = "In Progress" };
                     thirdColumn = new Models.Agile.Column { ColumnName = "Done" };
                     board.Columns.Add(firstColumn);
                     board.Columns.Add(secondColumn);
@@ -53,32 +53,74 @@ namespace Bravado.Services
             _dbContext.SaveChanges();
         }
 
-        public Board GetBoardByID(int boardID)
+public BoardList ListBoard()
         {
-            Board board = _boardRepo.GetBoardByID(boardID);
-            return board;
+            var model = new BoardList();
+
+            foreach (var board in _dbContext.Boards)
+            {
+                model.Boards.Add(new BoardList.Board
+                {
+                    Id = board.BoardID,
+                    Title = board.BoardTitle
+                });
+            }
+
+            return model;
         }
 
-        public Card GetCardByID(int cardID)
+        public BoardView GetBoard(int id)
         {
-            Card card = _boardRepo.GetCardByID(cardID);
-            return card;
+            var model = new BoardView();
+
+            var board = _dbContext.Boards
+                .Include(b => b.Columns)
+                .ThenInclude(c => c.Cards)
+                .SingleOrDefault(x => x.BoardID == id);
+
+            if (board == null) return model;
+            model.Id = board.BoardID;
+
+            foreach (var column in board.Columns)
+            {
+                var modelColumn = new BoardView.Column
+                {
+                    Title = column.ColumnName,
+                    Id = column.ColumnID
+                };
+
+                foreach (var card in column.Cards)
+                {
+                    var modelCard = new BoardView.Card
+                    {
+                        Id = card.CardID,
+                        Content = card.CardName
+                    };
+
+                    modelColumn.Cards.Add(modelCard);
+                }
+
+                model.Columns.Add(modelColumn);
+            }
+
+            return model;
         }
 
-        public IEnumerable<Card> GetCardList()
+        public void AddBoard(NewBoard viewModel)
         {
-            return _boardRepo.GetCardList();
+            _dbContext.Boards.Add(new Models.Agile.Board
+            {
+                BoardTitle = viewModel.Title
+            });
+
+            _dbContext.SaveChanges();
         }
 
-        public Column GetColumnByID(int columnID)
+        public void Move(MoveCardCommand command)
         {
-            Column column = _boardRepo.GetColumnByID(columnID);
-            return column;
-        }
-
-        public IEnumerable<Column> GetColumnList(int ID)
-        {
-            return _boardRepo.GetColumnList(ID);
+            var card = _dbContext.Cards.SingleOrDefault(x => x.CardID == command.CardId);
+            if (card != null) card.ColumnID = command.ColumnId;
+            _dbContext.SaveChanges();
         }
     }
 }

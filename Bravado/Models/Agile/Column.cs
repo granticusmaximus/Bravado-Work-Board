@@ -12,6 +12,6 @@ namespace Bravado.Models.Agile
         public string ColumnName {get;set;}
         public Board Board {get;set;}
         public int BoardID {get;set;}
-        public List<Card> Cards {get;set;}
+        public List<Card> Cards { get; set; } = new List<Card>();
     }
 }

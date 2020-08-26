@@ -1,49 +1,91 @@
+@model Bravado.ViewModel.AgileViewModels.BoardView
+
 @{
-ViewData["Title"] = "Local Boards:";
+    ViewData["Title"] = "Index";
 }
-@using Bravado.Models.Agile
-@using System.Collections.Generic
-@model IEnumerable<Board>
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Xsrf 
 
-<div>
-  <center>
-    <h3>Agile Boards</h3>
-  </center>
-</div>
-<hr />
-<div>
-    <a asp-action=NewBoard asp-controller="Agile" class="btn btn-success">
-      <i class="large material-icons">
-        <i class="fa fa-plus-circle" aria-hidden="true"></i> 
-          Add New Board
-      </i>
-    </a>
-</div>
+@functions { 
+    public string GetAntiXsrfRequestToken() 
+    { 
+        return Xsrf.GetAndStoreTokens(Context).RequestToken;
+    } 
+}
 
-<hr />
+<input type="hidden" 
+    id="RequestVarificationToken" 
+    name="RequestVarificationToken" 
+    value="@GetAntiXsrfRequestToken()">
+
+<script>
+    $(function () {
+        $(".draggable").draggable({
+            revert: "invalid"
+        });
+
+        $('.column').droppable({ 
+            accept: '.draggable', 
+            drop: function (event, ui) { 
+                var dropped = ui.draggable; 
+                var droppedOn = $(this); 
+                $(dropped).detach().css({ top: 0, left: 0 }).appendTo(droppedOn); 
+            
+                $.ajax({ 
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json", 
+                    url: "/api/Board/movecard",
+                    beforeSend: function (request) {
+                        request.setRequestHeader(
+                            "RequestVarificationToken", $('#RequestVarificationToken').val());
+                    }, 
+                    data: JSON.stringify({ cardId: dropped[0].id, columnId: droppedOn[0].id }),  
+                });
+            }
+        });
+    });
+</script>
+
 <div class="container">
-   <div class="row">
-  @foreach (var board in Model) 
-  {
- 
-    <div class="col s12 m6 l3">
-      <div class="card stickey-action blue-grey darken-1 hoverable activation">
-        <div class="card-content white-text">
-          <span class="card-title center-align">
-          <a asp-action="Open" asp-route-id="@board.BoardID" class="white-text">@board.BoardTitle</a>
-          </span>
-        </div>
 
-        <div class="card-reveal">
-          <span class="card-title white-text text-darken-4 center-align" style="color:white;">@board.BoardTitle<i class="material-icons right">close</i></span>
-        </div>
-        <div class="card-action">
-          <a asp-action="Open" asp-route-id="@board.BoardID"><i class="fa fa-paper-plane" aria-hidden="true"></i> View</a>
-        </div>
-      </div>
+    <div class="row">
+
+        @if (Model.Columns.Count >= 0)
+        {
+            <div>
+                <a asp-controller="Board"
+                   asp-action="AddCard"
+                   asp-route-id="@Model.Id"
+                   class="wave-effect waves-light btn">
+                    Add A Card
+                </a>
+            </div>
+        }
+
+        @foreach (var column in Model.Columns)
+        {
+            <div class="col m2">
+                <h3>@column.Title</h3>
+
+                <div class="column" style="min-height: 600px;" id="@column.Id">
+
+                    @foreach (var card in column.Cards)
+                    {
+                        <div class="card blue-grey darken-1 draggable">
+                            <div class="card-content white-text">
+                                <p>
+                                    <a asp-controller="Card" asp-action="Details" 
+                                    asp-route-id="@card.Id" class="white-text">
+                                        @card.Content
+                                    </a>
+                                </p>
+                                
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
     </div>
- 
-  }
-   </div>
-  
 </div>
+

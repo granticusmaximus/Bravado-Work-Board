@@ -19,63 +19,56 @@ namespace Bravado.Controllers
     [Authorize]
     public class AgileController : Controller
     {
-        private readonly AppDbContext _context;
-        private UserManager<ApplicationUser> _userManager;
-        private IBoardRepo repo;
-        private BoardService service;
+        private readonly CardService _cardService;
+        private BoardService _boardService;
 
-        public AgileController(AppDbContext context, UserManager<ApplicationUser> userManager, IBoardRepo repo, BoardService service)
+        public AgileController(BoardService boardService, CardService cardService)
         {
-            _context = context;
-            _userManager = userManager;
-            this.repo = repo;
-            this.service = service;
+            _boardService = boardService;
+            _cardService = cardService;
         }
 
-        #region BOARD REGION
-        [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(int id)
         {
-            var Claims = this.User;
-            ClaimsPrincipal currentUser = this.User;
-            var uId = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
-            var Boards = _context.Boards.Where(board => board.UserId == uId).ToList();
-            return View(Boards);
+            var model = _boardService.GetBoard(id);
+
+            return View(model);
         }
 
-        [HttpGet]
-        public IActionResult NewBoard()
+        public IActionResult Details(int id)
         {
-            ClaimsPrincipal currentUser = this.User;
-            var uId = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
-            return View(new Board { UserId = uId });
+            return View(_boardService.GetBoard(id));
         }
 
-        [HttpPost]
-        public async Task<IActionResult> NewBoard([FromForm] Board board)
+        public IActionResult AddCard(int id)
         {
-
-            _context.Boards.Add(board);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        public async Task<IActionResult> Open([FromRoute] int ID)
-        {   
-            var board = await _context.Boards.FindAsync(ID);
-            var cardList = repo.GetCardList();
-            var columnList = repo.GetColumnList(ID);
-            return View(model: new BoardDetails { Board = board, Columns = columnList, Cards = cardList });
+            return View();
         }
 
         [HttpPost]
         public IActionResult AddCard(AddCard viewModel)
         {
             if (!ModelState.IsValid) return View(viewModel);
-            service.AddCard(viewModel);
-            return RedirectToAction(nameof(Open), new { id = viewModel.Id });
+            _boardService.AddCard(viewModel);
+            return RedirectToAction(nameof(Index), new { id = viewModel.Id });
         }
-        #endregion
 
+        [HttpGet]
+        public IActionResult CardDetails(int id)
+        {
+            var viewModel = _cardService.GetDetails(id);
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult CardUpdate(CardDetails cardDetails)
+        {
+            _cardService.Update(cardDetails);
+
+            TempData["Message"] = "Saved card Details";
+
+            return RedirectToAction(nameof(Details), new { id = cardDetails.Id });
+        }
     }
 }

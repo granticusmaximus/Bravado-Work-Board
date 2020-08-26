@@ -14442,6 +14442,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Agile/Details.cshtml",
+      "TargetPath": "Views\\Agile\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Areas/Identity/Pages/Account/Lockout.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Lockout.cshtml",
       "FileKind": "mvc"
@@ -14449,11 +14454,6 @@
     {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Entry/Details.cshtml",
       "TargetPath": "Views\\Entry\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Agile/Open.cshtml",
-      "TargetPath": "Views\\Agile\\Open.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14502,11 +14502,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Agile/NewBoard.cshtml",
-      "TargetPath": "Views\\Agile\\NewBoard.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
       "FileKind": "mvc"
@@ -14514,6 +14509,11 @@
     {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Agile/AddCard.cshtml",
+      "TargetPath": "Views\\Agile\\AddCard.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14589,6 +14589,11 @@
     {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Agile/CardDetails.cshtml",
+      "TargetPath": "Views\\Agile\\CardDetails.cshtml",
       "FileKind": "mvc"
     },
     {
