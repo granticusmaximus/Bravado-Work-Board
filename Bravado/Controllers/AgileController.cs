@@ -27,8 +27,29 @@ namespace Bravado.Controllers
             _boardService = boardService;
             _cardService = cardService;
         }
+        
+        public IActionResult Index()
+        {
+            var model = _boardService.ListBoard();
 
-        public IActionResult Index(int id)
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult CreateBoard()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateBoard(NewBoard viewModel)
+        {
+            _boardService.AddBoard(viewModel);
+            
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult BoardDetail(int id)
         {
             var model = _boardService.GetBoard(id);
 

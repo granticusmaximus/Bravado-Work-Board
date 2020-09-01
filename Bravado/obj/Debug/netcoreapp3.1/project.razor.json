@@ -14502,6 +14502,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Agile/BoardDetail.cshtml",
+      "TargetPath": "Views\\Agile\\BoardDetail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
       "FileKind": "mvc"
@@ -14549,6 +14554,11 @@
     {
       "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Areas/Identity/Pages/Account/_StatusMessage.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Views/Agile/CreateBoard.cshtml",
+      "TargetPath": "Views\\Agile\\CreateBoard.cshtml",
       "FileKind": "mvc"
     },
     {
