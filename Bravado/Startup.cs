@@ -29,8 +29,8 @@ namespace Bravado {
                 options.UseSqlServer (Configuration.GetConnectionString ("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole> ()
-                .AddEntityFrameworkStores<AppDbContext> ()
-                .AddDefaultTokenProviders ();
+                .AddEntityFrameworkStores<AppDbContext> ();
+
             services.AddControllersWithViews (options => {
                 options.Filters.Add (new AutoValidateAntiforgeryTokenAttribute ());
             });

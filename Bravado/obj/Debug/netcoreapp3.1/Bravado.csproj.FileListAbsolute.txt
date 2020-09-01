@@ -651,3 +651,5 @@
 /Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Agile/AddCard.cshtml.g.cs
 /Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Agile/CardDetails.cshtml.g.cs
 /Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Agile/Details.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Agile/BoardDetail.cshtml.g.cs
+/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/Debug/netcoreapp3.1/Razor/Views/Agile/CreateBoard.cshtml.g.cs
