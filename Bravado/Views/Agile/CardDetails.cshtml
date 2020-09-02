@@ -5,27 +5,34 @@
 }
 
 <div class="container">
-    <h2>Details</h2>
     
     <div class="row">
         <form class="col s12" asp-controller="Card" asp-action="Update">
             <input asp-for="Id" type="hidden" />
             <div class="row">
-                <div class="input-field col s12">
-                    <input placeholder="Card contents"   asp-for="Contents" />
-                    <label asp-for="Contents">Contents</label>
+                <div class="input-field col s6">
+                    <h2>@Html.DisplayFor(model => model.Contents)</h2>
+                </div>
+                <div class="input-field col s6">
+                   <h2>@Model.DueDate.ToString("dd-MMM")</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <textarea placeholder="Notes" asp-for="Notes"  class="materialize-textarea"></textarea>
-                    <label asp-for="Notes">Notes</label>
+                    @if(Model.Notes == null)
+                    {
+                        <p>No Requirement Notes</p>
+                    }
+                    else
+                    {
+                        @Html.Raw(Model.Notes)
+                    }
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <select asp-for="Column" asp-items="Model.Columns"></select>
-                    <label asp-for="Column"></label>
+                    <select asp-for="Columns" asp-items="Model.Columns"></select>
+                    <label asp-for="Columns"></label>
                 </div>
             </div>
             <div class="row">
