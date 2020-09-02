@@ -1,7 +1,7 @@
 ﻿
 
-.droppable {
-    z-index:-1;
+.draggable {
+    z-index: 1;
 }
 
 .flexCol {
