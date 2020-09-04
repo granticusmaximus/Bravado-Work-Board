@@ -1,0 +1,11 @@
+@model Bravado.ViewModel.AgileViewModels.CardDetails
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+    <center><h2>Are you sure want to delete the following task:</h2></center>
+    <center><h4>@Html.DisplayFor(model => model.Contents)</h4></center>
+    <button class="btn btn-outline-danger"><a asp-action="DeleteCard" style="color:black" asp-route-id="@Model.Id"><i class="fa fa-times" aria-hidden="true"></i>Delete</a></button> 
+</div>
