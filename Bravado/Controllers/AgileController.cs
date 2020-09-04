@@ -61,6 +61,18 @@ namespace Bravado.Controllers
             return View(_boardService.GetBoard(id));
         }
 
+        public IActionResult DeleteCard(int id)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult DeleteCard(CardDetails card)
+        {
+            _cardService.Delete(card.Id);
+            return RedirectToAction(nameof(Index), new { id = card.Id });
+        }
+
         public IActionResult AddCard(int id)
         {
             return View();
@@ -71,7 +83,7 @@ namespace Bravado.Controllers
         {
             if (!ModelState.IsValid) return View(viewModel);
             _boardService.AddCard(viewModel);
-            return RedirectToAction(nameof(Index), new { id = viewModel.Id });
+            return RedirectToAction(nameof(BoardDetail), new { id = viewModel.Id });
         }
 
         [HttpGet]
@@ -80,6 +92,11 @@ namespace Bravado.Controllers
             var viewModel = _cardService.GetDetails(id);
 
             return View(viewModel);
+        }
+
+        public IActionResult EditCard(int id)
+        {
+            return View(_cardService.GetDetails(id));
         }
 
         [HttpPost]

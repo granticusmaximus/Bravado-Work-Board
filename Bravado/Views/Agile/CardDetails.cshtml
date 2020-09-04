@@ -5,41 +5,38 @@
 }
 
 <div class="container">
-    
     <div class="row">
-        <form class="col s12" asp-controller="Card" asp-action="Update">
-            <input asp-for="Id" type="hidden" />
-            <div class="row">
-                <div class="input-field col s6">
-                    <h2>@Html.DisplayFor(model => model.Contents)</h2>
-                </div>
-                <div class="input-field col s6">
-                   <h2>@Model.DueDate.ToString("dd-MMM")</h2>
-                </div>
+        <input asp-for="Id" type="hidden" />
+        <div class="row">
+            <div class="input-field col m6">
+                <h1>Task:</h1>
+                <h2>@Html.DisplayFor(model => model.Contents)</h2>
             </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    @if(Model.Notes == null)
-                    {
-                        <p>No Requirement Notes</p>
-                    }
-                    else
-                    {
-                        @Html.Raw(Model.Notes)
-                    }
-                </div>
+            <div class="input-field col m6">
+                <h1>Due Date:</h1>
+                <h2>@Model.DueDate.ToString("dd-MMM")</h2>
             </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <select asp-for="Columns" asp-items="Model.Columns"></select>
-                    <label asp-for="Columns"></label>
-                </div>
-            </div>
-            <div class="row">
-                <input type="submit" value="Save" class="btn">
-            </div>
-        </form>
+        </div>
     </div>
+    <div class="row">
+        <div class="input-field col s12">
+            @if(Model.Notes == null)
+            {
+                <p>No Requirement Notes</p>
+            }
+            else
+            {
+                @Html.Raw(Model.Notes)
+            }
+        </div>
+    </div>
+    <div class="row">
+        <button class="btn btn-outline-primary">
+            <a asp-action="EditCard" style="color:black" asp-route-id="@Model.Id"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</a>
+        </button>
+        <button class="btn btn-outline-danger"><a asp-action="DeleteCard" style="color:black" asp-route-id="@Model.Id"><i class="fa fa-times" aria-hidden="true"></i>Delete</a></button> 
+    </div>
+    
 </div>
 
 
