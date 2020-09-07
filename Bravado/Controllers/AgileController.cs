@@ -19,6 +19,7 @@ namespace Bravado.Controllers
     [Authorize]
     public class AgileController : Controller
     {
+        private readonly AppDbContext _context;
         private readonly CardService _cardService;
         private BoardService _boardService;
 
@@ -61,17 +62,33 @@ namespace Bravado.Controllers
             return View(_boardService.GetBoard(id));
         }
 
-        public IActionResult DeleteCard(int id)
+        public async Task<IActionResult> Delete(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var entry = await _context.Cards
+                .FirstOrDefaultAsync(m => m.CardID == id);
+            if (entry == null)
+            {
+                return NotFound();
+            }
+
+            return View(entry);
         }
 
-        [HttpPost]
-        public IActionResult DeleteCard(CardDetails card)
+        // POST: Entry/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            _cardService.Delete(card.Id);
-            return RedirectToAction(nameof(Index), new { id = card.Id });
-        }
+            var entry = await _context.Entries.FindAsync(id);
+            _context.Entries.Remove(entry);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }   
 
         public IActionResult AddCard(int id)
         {
