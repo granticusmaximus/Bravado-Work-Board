@@ -20,6 +20,11 @@ namespace Bravado.Controllers
 
         public IActionResult Index()
         {
+            var returnUrl ="~/Identity/Account/Login";
+            if(!User.Identity.IsAuthenticated)
+            {
+                return LocalRedirect(returnUrl);
+            }
             return View();
         }
 
