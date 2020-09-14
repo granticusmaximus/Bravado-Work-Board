@@ -125,5 +125,15 @@ namespace Bravado.Controllers
 
             return RedirectToAction(nameof(Details), new { id = cardDetails.Id });
         }
+
+        [HttpPost("movecard")]
+        public IActionResult MoveCard([FromBody] MoveCardCommand command)
+        {
+
+            return Ok(new
+            {
+                Moved = true
+            });
+        }
     }
 }
