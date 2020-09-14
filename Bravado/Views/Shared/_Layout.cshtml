@@ -68,7 +68,6 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="~/js/dragndrop.js"></script>
     <script src="~/js/aweui.js"></script>
     <script src="~/plugins/jquery/jquery.min.js"></script>
     <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -77,28 +76,6 @@
     <script>$(function () {
 
             $('.textarea').summernote()
-        });
-        $(function () {
-            awem.dragAndDrop({
-                from: $('.dropZone'),
-                sel: '.dragItem', // what we can drag
-                dropSel: '.dropZone', // where we can drop
-                //tof: function() {
-                //    // alternative way to determine where we are allowed to drop
-                //    // evaluated when we start dragging
-                //    return $('.dropZone').map(function (i, el) { return $(el); }).get();
-                //},
-                hover: function (cx) {
-                    cx.cont.addClass('awe-highlight');
-                },
-                drop: function (cx) {
-                    cx.cont.append(cx.drgo);
-                },
-                reshov: function () {
-                    $('.dropZone').removeClass('awe-highlight');
-                },
-                hide: 1 // hide drag object while dragging
-            });
         });
     </script>
     @RenderSection("Scripts", required: false)

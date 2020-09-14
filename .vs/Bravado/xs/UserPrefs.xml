@@ -1,24 +1,47 @@
-﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Bravado">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Controllers/BoardsController.cs">
+﻿<Properties StartupConfiguration="{6798DFF9-4DCC-474E-9710-68643163EF8B}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bravado/Controllers/API/CardController.cs">
     <Files>
-      <File FileName="Bravado/Controllers/BoardsController.cs" Line="104" Column="35" />
-      <File FileName="Bravado/Data/ApplicationDbContext.cs" Line="23" Column="47" />
-      <File FileName="Bravado/Controllers/TasksController.cs" Line="106" Column="2" />
-      <File FileName="Bravado/Startup.cs" Line="41" Column="1" />
+      <File FileName="Bravado/Data/ApplicationDbContext.cs" Line="23" Column="23" />
+      <File FileName="Bravado/Startup.cs" Line="1" Column="1" />
+      <File FileName="Bravado/Views/Agile/CardDetails.cshtml" Line="1" Column="1" />
+      <File FileName="Bravado/Views/Agile/BoardDetail.cshtml" Line="39" Column="19" />
+      <File FileName="Bravado/Controllers/AgileController.cs" Line="139" Column="10" />
+      <File FileName="Bravado/Controllers/API/CardController.cs" Line="1" Column="1" />
+      <File FileName="Bravado/ViewModel/AgileViewModels/MoveCardCommand.cs" Line="3" Column="18" />
+      <File FileName="Bravado/Services/CardService.cs" Line="1" Column="1" />
+      <File FileName="Bravado/Services/BoardService.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Bravado" expanded="True">
             <Node name="Bravado" expanded="True">
+              <Node name="Dependencies" expanded="True" />
               <Node name="Controllers" expanded="True">
-                <Node name="BoardsController.cs" selected="True" />
+                <Node name="API" expanded="True" />
               </Node>
-              <Node name="Data" expanded="True" />
-              <Node name="Services" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="BoardService.cs" selected="True" />
+              </Node>
+              <Node name="ViewModel" expanded="True">
+                <Node name="AgileViewModels" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Agile" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="js" expanded="True" />
+                <Node name="lib" expanded="True" />
+                <Node name="plugins" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

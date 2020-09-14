@@ -6,10 +6,10 @@ namespace Bravado.Controllers.API
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AgileController : ControllerBase
+    public class CardController : Controller
     {
         private readonly BoardService _boardService;
-        public AgileController(BoardService boardService)
+        public CardController(BoardService boardService)
         {
             _boardService = boardService;
         }
