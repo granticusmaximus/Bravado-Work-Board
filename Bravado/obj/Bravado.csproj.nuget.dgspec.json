@@ -14,7 +14,7 @@
         "outputPath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/grantwatson/.config/NuGet/NuGet.Config"
+          "/Users/grantwatson/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -81,6 +81,10 @@
             "SendGrid": {
               "target": "Package",
               "version": "[9.21.0, )"
+            },
+            "jQuery.UI.Combined": {
+              "target": "Package",
+              "version": "[1.12.1, )"
             }
           },
           "imports": [

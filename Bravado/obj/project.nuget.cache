@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "1pCYRIfQanwkHrmYEGj434LhKfNWecWQY0WGgkFgoGHV/lKRNFitphD1b1+uwhWivtUHswcifCecPimwxwJxxw==",
+  "dgSpecHash": "1YYwJLgjTkHr/iA8WI65782qWJeoIImrtI9xiolExlAdDqxo6XuYdFNP+7hF78+yEn0j+2DUtvCf+7B91Nfxaw==",
   "success": true,
   "projectFilePath": "/Users/grantwatson/Desktop/Dev/Bravado-Work-Board/Bravado/Bravado.csproj",
   "expectedPackageFiles": [
     "/Users/grantwatson/.nuget/packages/electronnet.api/9.31.2/electronnet.api.9.31.2.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/engineioclientdotnet/1.0.5/engineioclientdotnet.1.0.5.nupkg.sha512",
+    "/Users/grantwatson/.nuget/packages/jquery/1.12.4/jquery.1.12.4.nupkg.sha512",
+    "/Users/grantwatson/.nuget/packages/jquery.ui.combined/1.12.1/jquery.ui.combined.1.12.1.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/microsoft.aspnetcore.authentication.google/3.1.8/microsoft.aspnetcore.authentication.google.3.1.8.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/microsoft.aspnetcore.cryptography.internal/3.1.8/microsoft.aspnetcore.cryptography.internal.3.1.8.nupkg.sha512",
     "/Users/grantwatson/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/3.1.8/microsoft.aspnetcore.cryptography.keyderivation.3.1.8.nupkg.sha512",

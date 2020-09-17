@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Work Board Details";
 }
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 @inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Xsrf 
 
 @functions { 
@@ -16,6 +17,17 @@
     id="RequestVarificationToken" 
     name="RequestVarificationToken" 
     value="@GetAntiXsrfRequestToken()">
+
+<script>
+    $(document).ready(function () {
+        $("#sortable").sortable({
+            update: function(event, ui) {
+                var itemIds = "";
+                var boardIds = "";  
+            }
+        })
+    })
+</script>
 
 <script>
     $(function () {
@@ -58,6 +70,14 @@
                     Add A Card
                 </a>
             </div>
+
+            <div>
+                <a asp-controller="Agile"
+                   asp-action="CardLocationUpdate"
+                   class="btn btn-primary">
+                    Update
+                </a>
+            </div>
         }
 
         <hr/>
@@ -75,11 +95,11 @@
 
                     @foreach (var card in column.Cards)
                     {
-                        <div class="card blue-grey darken-1 draggable">
+                        <div class="card blue-grey darken-1 draggable" style="cursor: pointer;">
                             <div class="card-content white-text">
                                 <p>
                                     <a asp-controller="Agile" asp-action="CardDetails" 
-                                    asp-route-id="@card.Id" class="white-text">
+                                    asp-route-id="@card.Id" class="white-text taskSingle" id="task@(card.Id)" data-taskid="@(card.Id)"> 
                                         @card.Content
                                     </a>
                                 </p>

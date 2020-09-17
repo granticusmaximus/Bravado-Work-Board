@@ -9,6 +9,8 @@ namespace Bravado.Models.Agile
         public int CardID {get;set;}
         public Column Column {get;set;}
         public int ColumnID {get;set;}
+
+        public int RowNum {get;set;}
         [Display(Name = "Task Name:")]
         public string CardName {get;set;}
 
