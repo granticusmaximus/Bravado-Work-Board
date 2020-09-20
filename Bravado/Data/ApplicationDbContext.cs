@@ -22,7 +22,7 @@ namespace Bravado.Data {
 
         #region AGILE 
         public DbSet<Board> Boards { get; set; }
-        public DbSet<Card> Cards { get; set; }
+        public DbSet<Card> Cards { get; set; 
         public DbSet<Column> Columns { get; set; }
         #endregion
 
