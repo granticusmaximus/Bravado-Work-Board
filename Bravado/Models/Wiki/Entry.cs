@@ -12,7 +12,6 @@ namespace Bravado.Models.Wiki
 
         [Display(Name = "Date Created")]
         public DateTime DateCreated { get; set; }
-
         public ApplicationUser AppUser { get; set; }
     }
 }
